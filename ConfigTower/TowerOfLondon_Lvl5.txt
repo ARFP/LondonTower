@@ -1,0 +1,919 @@
+{
+  "Level": 5,
+  "TrialList": [
+    {
+      "PegList": [
+        {
+          "PegNumber": 1,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": [
+            {
+              "ColorBead": 4
+            },
+            {
+              "ColorBead": 2
+            },
+            {
+              "ColorBead": 0
+            },
+            {
+              "ColorBead": 3
+            },
+            {
+              "ColorBead": 1
+            }
+          ]
+        }
+      ],
+      "PegListGoal": [
+        {
+          "PegNumber": 1,
+          "BeadList": [
+            {
+              "ColorBead": 1
+            }
+          ]
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": [
+            {
+              "ColorBead": 3
+            }
+          ]
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": [
+            {
+              "ColorBead": 0
+            }
+          ]
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": [
+            {
+              "ColorBead": 2
+            }
+          ]
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": [
+            {
+              "ColorBead": 4
+            }
+          ]
+        }
+      ],
+      "MinimalMoveExpect": 5,
+      "TrialNumber": 0
+    },
+    {
+      "PegList": [
+        {
+          "PegNumber": 1,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": [
+            {
+              "ColorBead": 4
+            },
+            {
+              "ColorBead": 0
+            }
+          ]
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": [
+            {
+              "ColorBead": 2
+            },
+            {
+              "ColorBead": 3
+            },
+            {
+              "ColorBead": 1
+            }
+          ]
+        }
+      ],
+      "PegListGoal": [
+        {
+          "PegNumber": 1,
+          "BeadList": [
+            {
+              "ColorBead": 4
+            }
+          ]
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": [
+            {
+              "ColorBead": 0
+            }
+          ]
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": [
+            {
+              "ColorBead": 1
+            }
+          ]
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": [
+            {
+              "ColorBead": 3
+            }
+          ]
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": [
+            {
+              "ColorBead": 2
+            }
+          ]
+        }
+      ],
+      "MinimalMoveExpect": 4,
+      "TrialNumber": 1
+    },
+    {
+      "PegList": [
+        {
+          "PegNumber": 1,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": [
+            {
+              "ColorBead": 2
+            },
+            {
+              "ColorBead": 3
+            },
+            {
+              "ColorBead": 1
+            },
+            {
+              "ColorBead": 0
+            },
+            {
+              "ColorBead": 4
+            }
+          ]
+        }
+      ],
+      "PegListGoal": [
+        {
+          "PegNumber": 1,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": [
+            {
+              "ColorBead": 1
+            }
+          ]
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": [
+            {
+              "ColorBead": 4
+            },
+            {
+              "ColorBead": 0
+            },
+            {
+              "ColorBead": 3
+            },
+            {
+              "ColorBead": 2
+            }
+          ]
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": []
+        }
+      ],
+      "MinimalMoveExpect": 5,
+      "TrialNumber": 2
+    },
+    {
+      "PegList": [
+        {
+          "PegNumber": 1,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": [
+            {
+              "ColorBead": 2
+            },
+            {
+              "ColorBead": 3
+            },
+            {
+              "ColorBead": 1
+            },
+            {
+              "ColorBead": 0
+            },
+            {
+              "ColorBead": 4
+            }
+          ]
+        }
+      ],
+      "PegListGoal": [
+        {
+          "PegNumber": 1,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": [
+            {
+              "ColorBead": 2
+            },
+            {
+              "ColorBead": 0
+            },
+            {
+              "ColorBead": 4
+            }
+          ]
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": [
+            {
+              "ColorBead": 3
+            },
+            {
+              "ColorBead": 1
+            }
+          ]
+        }
+      ],
+      "MinimalMoveExpect": 9,
+      "TrialNumber": 3
+    },
+    {
+      "PegList": [
+        {
+          "PegNumber": 1,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": [
+            {
+              "ColorBead": 2
+            },
+            {
+              "ColorBead": 3
+            },
+            {
+              "ColorBead": 1
+            },
+            {
+              "ColorBead": 0
+            },
+            {
+              "ColorBead": 4
+            }
+          ]
+        }
+      ],
+      "PegListGoal": [
+        {
+          "PegNumber": 1,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": [
+            {
+              "ColorBead": 4
+            },
+            {
+              "ColorBead": 0
+            },
+            {
+              "ColorBead": 1
+            },
+            {
+              "ColorBead": 3
+            },
+            {
+              "ColorBead": 2
+            }
+          ]
+        }
+      ],
+      "MinimalMoveExpect": 11,
+      "TrialNumber": 4
+    },
+    {
+      "PegList": [
+        {
+          "PegNumber": 1,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": [
+            {
+              "ColorBead": 2
+            }
+          ]
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": [
+            {
+              "ColorBead": 3
+            },
+            {
+              "ColorBead": 1
+            }
+          ]
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": [
+            {
+              "ColorBead": 0
+            },
+            {
+              "ColorBead": 4
+            }
+          ]
+        }
+      ],
+      "PegListGoal": [
+        {
+          "PegNumber": 1,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": [
+            {
+              "ColorBead": 1
+            }
+          ]
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": [
+            {
+              "ColorBead": 0
+            },
+            {
+              "ColorBead": 3
+            }
+          ]
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": [
+            {
+              "ColorBead": 2
+            },
+            {
+              "ColorBead": 4
+            }
+          ]
+        }
+      ],
+      "MinimalMoveExpect": 8,
+      "TrialNumber": 5
+    },
+    {
+      "PegList": [
+        {
+          "PegNumber": 1,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": [
+            {
+              "ColorBead": 4
+            },
+            {
+              "ColorBead": 0
+            }
+          ]
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": [
+            {
+              "ColorBead": 2
+            },
+            {
+              "ColorBead": 3
+            },
+            {
+              "ColorBead": 1
+            }
+          ]
+        }
+      ],
+      "PegListGoal": [
+        {
+          "PegNumber": 1,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": [
+            {
+              "ColorBead": 4
+            },
+            {
+              "ColorBead": 0
+            }
+          ]
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": [
+            {
+              "ColorBead": 3
+            },
+            {
+              "ColorBead": 1
+            },
+            {
+              "ColorBead": 2
+            }
+          ]
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": []
+        }
+      ],
+      "MinimalMoveExpect": 7,
+      "TrialNumber": 6
+    },
+    {
+      "PegList": [
+        {
+          "PegNumber": 1,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": [
+            {
+              "ColorBead": 2
+            },
+            {
+              "ColorBead": 3
+            },
+            {
+              "ColorBead": 1
+            },
+            {
+              "ColorBead": 0
+            },
+            {
+              "ColorBead": 4
+            }
+          ]
+        }
+      ],
+      "PegListGoal": [
+        {
+          "PegNumber": 1,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": [
+            {
+              "ColorBead": 1
+            }
+          ]
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": [
+            {
+              "ColorBead": 2
+            },
+            {
+              "ColorBead": 0
+            },
+            {
+              "ColorBead": 3
+            }
+          ]
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": [
+            {
+              "ColorBead": 4
+            }
+          ]
+        }
+      ],
+      "MinimalMoveExpect": 8,
+      "TrialNumber": 7
+    },
+    {
+      "PegList": [
+        {
+          "PegNumber": 1,
+          "BeadList": [
+            {
+              "ColorBead": 2
+            }
+          ]
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": [
+            {
+              "ColorBead": 3
+            },
+            {
+              "ColorBead": 1
+            }
+          ]
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": [
+            {
+              "ColorBead": 0
+            },
+            {
+              "ColorBead": 4
+            }
+          ]
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": []
+        }
+      ],
+      "PegListGoal": [
+        {
+          "PegNumber": 1,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": [
+            {
+              "ColorBead": 1
+            },
+            {
+              "ColorBead": 4
+            }
+          ]
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": [
+            {
+              "ColorBead": 0
+            },
+            {
+              "ColorBead": 3
+            },
+            {
+              "ColorBead": 2
+            }
+          ]
+        }
+      ],
+      "MinimalMoveExpect": 5,
+      "TrialNumber": 8
+    },
+    {
+      "PegList": [
+        {
+          "PegNumber": 1,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": [
+            {
+              "ColorBead": 1
+            },
+            {
+              "ColorBead": 0
+            },
+            {
+              "ColorBead": 4
+            }
+          ]
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": [
+            {
+              "ColorBead": 2
+            },
+            {
+              "ColorBead": 3
+            }
+          ]
+        }
+      ],
+      "PegListGoal": [
+        {
+          "PegNumber": 1,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": [
+            {
+              "ColorBead": 1
+            }
+          ]
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": [
+            {
+              "ColorBead": 4
+            }
+          ]
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": [
+            {
+              "ColorBead": 0
+            },
+            {
+              "ColorBead": 3
+            },
+            {
+              "ColorBead": 2
+            }
+          ]
+        }
+      ],
+      "MinimalMoveExpect": 9,
+      "TrialNumber": 9
+    },
+    {
+      "PegList": [
+        {
+          "PegNumber": 1,
+          "BeadList": [
+            {
+              "ColorBead": 1
+            }
+          ]
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": [
+            {
+              "ColorBead": 0
+            }
+          ]
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": [
+            {
+              "ColorBead": 4
+            }
+          ]
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": [
+            {
+              "ColorBead": 2
+            },
+            {
+              "ColorBead": 3
+            }
+          ]
+        }
+      ],
+      "PegListGoal": [
+        {
+          "PegNumber": 1,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 2,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 3,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 4,
+          "BeadList": []
+        },
+        {
+          "PegNumber": 5,
+          "BeadList": [
+            {
+              "ColorBead": 1
+            },
+            {
+              "ColorBead": 0
+            },
+            {
+              "ColorBead": 2
+            },
+            {
+              "ColorBead": 3
+            },
+            {
+              "ColorBead": 4
+            }
+          ]
+        }
+      ],
+      "MinimalMoveExpect": 7,
+      "TrialNumber": 10
+    }
+  ],
+  "Personn": {
+    "LastName": null,
+    "FirstName": null,
+    "Genre": 0,
+    "DayofBirth": "0001-01-01T00:00:00"
+  }
+}

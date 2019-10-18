@@ -1,0 +1,236 @@
+﻿<Page x:Class="LondonTower.PageFolder.Identification"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:libControls="clr-namespace:LondonTowerLibrary.UserControls;assembly=LondonTowerLibrary"
+      xmlns:libComponent="clr-namespace:LondonTowerLibrary.Button;assembly=LondonTowerLibrary"
+      xmlns:libConverts="clr-namespace:LondonTowerLibrary;assembly=LondonTowerLibrary"
+
+    mc:Ignorable="d" 
+      d:DesignHeight="960" d:DesignWidth="1280"
+      Title="Identification">
+
+    <!-- RESSOURCES -->
+    <Page.Resources>
+        <ResourceDictionary>
+            <!-- ROUND TEXTBOX TEMPLATE -->
+            <ControlTemplate x:Key="TextBoxTemplate" TargetType="{x:Type TextBoxBase}">
+                <Border Background="{TemplateBinding Background}" x:Name="Bd" BorderBrush="{StaticResource ColShadow}"
+                        BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                    <ScrollViewer x:Name="PART_ContentHost"/>
+                </Border>
+            </ControlTemplate>
+            <!-- TEXTBOX  STYLE-->
+            <Style x:Key="TextBoxStyle" TargetType="{x:Type TextBox }">
+                <Setter Property="Padding" Value="5 4"/>
+                <Setter Property="Background" Value="{StaticResource ColDarkBlue}"/>
+                <Setter Property="Foreground" Value="{StaticResource ColWhite}"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="FontFamily" Value="{StaticResource GeneralFont}"/>
+            </Style>
+            <!--TEXTBLOCK STYLE-->
+            <Style x:Key="TextBlockStyle" TargetType="{x:Type TextBlock}">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="FontFamily" Value="{StaticResource GeneralFont}"/>
+                <Setter Property="Margin" Value="0 5"/>
+                <Setter Property="Foreground" Value="{StaticResource ColShadow}"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+            </Style>
+            <!--TEXTBLOCK TITLE STYLE-->
+            <Style x:Key="TextBlockTitle" TargetType="{x:Type TextBlock}">
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="TextAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="Foreground" Value="{StaticResource ColBrown}"/>
+                <Setter Property="FontFamily" Value="{StaticResource GeneralFont}"/>
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect ShadowDepth="0"   Color="{StaticResource RadColWhite}"   Opacity="1"  BlurRadius="3"/>
+                    </Setter.Value>
+
+                </Setter>
+            </Style>
+            <!--RADIOBUTTON STYLE-->
+            <Style x:Key="RadioStyle" TargetType="{x:Type RadioButton}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Padding" Value="5 4"/>
+                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="FontFamily" Value="{StaticResource GeneralFont}"/>
+                <Setter Property="Foreground" Value="{StaticResource ColShadow}"/>
+                <Setter Property="ForceCursor" Value="true"/>
+                <Setter Property="Cursor" Value="Hand"/>
+            </Style>
+            <!-- OLD BUTTON STYLE (unused)-->
+            <Style x:Key="ButtonStyle" TargetType="{x:Type Button}" >
+                <Setter Property="ForceCursor" Value="True"/>
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="BorderBrush" Value="{StaticResource ColBrown}"/>
+                <Setter Property="Margin" Value="20 0 20 0"/>
+                <Setter Property="Background" Value="{StaticResource ColDarkBlue}"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="FontFamily" Value="{StaticResource GeneralFont}"/>
+                <Setter Property="Foreground" Value="{StaticResource ColWhite}"/>
+                <Setter Property="BorderThickness" Value="4"/>
+                <Setter Property="BorderBrush"  Value="{StaticResource ColWhite}"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="{StaticResource ColShadow}"/>
+                        <Setter Property="Foreground" Value="{StaticResource ColLightBlue}"/>
+                        <Setter Property="BorderThickness" Value="{StaticResource ColLightBlue}"/>
+                        <Setter Property="BorderBrush"  Value="{StaticResource ColLightBlue}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    <!-- END RESSOURCES -->
+
+    <!-- BACKGROUND -->
+    <Page.Background>
+        <ImageBrush ImageSource="/LondonTowerLibrary;Component/Resources/WallpaperTower.png" Stretch="UniformToFill" />
+    </Page.Background>
+    <!-- BORDER-->
+
+    <Grid>
+    <Border Padding="150,150,150,150"  >
+        <Border.Background>
+            <LinearGradientBrush Opacity="0.9">
+                <GradientStop Offset="0" Color="{StaticResource RadColShadow}"/>
+                <GradientStop Offset="0.35" Color="{StaticResource RadColLightBlue}"/>
+                <GradientStop Offset="0.65" Color="{StaticResource RadColLightBlue}"/>
+                <GradientStop Offset="1" Color="{StaticResource RadColShadow}"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Border Padding=" 9 9 9 9" BorderThickness="1" CornerRadius="15" Background="{StaticResource ColBrown}" >
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" ShadowDepth="5" Color="{StaticResource RadColShadow}" Direction="145"/>
+            </Border.Effect>
+            <Border Padding=" 3 3 3 3"  CornerRadius="15" Background="{StaticResource ColLightBlue}">
+                <Border Padding=" 4 4 4 4"  CornerRadius="15" Background="{StaticResource ColBrown}" >
+                    <Border Padding=" 10 10 10 10"  CornerRadius="15"  >
+                        <Border.Background >
+                            <LinearGradientBrush >
+                                <GradientStop Offset="0" Color="{StaticResource RadColDarkBlue}"/>
+                                <GradientStop Offset="0.3" Color="{StaticResource RadColLightBlue}"/>
+                                <GradientStop Offset="0.7" Color="{StaticResource RadColLightBlue}"/>
+                                <GradientStop Offset="1" Color="{StaticResource RadColDarkBlue}" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+
+                        <!-- MAIN PANNEL -->
+                        <StackPanel   Background="Transparent" >
+                            <!-- INFOS -->
+
+                            <StackPanel Name="InfoStack">
+
+                                <TextBlock Text=" INFORMATIONS UTILISATEUR " Margin="20"  Style="{StaticResource TextBlockTitle}"/>
+                                <Grid Margin="20">
+                                    <Grid.ColumnDefinitions >
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Nom :" Grid.Column="0" Style="{StaticResource TextBlockStyle}"/>
+                                    <TextBox   Grid.Column="1" Style="{StaticResource TextBoxStyle}"  
+                                           Template="{StaticResource TextBoxTemplate}" 
+                                           Text="{Binding Path=LastName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                                </Grid>
+                                <Grid Margin="20">
+                                    <Grid.ColumnDefinitions >
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Prenom :" Grid.Column="0" Style="{StaticResource TextBlockStyle}"/>
+                                    <TextBox    Grid.Column="1" Style="{StaticResource TextBoxStyle}"  
+                                                Template="{StaticResource TextBoxTemplate}" 
+                                                Text="{Binding Path=FirstName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                                </Grid>
+                                <Grid Margin="20">
+                                    <Grid.ColumnDefinitions >
+                                        <ColumnDefinition Width="4*"/>
+                                        <ColumnDefinition Width="10*"/>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Date de Naissance :" Grid.Column="0" Style="{StaticResource TextBlockStyle}"/>
+                                    <TextBox  Name="BirthdateText"  Grid.Column="1" Style="{StaticResource TextBoxStyle}"  
+                                              Template="{StaticResource TextBoxTemplate}"
+                                              Text="{Binding Path=DayofBirth,  Mode=OneWayToSource, Converter={x:Static libConverts:DateToStringConverter.Instance}, UpdateSourceTrigger=PropertyChanged}" TextChanged="BirthdateText_TextChanged"/>
+                                    <!---->
+                                    <TextBlock Grid.Column="2" Text="Age :" Style="{StaticResource TextBlockStyle}" TextAlignment="Right" />
+                                    <TextBlock Grid.Column="3"  Style="{StaticResource TextBlockStyle}"  TextAlignment="Center"
+                                           Text="{Binding ElementName=BirthdateText, Path=Text, Converter={x:Static libConverts:DateToAgeConverter.Instance}}" />
+                                </Grid>
+                                <!-- RADIOBUTTON -->
+                                    <Grid Margin="20">
+                                        <Grid.ColumnDefinitions >
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="3*"/>
+                                            <ColumnDefinition Width="3*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Text="Sexe :" Grid.Column="0"  Margin="0 10" Style="{StaticResource TextBlockStyle}"/>
+
+                                        <Viewbox Height="25" Grid.Column="1" >
+                                            <RadioButton GroupName="RadioSex"  Content="Homme" Grid.Column="1" Style="{StaticResource RadioStyle}" 
+                                                     IsChecked="{Binding Path=Genre, Converter={x:Static libConverts:EnumToBooleanConverter.Instance}, 
+                                                            ConverterParameter=Homme, Mode=TwoWay}" Padding="0 1 0 0"/>
+                                        </Viewbox>
+                                        <Viewbox Height="25" Grid.Column="2">
+                                            <RadioButton GroupName="RadioSex" Content="Femme" Grid.Column="2"  Style="{StaticResource RadioStyle}" 
+                                                     IsChecked="{Binding Path=Genre, Converter={x:Static libConverts:EnumToBooleanConverter.Instance}, 
+                                                            ConverterParameter=Femme, Mode=TwoWay}" Padding="0 1 0 0" />
+                                        </Viewbox>
+                                    </Grid>
+                            </StackPanel>
+
+                            <StackPanel Name="TowerStack">
+                                <TextBlock Text=" LANCEMENT DU JEU " Margin="10"    Style="{StaticResource TextBlockTitle}"/>
+
+                                <!--DATETIME-->
+                                <Grid Margin="10 10 10 5">
+                                    <Grid.ColumnDefinitions >
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Date :" Grid.Column="0" Style="{StaticResource TextBlockStyle}" TextAlignment="Right"/>
+                                    <TextBlock Name="DateText"   Grid.Column="1" Style="{StaticResource TextBlockStyle}" TextAlignment="Center" />
+                                    <TextBlock Text="Heure :" Grid.Column="2" Style="{StaticResource TextBlockStyle}" TextAlignment="Center"/>
+                                    <TextBlock  Name="HourText"   Grid.Column="3" Style="{StaticResource TextBlockStyle}"  TextAlignment="Left" />
+                                </Grid>
+                                <!-- BUTTONS -->
+                                <Grid Margin="15 15 15 20">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <libComponent:WoodButtonUc ImgSource ="/LondonTowerLibrary;Component/Resources/woodbutton3.png" Tag="3" Grid.Column ="0" x:Name="button3peg"/>
+                                    <libComponent:WoodButtonUc ImgSource ="/LondonTowerLibrary;Component/Resources/woodbutton4.png" Tag="4" Grid.Column ="1" x:Name="button4peg"/>
+                                    <libComponent:WoodButtonUc ImgSource ="/LondonTowerLibrary;Component/Resources/woodbutton5.png" Tag="5" Grid.Column ="2" x:Name="button5peg"/>
+                                    </Grid>
+                                <Viewbox Height="18" HorizontalAlignment="Center" Margin="0 8">
+                                    <CheckBox  Name ="VisualHelpCbx" Padding="3 -3" Content="Utiliser les aides visuelles" FontSize="18" FontFamily="{StaticResource GeneralFont}" 
+                                           Foreground="{StaticResource ColShadow}" ForceCursor="true" Cursor="Hand"
+                                           IsChecked="{Binding Path=VisualHelp, Mode=TwoWay}"/>
+                                </Viewbox>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </Border>
+            </Border>
+        </Border>
+    </Border>
+
+    </Grid>
+</Page>

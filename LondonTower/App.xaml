@@ -1,0 +1,25 @@
+﻿<Application x:Class="LondonTower.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:LondonTower"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- FONTS -->
+            <FontFamily x:Key="GeneralFont" >Times New Roman</FontFamily>
+            <FontFamily x:Key="Tangerine">pack://application:,,,/Fonts/#Tangerine</FontFamily>
+            <!-- GENERAL COLORS SOLID BRUSH PALETE-->
+            <SolidColorBrush x:Key="ColShadow" Color="#2A3132"/>
+            <SolidColorBrush x:Key="ColLightBlue" Color="#90AFC5"/>
+            <SolidColorBrush x:Key="ColDarkBlue" Color="#336B87"/>
+            <SolidColorBrush x:Key="ColBrown" Color="#763626"/>
+            <SolidColorBrush x:Key="ColWhite" Color="#FFF"/>
+            <!-- GENERAL COLORS FOR GRADIENTBRUSH-->
+            <Color  x:Key="RadColShadow"   >#FF2A3132</Color>
+            <Color x:Key="RadColLightBlue" >#FF90AFC5</Color>
+            <Color x:Key="RadColDarkBlue"  >#FF336B87</Color>
+            <Color x:Key="RadColBrown" >#FF763626</Color>
+            <Color x:Key="RadColWhite" >#FFFF</Color>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
