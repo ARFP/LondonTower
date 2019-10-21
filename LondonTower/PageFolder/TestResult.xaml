@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:libComponent="clr-namespace:LondonTowerLibrary.Button;assembly=LondonTowerLibrary"
+      xmlns:libBorder="clr-namespace:LondonTowerLibrary.Border;assembly=LondonTowerLibrary"
       xmlns:libUc="clr-namespace:LondonTowerLibrary.UserControls;assembly=LondonTowerLibrary"
       mc:Ignorable="d" 
       d:DesignHeight="960" d:DesignWidth="1280"
@@ -11,6 +12,7 @@
       >
     <Page.Resources>
         <Style x:Key="HeaderStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="Padding" Value="5 0"/>            
             <Setter Property="Background" Value="#763626" />
             <Setter Property="Foreground" Value="White" />
             <Setter Property="BorderBrush" Value="Black" />
@@ -20,42 +22,49 @@
             <Setter Property="MinWidth" Value="0" />
             <Setter Property="MinHeight" Value="30" />
         </Style>
+        <!--<Style  TargetType="{x:Type DataGrid}" >
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGrid}">
+                        <Grid>
+                            <Border CornerRadius="15">
+                                <AdornedElementPlaceholder/>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            
+        </Style>-->
     </Page.Resources>
-    <Page.Background>
-        <ImageBrush ImageSource="/LondonTowerLibrary;component/Resources/WallpaperTower.png" Stretch="UniformToFill" />
-    </Page.Background>
+ 
     <Grid Name="GridWindow" Margin="0">
-        <Grid.Background>
-            <LinearGradientBrush Opacity="0.9" EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                <LinearGradientBrush.RelativeTransform>
-                    <TransformGroup>
-                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                        <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                        <RotateTransform Angle="-40.601" CenterY="0.5" CenterX="0.5"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </LinearGradientBrush.RelativeTransform>
-                <GradientStop Offset="0" Color="#2A3132"/>
-                <GradientStop Offset="0.35" Color="#90AFC5"/>
-                <GradientStop Offset="0.65" Color="#90AFC5"/>
-                <GradientStop Offset="1" Color="#2A3132"/>
-            </LinearGradientBrush>
-        </Grid.Background>
-        <TextBlock Name="labelTitleWindow" Text="Resultats" Margin="0,40,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="64" FontSize="36" Foreground="#FF763626" FontWeight="Bold" FontFamily="Times New Roman"/>
+        <TextBlock Name="labelTitleWindow" Text="Resultats" Margin="0,40,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="64" FontSize="36" Style="{StaticResource TextBlockTitle}"/>
 
         <libUc:UCResultPersonn Margin="100,120,0,0" />
         <libUc:UCResultGlobal HorizontalAlignment="Right" Margin="0,120,100,0" />
-        
-        
-        <DataGrid ColumnHeaderStyle="{StaticResource HeaderStyle}" 
+
+        <libBorder:AdornedBorder Style="{StaticResource WoodBorderShadow}" Margin="0,493,0,0" VerticalAlignment="Top" 
+                  HorizontalAlignment="Center">
+
+
+
+            <Grid Margin="-9">
+            <Border Name="mask" Background="{StaticResource ColShadow}" CornerRadius="19"/>
+                <StackPanel>
+                    <StackPanel.OpacityMask >
+                        <VisualBrush Visual="{Binding ElementName=mask}" />
+                    </StackPanel.OpacityMask>
+                    <DataGrid ColumnHeaderStyle="{StaticResource HeaderStyle}" 
             HeadersVisibility="Column" CanUserResizeColumns="False"
-            Name="dataGrid1" VerticalAlignment="Top" 
-                  HorizontalAlignment="Center"
-                  Margin="0,493,0,0" OpacityMask="#FF90AFC5" 
+            Name="dataGrid1"                   
                   Background="White" 
                   FontFamily="Times New Roman" FontSize="18" 
                   AutoGenerateColumns="False"
-                  Width="Auto">
+                  Width="Auto"
+                              BorderBrush="Transparent"
+                  >
+
             <DataGrid.CellStyle>
                 <Style TargetType="DataGridCell">
                     <Setter Property="TextBlock.TextAlignment" Value="Center" />
@@ -100,8 +109,11 @@
             </DataGrid.Columns>-->
             
         </DataGrid>
-
-        <libComponent:WoodButtonUc Name="ButNextPage" ImgSource="/LondonTowerLibrary;Component/Resources/woodarrow.png" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,30,30"/>
+                </StackPanel>
+            </Grid>
+        </libBorder:AdornedBorder>
+        
+        <libComponent:WoodButtonUc Name="ButNextPage" ImgName="exitButton" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,30,30" MAGICEnabled="True"/>
 
     </Grid>
 </Page>

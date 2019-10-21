@@ -24,7 +24,7 @@ namespace LondonTowerLibrary.UserControls
         {
             InitializeComponent();
             this.VerticalAlignment=VerticalAlignment.Bottom;
-            Margin = new Thickness(0, 0, 0, 50);
+            Margin = new Thickness(0, 0, 0, 0);
         }
     }
 }

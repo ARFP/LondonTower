@@ -61,13 +61,14 @@ namespace LondonTowerLibrary.UserControls
             if (UcGoal)
             {
                 HorizontalAlignment = HorizontalAlignment.Right;
-                this.Margin = new Thickness(0, 120, 20, 0);
+                this.Margin = new Thickness(0, 120, 10, 0);
                 listPeg = VTrial.ViewPegslistGoal;
+                
             }
             else
             {
                 HorizontalAlignment = HorizontalAlignment.Left;
-                this.Margin = new Thickness(20, 120, 0, 0);
+                this.Margin = new Thickness(10, 120, 0, 0);
                 listPeg = VTrial.ViewPegsList;
             }
 
@@ -97,11 +98,11 @@ namespace LondonTowerLibrary.UserControls
             /*ENCRAGE ET AJOUT DE LA GRID AU CONTAINER*/
             grid.VerticalAlignment = VerticalAlignment.Bottom;
             grid.HorizontalAlignment = HorizontalAlignment.Center;
-            grid.Margin = new Thickness(0, -10, 0, 0);
+            grid.Margin = new Thickness(0, 0, 0, 10);
             GridGame.Children.Add(grid);
 
             grid.Width = sequence * (nbrPeg - 1) + 65;
-            grid.Height = 426;
+            grid.Height = 436;
 
             /*CREATION DES COLONNES DE LA GRID */
             for(int i = 0; i <= nbrPeg + 1; i++)
@@ -158,7 +159,7 @@ namespace LondonTowerLibrary.UserControls
             imgPointeur.VerticalAlignment = VerticalAlignment.Bottom;
             imgPointeur.HorizontalAlignment = HorizontalAlignment.Left;
             imgPointeur.Stretch = Stretch.None;
-            imgPointeur.Margin = new Thickness(0, 0, 0, 25);
+            imgPointeur.Margin = new Thickness(0, 0, 0, 22);
             Grid.SetColumn(imgPointeur, 1);
             grid.Children.Add(imgPointeur);
 
@@ -230,7 +231,7 @@ namespace LondonTowerLibrary.UserControls
                     {
                         pegFrom = vpeg;
 
-                        VBeadTempo.Margin = new Thickness(0, 0, 0, 360);
+                        VBeadTempo.Margin = new Thickness(0, 0, 0, 370);
                         translateViewBead = new TranslateTransform();
                         VBeadTempo.RenderTransform = translateViewBead;
                         if (Mouse.GetPosition(grid).X > Step - Offset && Mouse.GetPosition(grid).X < grid.Width - Step + Offset)

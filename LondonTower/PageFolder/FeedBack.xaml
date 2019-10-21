@@ -4,107 +4,66 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:ImgFile ="clr-namespace:LondonTowerLibrary;assembly=LondonTowerLibrary"
-      xmlns:libComponent="clr-namespace:LondonTowerLibrary.Button;assembly=LondonTowerLibrary"
+      xmlns:libControls="clr-namespace:LondonTowerLibrary.Button;assembly=LondonTowerLibrary"
+      xmlns:libBorders="clr-namespace:LondonTowerLibrary.Border;assembly=LondonTowerLibrary"
       mc:Ignorable="d" 
       d:DesignHeight="960" d:DesignWidth="1280"
       Title="FeedBack">
 
-    
-    <Page.Resources>
-        <ResourceDictionary>
-            <Style x:Key="TextBlockStyle" TargetType="{x:Type TextBlock}">
-                <Setter Property="FontSize" Value="18"/>
-                <Setter Property="FontFamily" Value="{StaticResource GeneralFont}"/>
-                <Setter Property="Margin" Value="0 5"/>
-                <Setter Property="Foreground" Value="{StaticResource ColShadow}"/>
-                <Setter Property="FontWeight" Value="Bold"/>
-            </Style>
-            <Style x:Key="NoButtonBorder" TargetType="{x:Type Button}">
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type Button}">
-                            <ContentPresenter                  
-                            Margin="{TemplateBinding Padding}"                  
-                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"                  
-                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"                  
-                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"                  
-                            ContentTemplate="{TemplateBinding ContentTemplate}"                  
-                            RecognizesAccessKey="True"                  
-                            Content="{TemplateBinding Content}" />
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
 
-        </ResourceDictionary>
-
-    </Page.Resources>
-    <Page.Background>
-        <ImageBrush ImageSource="/LondonTowerLibrary;Component/Resources/WallpaperTower.png" Stretch="UniformToFill" />
-    </Page.Background>
-    <Grid>
-    <Border Padding=" 150 150 150 150"  >
-        <Border.Background>
-            <LinearGradientBrush Opacity="0.9">
-                <GradientStop Offset="0" Color="{StaticResource RadColShadow}"/>
-                <GradientStop Offset="0.35" Color="{StaticResource RadColLightBlue}"/>
-                <GradientStop Offset="0.65" Color="{StaticResource RadColLightBlue}"/>
-                <GradientStop Offset="1" Color="{StaticResource RadColShadow}"/>
-            </LinearGradientBrush>
-        </Border.Background>
-        <Border Padding=" 9 9 9 9" BorderThickness="1" CornerRadius="15" Background="{StaticResource ColBrown}" >
-            <Border.Effect>
-                <DropShadowEffect BlurRadius="30" ShadowDepth="5" Color="{StaticResource RadColShadow}" Direction="145"/>
-            </Border.Effect>
-            <Border Padding=" 3 3 3 3"  CornerRadius="15" Background="{StaticResource ColLightBlue}">
-                <Border Padding=" 4 4 4 4"  CornerRadius="15" Background="{StaticResource ColBrown}" >
-
-                    <Border Padding=" 10 10 10 10"  CornerRadius="15"  >
-                        <Border.Background >
-                            <LinearGradientBrush >
-                                <GradientStop Offset="0" Color="{StaticResource RadColDarkBlue}"/>
-                                <GradientStop Offset="0.3" Color="{StaticResource RadColLightBlue}"/>
-                                <GradientStop Offset="0.7" Color="{StaticResource RadColLightBlue}"/>
-                                <GradientStop Offset="1" Color="{StaticResource RadColDarkBlue}" />
-                            </LinearGradientBrush>
-                        </Border.Background>
-                        <StackPanel   Background="Transparent" >
-                            <TextBlock Text="Merci de votre participation" Padding="40" Grid.Row="2" TextAlignment="Center"    FontSize="200"                                   
+    <Grid >
+        <libBorders:AdornedBorder Style="{StaticResource WoodBorder}" Margin="150">
+            <StackPanel   Background="Transparent" >
+                <TextBlock Text="Merci de votre participation" Padding="40" Grid.Row="2" TextAlignment="Center"    FontSize="160"                                   
                       FontFamily="{StaticResource Tangerine}" TextWrapping="Wrap" FontWeight="Bold" LineStackingStrategy="BlockLineHeight"  LineHeight="120" >
-                                <TextBlock.Foreground>
-                                    <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
-                                        <GradientStop Color="white" Offset="0"/>
-                                        <GradientStop Color="green" Offset="0.25"/>
-                                        <GradientStop Color="blue" Offset="0.6"/>
-                                        <GradientStop Color="White" Offset="1"/>
-                                    </LinearGradientBrush>
-                                    <!--<ImageBrush ImageSource="img/fireworks.jpg"/>-->
-
-                                </TextBlock.Foreground>
-                                <TextBlock.Effect>
-                                    <DropShadowEffect ShadowDepth="0"   Color="{StaticResource RadColShadow}"   Opacity="1"  BlurRadius="15"/>
-                                </TextBlock.Effect>
-                            </TextBlock>
-                            <TextBlock FontStyle="Italic" FontSize="25" TextAlignment="Center" Margin="10 20 0 0" Style="{StaticResource TextBlockStyle}"
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                            <GradientStop Color="white" Offset="0"/>
+                            <GradientStop Color="green" Offset="0.25"/>
+                            <GradientStop Color="blue" Offset="0.6"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                        <!--<ImageBrush ImageSource="img/fireworks.jpg"/>-->
+                    </TextBlock.Foreground>
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="0"   Color="{StaticResource RadColShadow}"   Opacity="1"  BlurRadius="15"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+                <TextBlock FontStyle="Italic" FontSize="25" TextAlignment="Center" Margin="10 10 0 0" Style="{StaticResource TextBlockStyle}"
                                        Text="Comment évaluriez-vous votre prestation sur ce test sur une échelle de 1 à 10 ? "    />
-                            <ScrollBar Orientation="Horizontal" Margin="30" Background="{StaticResource ColShadow}" 
-                                       Foreground="{StaticResource ColDarkBlue}"  InputScope="10" Height="30" />
+                <Grid Margin="30 30 ">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <libControls:WoodRadioUC RadValue="01" Grid.Column="0" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
+                    <libControls:WoodRadioUC RadValue="02" Grid.Column="1" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
+                    <libControls:WoodRadioUC RadValue="03" Grid.Column="2" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
+                    <libControls:WoodRadioUC RadValue="04" Grid.Column="3" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
+                    <libControls:WoodRadioUC RadValue="05" Grid.Column="4" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
+                    <libControls:WoodRadioUC RadValue="06" Grid.Column="5" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
+                    <libControls:WoodRadioUC RadValue="07" Grid.Column="6" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
+                    <libControls:WoodRadioUC RadValue="08" Grid.Column="7" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
+                    <libControls:WoodRadioUC RadValue="09" Grid.Column="8" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
+                    <libControls:WoodRadioUC RadValue="10" Grid.Column="9" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="7*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <libControls:WoodButtonUc ImgName="woodarrow"  Name="ButNextPage"  Grid.Column="1" Click="WoodButton_Click" Width="100" Height="100"/>
 
-                            <Grid>
-                                <Grid.ColumnDefinitions >
-                                    <ColumnDefinition Width="7*"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                            </Grid>
-
-                        </StackPanel>
-                    </Border>
-                </Border>
-            </Border>
-        </Border>
-    </Border>
-
-        <libComponent:WoodButtonUc Name="ButNextPage" ImgSource="/LondonTowerLibrary;Component/Resources/woodarrow.png" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,30,30"/>
-
+                </Grid>
+            </StackPanel>
+        </libBorders:AdornedBorder>
     </Grid>
 </Page>

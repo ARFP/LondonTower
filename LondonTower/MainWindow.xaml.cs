@@ -1,5 +1,6 @@
 ﻿using LondonTower.PageFolder;
 using LondonTowerLibrary;
+using LondonTowerLibrary.ViewModels;
 using System;
 using System.Windows;
 using System.Windows.Navigation;
@@ -20,15 +21,16 @@ namespace LondonTower
              //tower = FactoryLondonTower.InitialiseTowerOfLondon();
 
         }
-        public void InitTower(int _level)
+        public void InitTower(LondonTowerVM towerVM)
         {
-            tower = FactoryLondonTower.GetTowerOfLondon(_level);
-            LoadingPage("Demo");
+            tower = FactoryLondonTower.GetTowerOfLondon(towerVM);
+            
+            //LoadingPage("Demo");
             //LoadingPage("TestResult");
             
         }
 
-        public void LoadingPage(string _nextPage)
+        public void LoadingPage(string _nextPage, object sentback = null)
         {
             switch (_nextPage)
             {
@@ -36,6 +38,7 @@ namespace LondonTower
                     this.Navigate(new Identification());
                     break;
                 case "Demo":
+                    InitTower((LondonTowerVM)sentback);
                     this.Navigate(new Demo(tower.GetNextTrial()));
                     break;
                 case "Trial":
@@ -52,6 +55,7 @@ namespace LondonTower
                     this.Navigate(new FeedBack());
                     break;
                 case "TestResult":
+                    this.tower.Fdback = sentback as string;
                     this.Navigate(new TestResult(tower));
                     break;
 

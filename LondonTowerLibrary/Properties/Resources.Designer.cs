@@ -381,6 +381,111 @@ namespace LondonTowerLibrary.Properties {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à {
+        ///  &quot;Level&quot;: 3,
+        ///  &quot;TestDate&quot;: &quot;2019-10-17T12:28:40.7505447+02:00&quot;,
+        ///  &quot;TrialList&quot;: [
+        ///    {
+        ///      &quot;PegListGoal&quot;: [
+        ///        {
+        ///          &quot;PegNumber&quot;: 1,
+        ///          &quot;BeadList&quot;: [
+        ///            {
+        ///              &quot;ColorBead&quot;: 1
+        ///            }
+        ///          ]
+        ///        },
+        ///        {
+        ///          &quot;PegNumber&quot;: 2,
+        ///          &quot;BeadList&quot;: [
+        ///            {
+        ///              &quot;ColorBead&quot;: 3
+        ///            }
+        ///          ]
+        ///        },
+        ///        {
+        ///          &quot;PegNumber&quot;: 3,
+        ///          &quot;BeadList&quot;: [
+        ///            {
+        ///              &quot;Colo [le reste de la chaîne a été tronqué]&quot;;.
+        /// </summary>
+        internal static string TowerOfLondon_Lvl3 {
+            get {
+                return ResourceManager.GetString("TowerOfLondon_Lvl3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à {
+        ///  &quot;Level&quot;: 4,
+        ///  &quot;TestDate&quot;: &quot;2019-10-17T12:33:04.172823+02:00&quot;,
+        ///  &quot;TrialList&quot;: [
+        ///    {
+        ///      &quot;PegListGoal&quot;: [
+        ///        {
+        ///          &quot;PegNumber&quot;: 1,
+        ///          &quot;BeadList&quot;: [
+        ///            {
+        ///              &quot;ColorBead&quot;: 3
+        ///            }
+        ///          ]
+        ///        },
+        ///        {
+        ///          &quot;PegNumber&quot;: 2,
+        ///          &quot;BeadList&quot;: [
+        ///            {
+        ///              &quot;ColorBead&quot;: 2
+        ///            }
+        ///          ]
+        ///        },
+        ///        {
+        ///          &quot;PegNumber&quot;: 3,
+        ///          &quot;BeadList&quot;: [
+        ///            {
+        ///              &quot;Color [le reste de la chaîne a été tronqué]&quot;;.
+        /// </summary>
+        internal static string TowerOfLondon_Lvl4 {
+            get {
+                return ResourceManager.GetString("TowerOfLondon_Lvl4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à {
+        ///  &quot;Level&quot;: 5,
+        ///  &quot;TestDate&quot;: &quot;2019-10-17T15:46:26.5461952+02:00&quot;,
+        ///  &quot;TrialList&quot;: [
+        ///    {
+        ///      &quot;PegListGoal&quot;: [
+        ///        {
+        ///          &quot;PegNumber&quot;: 1,
+        ///          &quot;BeadList&quot;: [
+        ///            {
+        ///              &quot;ColorBead&quot;: 1
+        ///            }
+        ///          ]
+        ///        },
+        ///        {
+        ///          &quot;PegNumber&quot;: 2,
+        ///          &quot;BeadList&quot;: [
+        ///            {
+        ///              &quot;ColorBead&quot;: 3
+        ///            }
+        ///          ]
+        ///        },
+        ///        {
+        ///          &quot;PegNumber&quot;: 3,
+        ///          &quot;BeadList&quot;: [
+        ///            {
+        ///              &quot;Colo [le reste de la chaîne a été tronqué]&quot;;.
+        /// </summary>
+        internal static string TowerOfLondon_Lvl5 {
+            get {
+                return ResourceManager.GetString("TowerOfLondon_Lvl5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap WallpaperTower {

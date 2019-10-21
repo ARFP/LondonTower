@@ -4,33 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LondonTowerLibrary.UserControls"
+             xmlns:libBorder="clr-namespace:LondonTowerLibrary.Border"
              mc:Ignorable="d" 
              d:DesignHeight="290" d:DesignWidth="470"
              DataContext="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Page}}, Path= Tower}">
 
     <StackPanel Background="Transparent" HorizontalAlignment="Left" Height="290" Margin="0,0,0,0" VerticalAlignment="Top" Width="470">
-        <Border Padding=" 9 9 9 9" BorderThickness="1" CornerRadius="15" Background="#763626" Height="290">
-            <Border Padding=" 3 3 3 3"  CornerRadius="15" Background="#90AFC5">
-                <Border Padding=" 4 4 4 4"  CornerRadius="15" Background="#763626" Margin="0,0,0,0" >
-                    <Border Padding=" 10 10 10 10"  CornerRadius="15" Margin="0,0,0,0">
-                        <Border.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                                <LinearGradientBrush.RelativeTransform>
-                                    <TransformGroup>
-                                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                                        <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                                        <RotateTransform Angle="-40.601" CenterY="0.5" CenterX="0.5"/>
-                                        <TranslateTransform/>
-                                    </TransformGroup>
-                                </LinearGradientBrush.RelativeTransform>
-
-                                <GradientStop Offset="0" Color="#336B87"/>
-                                <GradientStop Offset="0.3" Color="#90AFC5"/>
-                                <GradientStop Offset="0.7" Color="#90AFC5"/>
-                                <GradientStop Offset="1" Color="#2A3132"/>
-
-                            </LinearGradientBrush>
-                        </Border.Background>
+        <libBorder:AdornedBorder Style="{StaticResource WoodBorder}">
                         <StackPanel>
                             <Grid>
                                 <Label Content="Nom :" HorizontalAlignment="Left" Margin="22,11,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" Height="30"/>
@@ -54,9 +34,6 @@
                             </Grid>
                         </StackPanel>
 
-                    </Border>
-                </Border>
-            </Border>
-        </Border>
+        </libBorder:AdornedBorder>
     </StackPanel>
 </UserControl>

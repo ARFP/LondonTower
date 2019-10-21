@@ -34,6 +34,9 @@
     <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.WPF, Version=4.7.0.37774, Culture=neutral, PublicKeyToken=0758b07a11a4f466, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.WPF.4.7.0.9\lib\net40\FontAwesome.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -54,15 +57,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bead.cs" />
+    <Compile Include="Border\AdornedBorder.cs" />
     <Compile Include="Button\WoodButtonUc.xaml.cs">
       <DependentUpon>WoodButtonUc.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Button\WoodRadioUC.xaml.cs">
+      <DependentUpon>WoodRadioUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ColorEnum.cs" />
-    <Compile Include="DateToAgeConverter.cs" />
-    <Compile Include="DateToStringConverter.cs">
+    <Compile Include="Converters\DateToAgeConverter.cs" />
+    <Compile Include="Converters\DateToStringConverter.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="EnumToBooleanConverter.cs" />
+    <Compile Include="Converters\EnumToBooleanConverter.cs" />
+    <Compile Include="Converters\HourToStringConverter.cs" />
     <Compile Include="Event\NotifyPropertyChanged.cs" />
     <Compile Include="Event\TrialCompleteEvent.cs" />
     <Compile Include="FactoryLondonTower.cs" />
@@ -101,6 +109,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Button\WoodButtonUc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Button\WoodRadioUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -324,6 +336,26 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\peg5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\TowerOfLondon_Lvl3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\TowerOfLondon_Lvl4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\TowerOfLondon_Lvl5.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TowerOfLondon_Lvl3.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TowerOfLondon_Lvl4.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TowerOfLondon_Lvl5.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

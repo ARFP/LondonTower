@@ -12,16 +12,21 @@ namespace LondonTowerLibrary
         private List<Trial> trialList;
         private int trialNumber;
         private Personn personn;
+        private bool visualHelp;
+        private DateTime dateAndTime;
+        private string fdback;
 
         public int Level { get => level; set => level = value; }
         public DateTime TestDate { get => testDate; set => testDate = value; }
         public List<Trial> TrialList { get => trialList; set => trialList = value; }
         public Personn Personn { get => personn; set => personn = value; }
+        public bool VisualHelp { get => visualHelp; set => visualHelp = value; }
+        public DateTime DateAndTime { get => dateAndTime; set => dateAndTime = value; }
+        public string Fdback { get => fdback; set => fdback = value; }
 
         public TowerOfLondon()
         {
             trialNumber = 0;
-            testDate = DateTime.Now;
         }
         public TowerOfLondon(int _level, List<Trial> _trialList, Personn _personn) : this()
         {

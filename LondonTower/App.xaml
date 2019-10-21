@@ -2,24 +2,298 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:LondonTower"
+             xmlns:libButtons="clr-namespace:LondonTowerLibrary.Button;assembly=LondonTowerLibrary"
+             xmlns:libBorder="clr-namespace:LondonTowerLibrary.Border;assembly=LondonTowerLibrary"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <!-- FONTS -->
-            <FontFamily x:Key="GeneralFont" >Times New Roman</FontFamily>
-            <FontFamily x:Key="Tangerine">pack://application:,,,/Fonts/#Tangerine</FontFamily>
-            <!-- GENERAL COLORS SOLID BRUSH PALETE-->
-            <SolidColorBrush x:Key="ColShadow" Color="#2A3132"/>
-            <SolidColorBrush x:Key="ColLightBlue" Color="#90AFC5"/>
-            <SolidColorBrush x:Key="ColDarkBlue" Color="#336B87"/>
-            <SolidColorBrush x:Key="ColBrown" Color="#763626"/>
-            <SolidColorBrush x:Key="ColWhite" Color="#FFF"/>
-            <!-- GENERAL COLORS FOR GRADIENTBRUSH-->
-            <Color  x:Key="RadColShadow"   >#FF2A3132</Color>
-            <Color x:Key="RadColLightBlue" >#FF90AFC5</Color>
-            <Color x:Key="RadColDarkBlue"  >#FF336B87</Color>
-            <Color x:Key="RadColBrown" >#FF763626</Color>
-            <Color x:Key="RadColWhite" >#FFFF</Color>
+        <!-- FONTS -->
+        <FontFamily x:Key="GeneralFont" >Times New Roman</FontFamily>
+        <FontFamily x:Key="Tangerine">pack://application:,,,/Fonts/#Tangerine</FontFamily>
+        <!-- GENERAL COLORS SOLID BRUSH PALETE-->
+        <SolidColorBrush x:Key="ColShadow" Color="#2A3132"/>
+        <SolidColorBrush x:Key="ColLightBlue" Color="#90AFC5"/>
+        <SolidColorBrush x:Key="ColDarkBlue" Color="#336B87"/>
+        <SolidColorBrush x:Key="ColBrown" Color="#763626"/>
+        <SolidColorBrush x:Key="ColWhite" Color="#FFF"/>
+        <!-- GENERAL COLORS FOR GRADIENTBRUSH-->
+        <Color  x:Key="RadColShadow"   >#FF2A3132</Color>
+        <Color x:Key="RadColLightBlue" >#FF90AFC5</Color>
+        <Color x:Key="RadColDarkBlue"  >#FF336B87</Color>
+        <Color x:Key="RadColBrown" >#FF763626</Color>
+        <Color x:Key="RadColWhite" >#FFFF</Color>
+        <Color x:Key="RadColWhiteDim" >#4FFF</Color>
+        <!--BORDERS DEFINITIONS-->
+        <!--INDIVIDUAL BORDERS-->
+        <!-- LAYER 0 (only use this one to center main page content-->
+        <Style x:Key="AdornedBorder0" TargetType="{x:Type Border}">
+            <Setter Property="Padding" Value="150 150 150 150"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush Opacity="0.9">
+                        <GradientStop Offset="0" Color="{StaticResource RadColShadow}"/>
+                        <GradientStop Offset="0.35" Color="{StaticResource RadColLightBlue}"/>
+                        <GradientStop Offset="0.65" Color="{StaticResource RadColLightBlue}"/>
+                        <GradientStop Offset="1" Color="{StaticResource RadColShadow}"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- LAYER 1-->
+        <Style x:Key="AdornedBorder1" TargetType="{x:Type Border}">
+            <Setter Property="Padding" Value="9 9 9 9"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="{StaticResource ColBrown}"/>
+            <Setter  Property="CornerRadius" Value="15"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="30" ShadowDepth="5" Color="{StaticResource RadColShadow}" Direction="145"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- LAYER 2-->
+        <Style x:Key="AdornedBorder2" TargetType="{x:Type Border}">
+            <Setter Property="Padding" Value="3 3 3 3"/>
+            <Setter Property="Background" Value="{StaticResource ColLightBlue}"/>
+            <Setter  Property="CornerRadius" Value="15"/>
+        </Style>
+        <!-- LAYER 3-->
+        <Style x:Key="AdornedBorder3" TargetType="{x:Type Border}">
+            <Setter Property="Padding" Value="1 1 1 1"/>
+            <Setter Property="Background" Value="{StaticResource ColBrown}"/>
+            <Setter  Property="CornerRadius" Value="15"/>
+        </Style>
+        <!-- LAYER 4 (ONLY USE IN COMBO WITH TRANSPARENT BACKGROUND PANELS)-->
+        <Style x:Key="AdornedBorder4" TargetType="{x:Type Border}">
+            <Setter Property="Padding" Value="10 10 10 10"/>
+            <Setter  Property="CornerRadius" Value="15"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush>
+                        <GradientStop Offset="0" Color="{StaticResource RadColDarkBlue}"/>
+                        <GradientStop Offset="0.3" Color="{StaticResource RadColLightBlue}"/>
+                        <GradientStop Offset="0.7" Color="{StaticResource RadColLightBlue}"/>
+                        <GradientStop Offset="1" Color="{StaticResource RadColDarkBlue}" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--ADORNEDBORDER CLASS STYLE : COMBINING LAYERS 0 to 4 (FOR MASSIVE PANELS AT THE CENTER OF THE SCREEN)-->
+        <Style TargetType="{x:Type libBorder:AdornedBorder}" x:Key="CentredBorder">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type libBorder:AdornedBorder}">
+                        <Border Style="{StaticResource AdornedBorder0}">
+                            <Border Style="{StaticResource AdornedBorder1}">
+                                <Border Style="{StaticResource AdornedBorder2}">
+                                    <Border Style="{StaticResource AdornedBorder3}">
+                                        <Border Style="{StaticResource AdornedBorder4}">
+                                            <ContentPresenter/>
+                                            <!--CONTENT PRESENTER MUST HAVE TRANSPARENT BACKGROUND-->
+                                        </Border>
+                                    </Border>
+                                </Border>
+                            </Border>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!--ADORNEDBORDER CLASS STYLE : COMBINING LAYERS 1 TO 5 (FOR NORMAL PANELS) -->
+        <Style TargetType="{x:Type libBorder:AdornedBorder}" x:Key="NormalBorder">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type libBorder:AdornedBorder}">
+                        <Border Style="{StaticResource AdornedBorder1}">
+                            <Border Style="{StaticResource AdornedBorder2}">
+                                <Border Style="{StaticResource AdornedBorder3}">
+                                    <Border Style="{StaticResource AdornedBorder4}">
+                                        <ContentPresenter/>
+                                        <!--CONTENT PRESENTER MUST HAVE TRANSPARENT BACKGROUND-->
+                                    </Border>
+                                </Border>
+                            </Border>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="CustomBorder" TargetType="{x:Type ContentControl}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ContentControl">
+                        <Grid>
+                            <Border BorderThickness="24"  CornerRadius="25">
+                                <Border.BorderBrush>
+                                    <ImageBrush  ImageSource="pack://application:,,,/LondonTowerLibrary;Component/Resources/Border.png"/>
+                                </Border.BorderBrush>
+                                <Border.Effect>
+                                    <DropShadowEffect BlurRadius="30" ShadowDepth="5" Color="{StaticResource RadColShadow}" Direction="145"/>
+                                </Border.Effect>
+                                <Border.Background>
+                                        <ImageBrush ImageSource="pack://application:,,,/LondonTowerLibrary;Component/Resources/wood.png"/>
+                                </Border.Background>
+                                <Border CornerRadius="15" >
+                                    <Border.Background >
+                                        <LinearGradientBrush >
+                                            <GradientStop Offset="0" Color="{StaticResource RadColDarkBlue}"/>
+                                            <GradientStop Offset="0.3" Color="{StaticResource RadColLightBlue}"/>
+                                            <GradientStop Offset="0.7" Color="{StaticResource RadColLightBlue}"/>
+                                            <GradientStop Offset="1" Color="{StaticResource RadColDarkBlue}" />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                    <Grid>
+                                        <Border Style="{StaticResource AdornedBorder4}">
+                                            <ContentPresenter/>
+                                            <!--CONTENT PRESENTER MUST HAVE TRANSPARENT BACKGROUND-->
+                                        </Border>
+                                    </Grid>
+                                </Border>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+            <Style x:Key="CustomShadowBorder" TargetType="{x:Type ContentControl}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ContentControl">
+                            <Grid>
+                                <Border BorderThickness="24"  CornerRadius="25">
+                                    <Border.BorderBrush>
+                                        <ImageBrush  ImageSource="pack://application:,,,/LondonTowerLibrary;Component/Resources/Border.png"/>
+                                    </Border.BorderBrush>
+                                    <Border.Effect>
+                                        <DropShadowEffect BlurRadius="30" ShadowDepth="5" Color="{StaticResource RadColShadow}" Direction="145"/>
+                                    </Border.Effect>
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="pack://application:,,,/LondonTowerLibrary;Component/Resources/wood.png"/>
+                                    </Border.Background>
+                                    <Border CornerRadius="15" Background="{StaticResource ColShadow}" > 
+                                        <Grid>
+                                            <Border CornerRadius="15" Padding="10 10 10 10" Background="{StaticResource ColShadow}">
+                                                <ContentPresenter/>
+                                                <!--CONTENT PRESENTER MUST HAVE TRANSPARENT BACKGROUND-->
+                                            </Border>
+                                        </Grid>
+                                    </Border>
+                                </Border>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style TargetType="{x:Type libBorder:AdornedBorder}" x:Key="WoodBorder">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type libBorder:AdornedBorder}">
+                        <ContentControl Style="{StaticResource CustomBorder}">
+                            <ContentPresenter/>
+                            <!--CONTENT PRESENTER MUST HAVE TRANSPARENT BACKGROUND-->
+                        </ContentControl>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+            <Style TargetType="{x:Type libBorder:AdornedBorder}" x:Key="WoodBorderShadow">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type libBorder:AdornedBorder}">
+                            <ContentControl Style="{StaticResource CustomShadowBorder}">
+                                <ContentPresenter/>
+                                <!--CONTENT PRESENTER MUST HAVE TRANSPARENT BACKGROUND-->
+                            </ContentControl>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <!--#endregion-->
+        <!-- END BORDERS-->
+        <!-- ROUND TEXTBOX TEMPLATE -->
+        <ControlTemplate x:Key="TextBoxTemplate" TargetType="{x:Type TextBoxBase}">
+            <Border Background="{TemplateBinding Background}" x:Name="Bd" BorderBrush="{StaticResource ColShadow}"
+                        BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                <ScrollViewer x:Name="PART_ContentHost"/>
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="0" Color="{StaticResource RadColShadow}" Direction="145" />
+                </Border.Effect>
+            </Border>
+        </ControlTemplate>
+        <!-- TEXTBOX  STYLE-->
+        <Style x:Key="TextBoxStyle" TargetType="{x:Type TextBox }">
+            <Setter Property="Padding" Value="5 4"/>
+            <Setter Property="Background" Value="{StaticResource ColDarkBlue}"/>
+            <Setter Property="Foreground" Value="{StaticResource ColWhite}"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontFamily" Value="{StaticResource GeneralFont}"/>
+        </Style>
+        <!--TEXTBLOCK STYLE-->
+        <Style x:Key="TextBlockStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontFamily" Value="{StaticResource GeneralFont}"/>
+            <Setter Property="Margin" Value="0 5"/>
+            <Setter Property="Foreground" Value="{StaticResource ColShadow}"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <!--ERRORS BOX -->
+        <ControlTemplate x:Key="TexBoxErrorTemplate" >
+            <StackPanel>
+                <Border  BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Width="654">
+                    <AdornedElementPlaceholder />
+                </Border>
+                <ItemsControl ItemsSource="{Binding}">
+                    <ItemsControl.ItemTemplate >
+                        <DataTemplate >
+                            <Border CornerRadius="10" BorderBrush="{StaticResource ColWhite}" BorderThickness="1" Margin="0 3 0 0" >
+                                <Border.Background >
+                                    <SolidColorBrush Color="{StaticResource RadColWhiteDim}"/>
+                                </Border.Background>
+                                <Grid HorizontalAlignment="Center">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="9*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <fa:FontAwesome FontSize="18" Icon="ExclamationTriangle" Grid.Column="0" VerticalAlignment="Center" Foreground="Red" 
+                                                    Padding="0 2 5 0 "/>
+                                    <TextBlock Grid.Column="1" Grid.IsSharedSizeScope="True" Text="{Binding ErrorContent}" FontStyle="Italic" 
+                                               Background="Transparent" Foreground="Red" FontSize="18" FontWeight="DemiBold"  Margin="3"  >
+                                    </TextBlock>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </ControlTemplate>
+        <!--TEXTBLOCK TITLE STYLE-->
+        <Style x:Key="TextBlockTitle" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Foreground" Value="{StaticResource ColBrown}"/>
+            <Setter Property="FontFamily" Value="{StaticResource GeneralFont}"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect ShadowDepth="0"   Color="{StaticResource RadColWhite}"   Opacity="1"  BlurRadius="3"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!--RADIOBUTTON STYLE-->
+        <Style x:Key="RadioStyle" TargetType="{x:Type RadioButton}">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="5 4"/>
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="FontFamily" Value="{StaticResource GeneralFont}"/>
+            <Setter Property="Foreground" Value="{StaticResource ColShadow}"/>
+            <Setter Property="ForceCursor" Value="true"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

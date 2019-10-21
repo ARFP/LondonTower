@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Windows.Controls;
+using LondonTowerLibrary.Properties;
 using LondonTowerLibrary.ViewModels;
 using Newtonsoft.Json;
 
@@ -10,56 +11,60 @@ namespace LondonTowerLibrary
     public class FactoryLondonTower
     {
 
-        public static TowerOfLondon GetTowerOfLondon(int level)
+        public static TowerOfLondon GetTowerOfLondon(LondonTowerVM towerVM)
         {
-            TowerOfLondon ToL = LoadTowerOfLondon<TowerOfLondon>(level);
+
+
+            TowerOfLondon ToL = LoadTowerOfLondon<TowerOfLondon>(towerVM.NbPegs);
+            ToL.DateAndTime = towerVM.DateAndTime;
+            ToL.Personn = towerVM.Personne;
+            ToL.VisualHelp = towerVM.VisualHelp;
             //SaveTn(ToL);
             return ToL;
         }
 
         private static T LoadTowerOfLondon<T>(int level)
         {
-            string path = "./TowerOfLondon_Lvl" + level + ".txt";
-
-            var str = File.ReadAllText(path);
+           string path = "./Config/TowerOfLondon_Lvl" + level + ".txt";
+           var str = File.ReadAllText(path);
             T Tempo = JsonConvert.DeserializeObject<T>(str);
             return Tempo;
         }
 
         public static void SaveTowerOfLondon(TowerOfLondon _t)
         {
-            string path = "./TowerOfLondon_Lvl" + _t.Level + ".txt";
+            string path = "pack://application:,,,/Component/Resources/Config/TowerOfLondon_Lvl" + _t.Level + "_save.txt";
             string str = JsonConvert.SerializeObject(_t, Formatting.Indented);
             File.WriteAllText(path, str);
         }
 
-        private static void SaveTn(TowerOfLondon _t)
-        {
-            string path = "./Tower" + _t.Level + ".txt";
-            string str = JsonConvert.SerializeObject(_t, Formatting.Indented);
-            File.WriteAllText(path, str);
-        }
+        //private static void SaveTn(TowerOfLondon _t)
+        //{
+        //    string path = "./ConfigTower/Tower" + _t.Level + "_save.txt";
+        //    string str = JsonConvert.SerializeObject(_t, Formatting.Indented);
+        //    File.WriteAllText(path, str);
+        //}
 
-        public static TowerOfLondon InitialiseTowerOfLondon()
-        {
+        //public static TowerOfLondon InitialiseTowerOfLondon()
+        //{
 
-            //Trial trial;
-            //List<Trial> ListTrial = new List<Trial>();
-            //for(int i = 0; i <= 10; i++)
-            //{
-            //    trial = new Trial(i, 5);
-            //    trial.PegList = InitListStart();
-            //    trial.PegListGoal = InitListGoalPosition();
-            //    ListTrial.Add(trial);
-            //}
+        //    //Trial trial;
+        //    //List<Trial> ListTrial = new List<Trial>();
+        //    //for(int i = 0; i <= 10; i++)
+        //    //{
+        //    //    trial = new Trial(i, 5);
+        //    //    trial.PegList = InitListStart();
+        //    //    trial.PegListGoal = InitListGoalPosition();
+        //    //    ListTrial.Add(trial);
+        //    //}
 
-            //TowerOfLondon tower = new TowerOfLondon(5,ListTrial,new Personn());
-            //tower.Personn = new Personn("Super", "Toto", Genre.Homme, new System.DateTime(1984,10,1));
-            //SaveTowerOfLondon(tower);
+        //    //TowerOfLondon tower = new TowerOfLondon(5,ListTrial,new Personn());
+        //    //tower.Personn = new Personn("Super", "Toto", Genre.Homme, new System.DateTime(1984,10,1));
+        //    //SaveTowerOfLondon(tower);
 
-            TowerOfLondon tower = GetTowerOfLondon(5);
-            return tower;
-        }
+        //    TowerOfLondon tower = GetTowerOfLondon(5);
+        //    return tower;
+        //}
 
         private static Bead CreateBead(ColorEnum color)
         {

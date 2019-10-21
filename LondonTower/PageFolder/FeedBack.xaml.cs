@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using LondonTowerLibrary.Button;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace LondonTower.PageFolder
 {
@@ -21,6 +12,7 @@ namespace LondonTower.PageFolder
     public partial class FeedBack : Page
     {
         CommandNavigate myCommand;
+        string fback;
         public FeedBack()
         {
             InitializeComponent();
@@ -36,11 +28,18 @@ namespace LondonTower.PageFolder
         {
             //this.NavigationService.Navigate(new Identification());
             MainWindow main = (MainWindow)Window.GetWindow(this);
-            main.LoadingPage("TestResult");
+
+            main.LoadingPage("TestResult", fback);
         }
 
         public CommandNavigate MyNextCommand {
             get => myCommand;
             set => myCommand = value; }
+        private void WoodRadioUC_WhyThou(object sender, RoutedEventArgs e)
+        {
+            WoodRadioUC radio = (WoodRadioUC)sender;
+            this.fback = radio.RadValue ;
+            this.ButNextPage.MAGICEnabled = true;
+        }
     }
 }

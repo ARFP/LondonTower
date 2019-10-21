@@ -4,49 +4,25 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:libComponent="clr-namespace:LondonTowerLibrary.Button;assembly=LondonTowerLibrary"
+      xmlns:libBorders="clr-namespace:LondonTowerLibrary.Border;assembly=LondonTowerLibrary"
       mc:Ignorable="d" 
       d:DesignHeight="960" d:DesignWidth="1280"
       Title="Demo">
-    <Page.Background>
-        <ImageBrush ImageSource="/LondonTowerLibrary;component/Resources/WallpaperTower.png" Stretch="UniformToFill" />
-    </Page.Background>
-    
-    <Grid Name="GridWindow" Margin="0">
-        <Grid.Background>
-            <LinearGradientBrush Opacity="0.9" EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                <LinearGradientBrush.RelativeTransform>
-                    <TransformGroup>
-                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                        <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                        <RotateTransform Angle="-40.601" CenterY="0.5" CenterX="0.5"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </LinearGradientBrush.RelativeTransform>
-                <GradientStop Offset="0" Color="#2A3132"/>
-                <GradientStop Offset="0.35" Color="#90AFC5"/>
-                <GradientStop Offset="0.65" Color="#90AFC5"/>
-                <GradientStop Offset="1" Color="#2A3132"/>
-            </LinearGradientBrush>
-        </Grid.Background>
-        
-        <TextBlock Name="labelTitleWindow" Text="Démonstration" Margin="565,34,376,0" VerticalAlignment="Top" Height="64" FontSize="36" Foreground="#FF763626" FontWeight="Bold" FontFamily="Times New Roman"/>
-        
-        
-        <StackPanel  Name="StackpanelInstru" Background="Transparent" Height="270" Margin="0,0,0,50" VerticalAlignment="Bottom" Width="900">
-            <Border Padding=" 9 9 9 9" BorderThickness="1" CornerRadius="15" Background="#763626" Height="270">
-                <Border Padding=" 3 3 3 3"  CornerRadius="15" Background="#90AFC5">
-                    <Border Padding=" 4 4 4 4"  CornerRadius="15" Background="#763626" Margin="0,0,0,0" >
-                        <Border Padding=" 10 10 10 10"  CornerRadius="15" Background="#2a3132">
-                            <StackPanel>
-                                <Label Name="labelTitreInstru" FontSize="25" FontFamily="Times New Roman" Margin="0" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#90afc5"/>
-                                <TextBlock Name="labelTextInstru" TextWrapping="WrapWithOverflow" FontSize="18" FontFamily="Times New Roman" Margin="0" VerticalAlignment="Top" Foreground="#90afc5"/>
-                            </StackPanel>
-                        </Border>
-                    </Border>
-                </Border>
-            </Border>
-        </StackPanel>
 
-        <libComponent:WoodButtonUc Name="ButNextPage" ImgSource="/LondonTowerLibrary;Component/Resources/woodarrow.png" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,30,30" Visibility="Hidden" />
+    
+    <Grid Name="GridWindow" Margin="0">        
+        <TextBlock Name="labelTitleWindow" Text="Démonstration" Margin="0,34,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="64" FontSize="36" Style="{StaticResource TextBlockTitle}"/>
+
+        <libBorders:AdornedBorder Style="{StaticResource WoodBorderShadow}"  Height="270" Margin="0,0,0,30" VerticalAlignment="Bottom" Width="900">
+            <StackPanel  Name="StackpanelInstru" Background="Transparent">
+            
+                <StackPanel>
+                    <Label Name="labelTitreInstru" FontSize="25" FontFamily="Times New Roman" Margin="0" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold" Foreground="{StaticResource ColLightBlue}"/>
+                    <TextBlock Name="labelTextInstru" TextWrapping="WrapWithOverflow" FontSize="18" FontFamily="Times New Roman" Margin="0" VerticalAlignment="Top" Foreground="{StaticResource ColLightBlue}"/>
+                </StackPanel>
+            
+        </StackPanel>
+        </libBorders:AdornedBorder>
+        <libComponent:WoodButtonUc Name="ButNextPage" ImgName="woodarrow" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,30,30" MAGICEnabled="False" />
     </Grid>
 </Page>

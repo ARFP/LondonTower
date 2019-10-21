@@ -5,40 +5,54 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LondonTowerLibrary.Button"
              mc:Ignorable="d" 
+             Loaded="UserControl_Loaded"
              d:DesignHeight="{Binding ImgSource.Height}" d:DesignWidth="{Binding ImgSource.Width}"
-             DataContext="{Binding RelativeSource={RelativeSource Self}}">
+             >
 
-    <Button Name="button" Click="Button_Click">
+   <Button Name="button" Click="Button_Click"  MouseEnter="Button_MouseEnter">
         <Button.Template>
             <ControlTemplate TargetType="{x:Type Button}">
-                <Border Name="buttonBorder">
-                    <Border.Effect>
-                        <DropShadowEffect Opacity="0.0" />
-                    </Border.Effect>
-                    <Border.Child>
-                        <Image Name="img" Source="{Binding ImgSource}" Stretch="None"/>
-                    </Border.Child>
-                </Border>
-                <ControlTemplate.Triggers>
-                    <Trigger Property="IsMouseOver" Value="true">
-                        <Setter TargetName="buttonBorder" Property="Effect">
-                            <Setter.Value>
-                                <DropShadowEffect Opacity="0.8" />
-                            </Setter.Value>
-                        </Setter>
-                    </Trigger>
-                    <Trigger Property="IsMouseCaptured" Value="true">
-                        <Setter TargetName="buttonBorder" Property="Effect">
-                            <Setter.Value>
-                                <DropShadowEffect Opacity="0.8" Direction="135"  
-                             ShadowDepth="3" BlurRadius="1" />
-                            </Setter.Value>
-                        </Setter>
-                    </Trigger>
-                </ControlTemplate.Triggers>
-            </ControlTemplate>
-        </Button.Template>
+    <Border Name="buttonBorder">
+        <Border.Effect>
+            <DropShadowEffect Opacity="0.0"/>
+        </Border.Effect>
+        <Border.Child>
+            <Image Name="img"  Stretch="None" Cursor="Hand" DataContext="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=local:WoodButtonUc}}">
+                <Image.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="1" Color="#2A3132" Direction="145" />
+                </Image.Effect>
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Source" Value="{Binding ImgSource}"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Source" Value="{Binding SelectedImgSource}"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+        </Border.Child>
+    </Border>
+    <ControlTemplate.Triggers>
+        <Trigger Property="IsMouseOver" Value="true">
+            <Setter TargetName="buttonBorder" Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="10" ShadowDepth="3" Color="#2A3132" Direction="145"/>
+                </Setter.Value>
+            </Setter>
+        </Trigger>
+        <Trigger Property="IsMouseCaptured" Value="true">
+            <Setter TargetName="buttonBorder" Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect  BlurRadius="5" ShadowDepth="1" Direction="145"/>
 
+                </Setter.Value>
+            </Setter>
+        </Trigger>
+    </ControlTemplate.Triggers>
+    </ControlTemplate>
+    </Button.Template>
     </Button>
 
 </UserControl>

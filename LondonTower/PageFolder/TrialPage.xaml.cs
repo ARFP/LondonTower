@@ -43,11 +43,11 @@ namespace LondonTower.PageFolder
             ViewTrial vtrailtest = new ViewTrial(_t);
             this.DataContext = vtrailtest;
             vtrailtest.TrialComplet += EnableNextPage;
-
-            gameTrial = new GameUc(vtrailtest, false);
             gameGoal = new GameUc(vtrailtest, true);
-            GridWindow.Children.Add(gameTrial);
+            gameTrial = new GameUc(vtrailtest, false);
             GridWindow.Children.Add(gameGoal);
+            GridWindow.Children.Add(gameTrial);
+            
         }
 
         private void EnableNextPage(object sender, TrialCompleteEvent e)
@@ -55,14 +55,18 @@ namespace LondonTower.PageFolder
             if(e.Complete)
             {
                 ResultUc.Visibility = Visibility.Visible;
-                ButNextPage.Visibility = Visibility.Visible;
+                ButNextPage.MAGICEnabled = true;
             }
         }
 
         private void ButNextPage_Click(object sender, EventArgs e)
         {
-            MainWindow main = (MainWindow)Window.GetWindow(this);
-            main.LoadingPage("Trial");
+            if (ButNextPage.MAGICEnabled)
+            {
+                MainWindow main = (MainWindow)Window.GetWindow(this);
+                main.LoadingPage("Trial");
+            }
+
         }
 
     }

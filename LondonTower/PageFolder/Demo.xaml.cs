@@ -33,17 +33,20 @@ namespace LondonTower.PageFolder
             this.DataContext = trial;
             ViewTrial vtrailtest = new ViewTrial(_t);
             vtrailtest.TrialComplet+= EnableNextPage;
-
-            GameUc gameTrial = new GameUc(vtrailtest, false);
             GameUc gameGoal = new GameUc(vtrailtest, true);
-            GridWindow.Children.Add(gameTrial);
+            GameUc gameTrial = new GameUc(vtrailtest, false);
             GridWindow.Children.Add(gameGoal);
+            GridWindow.Children.Add(gameTrial);
+            
             ConfigLabel();
         }
         private void ButNextPage_Click(object sender, EventArgs e)
         {
-            MainWindow main = (MainWindow)Window.GetWindow(this);
-            main.LoadingPage("Trial");
+            if (ButNextPage.MAGICEnabled)
+            {
+                MainWindow main = (MainWindow)Window.GetWindow(this);
+                main.LoadingPage("Trial");
+            }
         }
         private void ConfigLabel()
         {
@@ -66,7 +69,7 @@ namespace LondonTower.PageFolder
             if (e.Complete)
             {
               
-                ButNextPage.Visibility = Visibility.Visible;
+                ButNextPage.MAGICEnabled =true;
             }
         }
 

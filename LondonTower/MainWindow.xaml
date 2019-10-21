@@ -5,5 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="MainWindow" Height="960" Width="1280" Source="./PageFolder/Identification.xaml" ResizeMode="NoResize">
- 
+    <NavigationWindow.Background>
+        <ImageBrush ImageSource="pack://application:,,,/LondonTowerLibrary;Component/Resources/WallpaperTower.png" Stretch="UniformToFill"/>
+    </NavigationWindow.Background>
 </NavigationWindow>
