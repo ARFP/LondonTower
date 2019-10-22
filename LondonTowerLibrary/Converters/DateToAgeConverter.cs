@@ -15,12 +15,15 @@ namespace LondonTowerLibrary.Converters
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             var now = DateTime.Today;
-            if (DateTime.TryParse((string)value, out DateTime date) && date < now )
-            {
-                var age = now.Year - date.Year;
+            //if (DateTime.TryParse((string)value, out DateTime date) && date < now )
+            //{
+            //    var age = now.Year - date.Year;
+            //    return ((date.Date>now.AddYears(-age))?--age:age).ToString();
+            //}
+            //else return "";
+            var date = (DateTime)value;
+            var age = now.Year - date.Year;
                 return ((date.Date>now.AddYears(-age))?--age:age).ToString();
-            }
-            else return "";
 
         }
 

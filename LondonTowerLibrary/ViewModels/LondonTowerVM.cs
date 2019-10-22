@@ -131,7 +131,7 @@ namespace LondonTowerLibrary.ViewModels
             return new TowerOfLondon
             {
                 VisualHelp = ltvm.VisualHelp,
-                DateAndTime = ltvm.DateAndTime,
+                DateAndTime = ltvm.DateAndTime.ToShortDateString(),
                 Personn = ltvm.Personne,
                 Level = ltvm.NbPegs
             };

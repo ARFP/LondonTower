@@ -16,7 +16,7 @@ namespace LondonTowerLibrary
 
 
             TowerOfLondon ToL = LoadTowerOfLondon<TowerOfLondon>(towerVM.NbPegs);
-            ToL.DateAndTime = towerVM.DateAndTime;
+            ToL.DateAndTime = towerVM.DateAndTime.ToString("dd/MM/yyyy HH:mm");
             ToL.Personn = towerVM.Personne;
             ToL.VisualHelp = towerVM.VisualHelp;
             //SaveTn(ToL);

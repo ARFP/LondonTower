@@ -61,6 +61,7 @@ namespace LondonTower.PageFolder
             {
                 MainWindow parent = Window.GetWindow(this) as MainWindow;
                 parent.LoadingPage("Demo", towerVM);
+                
             }
         }
 

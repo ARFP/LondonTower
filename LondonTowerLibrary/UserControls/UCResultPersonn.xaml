@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LondonTowerLibrary.UserControls"
              xmlns:libBorder="clr-namespace:LondonTowerLibrary.Border"
+             xmlns:libConverts="clr-namespace:LondonTowerLibrary.Converters"
              mc:Ignorable="d" 
              d:DesignHeight="290" d:DesignWidth="470"
              DataContext="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Page}}, Path= Tower}">
@@ -22,7 +23,7 @@
                             </Grid>
                             <Grid>
                                 <Label Content="Age :" HorizontalAlignment="Left" Margin="22,11,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" Height="30"/>
-                                <Label Content="{Binding Personn.Age}" HorizontalAlignment="Left" Margin="150,11,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="18" Width="212" Height="30"/>
+                    <Label Content="{Binding Personn.DayofBirth, Converter={x:Static libConverts:DateToAgeConverter.Instance}}" HorizontalAlignment="Left" Margin="150,11,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="18" Width="212" Height="30"/>
                             </Grid>
                             <Grid>
                                 <Label Content="Sexe :" HorizontalAlignment="Left" Margin="22,11,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" Height="30"/>
@@ -30,7 +31,7 @@
                             </Grid>
                             <Grid>
                                 <Label Content="Date/heure :" HorizontalAlignment="Left" Margin="22,11,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" Height="30"/>
-                                <Label Content="{Binding TestDate}" HorizontalAlignment="Left" Margin="150,11,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="18" Width="212" Height="30"/>
+                                <Label Content="{Binding DateAndTime}" HorizontalAlignment="Left" Margin="150,11,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="18" Width="212" Height="30"/>
                             </Grid>
                         </StackPanel>
 

@@ -15,7 +15,7 @@
         <libBorders:AdornedBorder Style="{StaticResource WoodBorder}" Margin="150">
             <StackPanel   Background="Transparent" >
                 <TextBlock Text="Merci de votre participation" Padding="40" Grid.Row="2" TextAlignment="Center"    FontSize="160"                                   
-                      FontFamily="{StaticResource Tangerine}" TextWrapping="Wrap" FontWeight="Bold" LineStackingStrategy="BlockLineHeight"  LineHeight="120" >
+                      FontFamily="{StaticResource Tangerine}" TextWrapping="Wrap" FontWeight="Bold" LineStackingStrategy="BlockLineHeight"  LineHeight="105" >
                     <TextBlock.Foreground>
                         <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
                             <GradientStop Color="white" Offset="0"/>
@@ -31,7 +31,7 @@
                 </TextBlock>
                 <TextBlock FontStyle="Italic" FontSize="25" TextAlignment="Center" Margin="10 10 0 0" Style="{StaticResource TextBlockStyle}"
                                        Text="Comment évaluriez-vous votre prestation sur ce test sur une échelle de 1 à 10 ? "    />
-                <Grid Margin="30 30 ">
+                <Grid Margin="30 20 30 30">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
