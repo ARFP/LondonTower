@@ -65,6 +65,7 @@
       <DependentUpon>WoodRadioUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="ColorEnum.cs" />
+    <Compile Include="Converters\DateAndTimeToStringConverter.cs" />
     <Compile Include="Converters\DateToAgeConverter.cs" />
     <Compile Include="Converters\DateToStringConverter.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

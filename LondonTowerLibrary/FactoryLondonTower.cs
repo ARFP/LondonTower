@@ -16,7 +16,7 @@ namespace LondonTowerLibrary
 
 
             TowerOfLondon ToL = LoadTowerOfLondon<TowerOfLondon>(towerVM.NbPegs);
-            ToL.DateAndTime = towerVM.DateAndTime.ToString("dd/MM/yyyy HH:mm");
+            ToL.DateAndTime = towerVM.DateAndTime;
             ToL.Personn = towerVM.Personne;
             ToL.VisualHelp = towerVM.VisualHelp;
             //SaveTn(ToL);
@@ -45,27 +45,7 @@ namespace LondonTowerLibrary
         //    File.WriteAllText(path, str);
         //}
 
-        //public static TowerOfLondon InitialiseTowerOfLondon()
-        //{
-
-        //    //Trial trial;
-        //    //List<Trial> ListTrial = new List<Trial>();
-        //    //for(int i = 0; i <= 10; i++)
-        //    //{
-        //    //    trial = new Trial(i, 5);
-        //    //    trial.PegList = InitListStart();
-        //    //    trial.PegListGoal = InitListGoalPosition();
-        //    //    ListTrial.Add(trial);
-        //    //}
-
-        //    //TowerOfLondon tower = new TowerOfLondon(5,ListTrial,new Personn());
-        //    //tower.Personn = new Personn("Super", "Toto", Genre.Homme, new System.DateTime(1984,10,1));
-        //    //SaveTowerOfLondon(tower);
-
-        //    TowerOfLondon tower = GetTowerOfLondon(5);
-        //    return tower;
-        //}
-
+   
         private static Bead CreateBead(ColorEnum color)
         {
             return new Bead(color);

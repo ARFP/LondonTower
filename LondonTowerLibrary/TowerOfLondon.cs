@@ -13,7 +13,7 @@ namespace LondonTowerLibrary
         private int trialNumber;
         private Personn personn;
         private bool visualHelp;
-        private string dateAndTime;
+        private DateTime dateAndTime;
         private string fdback;
 
         public int Level { get => level; set => level = value; }
@@ -21,7 +21,7 @@ namespace LondonTowerLibrary
         public List<Trial> TrialList { get => trialList; set => trialList = value; }
         public Personn Personn { get => personn; set => personn = value; }
         public bool VisualHelp { get => visualHelp; set => visualHelp = value; }
-        public string DateAndTime { get => dateAndTime; set => dateAndTime = value; }
+        public DateTime DateAndTime { get => dateAndTime; set => dateAndTime = value; }
         public string Fdback { get => fdback; set => fdback = value; }
 
         public TowerOfLondon()

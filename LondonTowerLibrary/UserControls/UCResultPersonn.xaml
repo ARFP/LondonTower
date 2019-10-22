@@ -31,7 +31,7 @@
                 </Grid>
                 <Grid>
                     <Label Content="Date/heure :" HorizontalAlignment="Left" Margin="22,11,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" Height="30"/>
-                    <TextBlock Text="{Binding DateAndTime}" HorizontalAlignment="Right" Margin="0,11,16,0" FontFamily="Times New Roman" FontSize="18"/>
+                    <TextBlock Text="{Binding DateAndTime, Converter= {x:Static libConverts:DateAndTimeToStringConverter.Instance}}" HorizontalAlignment="Right" Margin="0,11,16,0" FontFamily="Times New Roman" FontSize="18"/>
                 </Grid>
             </StackPanel>
 
