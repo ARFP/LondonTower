@@ -140,12 +140,12 @@ namespace LondonTowerLibrary.UserControls
         private void InitRectangleSelect()
         {
             /*CREATION DU POINTEUR SOUS LA ZONE DE TEST POUR LA SELECTION DE LA BILLE A BOUGER*/
-            RectSelection = new Rectangle();
-            RectSelection.Width = 86;
-            RectSelection.Height = 10;
-            RectSelection.HorizontalAlignment = HorizontalAlignment.Left;
-            RectSelection.VerticalAlignment = VerticalAlignment.Bottom;
-            RectSelection.Margin = new Thickness(0, 0, 0, 34);
+            //RectSelection = new Rectangle();
+            //RectSelection.Width = 86;
+            //RectSelection.Height = 10;
+            //RectSelection.HorizontalAlignment = HorizontalAlignment.Left;
+            //RectSelection.VerticalAlignment = VerticalAlignment.Bottom;
+            //RectSelection.Margin = new Thickness(0, 0, 0, 34);
 
             BitmapImage pointeur = new BitmapImage();
             string pathBoard = "pack://application:,,,/LondonTowerLibrary;component/Resources/Pointeur.png";
@@ -261,7 +261,7 @@ namespace LondonTowerLibrary.UserControls
                         VBeadTempo.RenderTransform = null;
                         translateViewBead = new TranslateTransform();
                         VBeadTempo.RenderTransform = translateViewBead;
-                        translateViewBead.X = Mouse.GetPosition(grid).X - (RectSelection.Width / 2) - ((col - 1) * largeur);
+                        translateViewBead.X = Mouse.GetPosition(grid).X - (imgPointeur.Width / 2) - ((col - 1) * largeur);
                         Grid.SetColumn(VBeadTempo, col);
                         grid.Children.Add(VBeadTempo);
                         VBeadTempo.Margin = new Thickness(0, 0, 0, 360);

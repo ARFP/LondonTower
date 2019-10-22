@@ -166,7 +166,7 @@ namespace LondonTower.PageFolder
 
             MoyenneTime = Math.Floor((double)(TotalTime / 10));
 
-            TotalTimeTower = Math.Floor((tower.TestDate - DateTime.Now).TotalSeconds);
+            TotalTimeTower = Math.Floor(( DateTime.Now-tower.DateAndTime).TotalSeconds);
         }
 
 
