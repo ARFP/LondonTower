@@ -17,7 +17,6 @@
 
         <libComponent:WoodButtonUc x:Name="ButNextPage" ImgName="woodarrow" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,30,30"  MAGICEnabled="False"/>
 
-        <LibUC:MessageResultTrial Name="ResultUc" Visibility="Hidden"/>
-
+        <LibUC:MessageResultTrial Name="ResultUc" Visibility="Hidden" Margin="0,0,0,50"/>
     </Grid>
 </Page>

@@ -8,7 +8,7 @@
               mc:Ignorable="d" 
              xmlns:libBorder="clr-namespace:LondonTowerLibrary.Border"
              Background="Transparent" >
-    <libBorder:AdornedBorder Style="{StaticResource WoodBorder}" VerticalAlignment="Top" Width="620" Height="493">
+    <libBorder:AdornedBorder Style="{StaticResource WoodBorderShadow}" VerticalAlignment="Top" Width="620" Height="493">
         <StackPanel Name="StackPane" Background="Transparent" HorizontalAlignment="Left" Margin="-13,-10,-12,-10" Width="577">
 
             <Grid Name="GridGame" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="448" Width="561">

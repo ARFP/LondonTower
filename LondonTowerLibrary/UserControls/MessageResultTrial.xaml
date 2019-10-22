@@ -5,13 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LondonTowerLibrary.UserControls"
              xmlns:libBorder="clr-namespace:LondonTowerLibrary.Border"
-             mc:Ignorable="d" 
-             d:DesignHeight="168.127" d:DesignWidth="500"
+             mc:Ignorable="d"
              >
 
-    <StackPanel  Name="StackpanelScrore" Background="Transparent" Height="270" VerticalAlignment="Top" Width="500" >
+    <StackPanel  Name="StackpanelScrore" Background="Transparent" Height="199" VerticalAlignment="Top" Width="550" >
 
-        <libBorder:AdornedBorder Style="{StaticResource WoodBorderShadow}">
+        <libBorder:AdornedBorder Style="{StaticResource WoodBorderShadow}" Height="198">
             <Grid>
                 <TextBlock Name="LabelTitre" FontSize="25" FontFamily="Times New Roman" Margin="0,-70,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="{StaticResource ColLightBlue}">
                             <Run Text="Vous avez terminé en "/>
