@@ -39,13 +39,13 @@ namespace LondonTower
                     break;
                 case "Demo":
                     InitTower((LondonTowerVM)sentback);
-                   // this.Navigate(new Demo(tower.GetNextTrial()));
-                    this.Navigate(new TestResult(tower));
+                    this.Navigate(new Demo(tower.GetNextTrial(), tower.VisualHelp));
+                   // this.Navigate(new TestResult(tower));
                     break;
                 case "Trial":
                     if (tower.HastNextTrial())
                     {
-                        this.Navigate(new TrialPage(tower.GetNextTrial()));
+                        this.Navigate(new TrialPage(tower.GetNextTrial(), tower.VisualHelp));
                     }
                     else
                     {

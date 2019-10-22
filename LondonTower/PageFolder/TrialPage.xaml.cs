@@ -32,7 +32,7 @@ namespace LondonTower.PageFolder
 
 
 
-        public TrialPage(Trial _t)
+        public TrialPage(Trial _t, bool _visualhelp)
         {
             InitializeComponent();
             ButNextPage.Click += ButNextPage_Click;
@@ -40,7 +40,7 @@ namespace LondonTower.PageFolder
             //this.DataContext = trial;
             //this.Resources["MyContent"]=trial;
             
-            ViewTrial vtrailtest = new ViewTrial(_t);
+            ViewTrial vtrailtest = new ViewTrial(_t, _visualhelp);
             this.DataContext = vtrailtest;
             vtrailtest.TrialComplet += EnableNextPage;
             gameGoal = new GameUc(vtrailtest, true);

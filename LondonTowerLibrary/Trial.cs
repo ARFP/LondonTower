@@ -68,9 +68,10 @@ namespace LondonTowerLibrary
 
         public void MoveBead(Peg _from, Peg _to)
         {
-            if (_to.CanAdd() && _from.CanRemove())
+            if (_to.CanAdd() && _from.CanRemove() || _from == _to)
             {
-                _to.AddBead(_from.RemoveTopBead());
+                Bead bd = _from.RemoveTopBead();
+                _to.AddBead(bd);
                 MoveMade();
             }
             this.FinishTrial();

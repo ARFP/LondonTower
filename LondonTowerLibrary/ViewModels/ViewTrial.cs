@@ -12,7 +12,7 @@ namespace LondonTowerLibrary.ViewModels
     {
         private Trial trial;
 
-        private bool TrialStart;
+        //private bool TrialStart;
         private List<ViewPeg> viewPegsList;
         private List<ViewPeg> viewPegslistGoal;
 
@@ -24,14 +24,14 @@ namespace LondonTowerLibrary.ViewModels
 
         public event TrialCompleteEventHandler TrialComplet;
 
-        public ViewTrial(Trial _t)
+        public ViewTrial(Trial _t, bool _visualhelp)
         {
             this.Trial = _t;
             Trial.OnComplete += Finish;
             Trial.TryMovemade_OnChange += GetTryMoveMade;
 
-            ViewPegsList = ListViewPeg(Trial.PegList);
-            ViewPegslistGoal = ListViewPeg(Trial.PegListGoal);
+            ViewPegsList = ListViewPeg(Trial.PegList, _visualhelp);
+            ViewPegslistGoal = ListViewPeg(Trial.PegListGoal, _visualhelp);
 
             Trial.StartTimeDisplayTrial();
         }
@@ -74,21 +74,20 @@ namespace LondonTowerLibrary.ViewModels
 
         public void MoveBead(ViewPeg _from, ViewPeg _to)
         {
-            if(_from.CanRemoveViewBead() && _to.CanAddViewBead())
+            if(_from.CanRemoveViewBead() && _to.CanAddViewBead() || _from == _to)
             {
-                _to.AddViewBead(_from.RemoveTopViewBead());
                 this.trial.MoveBead(_from.Peg, _to.Peg);
+                _to.AddViewBead(_from.RemoveTopViewBead());
             }
-
         }
 
-        private static List<ViewPeg> ListViewPeg(ObservableCollection<Peg> _listPeg)
+        private static List<ViewPeg> ListViewPeg(ObservableCollection<Peg> _listPeg, bool _visualhelp)
         {
             List<ViewPeg> listViewPeg = new List<ViewPeg>();
             int position;
             foreach (Peg p in _listPeg)
             {
-                ViewPeg Vpeg = new ViewPeg(p);
+                ViewPeg Vpeg = new ViewPeg(p, _visualhelp);
                 position = _listPeg.Count - p.PegNumber + 1;
                 Grid.SetColumn(Vpeg, position);
                 if (Vpeg.GetListViewBead().Count > 0)

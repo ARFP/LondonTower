@@ -16,6 +16,8 @@ namespace LondonTowerLibrary.ViewModels
 
         private BitmapImage ImgCut;
         private BitmapImage ImgUnCut;
+        private string pathCut;
+        private string pathUncut;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -36,7 +38,6 @@ namespace LondonTowerLibrary.ViewModels
             {
                 this.row = value;
                 OnProperty_Change("Row");
-                //RefreshMargin();
             }
         }
 
@@ -46,15 +47,24 @@ namespace LondonTowerLibrary.ViewModels
             this.PropertyChanged += RefreshMargin;
         }
 
-        public ViewBead(Bead _bead) : this()
+        public ViewBead(Bead _bead, bool _visualHelp) : this()
         {
             this.bead = _bead;
-            
-            //string pathCut = "bead_" + bead.ColorBead + "_Cut.png";
-            //string pathUnCut = "bead_" + bead.ColorBead + ".png";
 
-            string pathCut = "pack://application:,,,/LondonTowerLibrary;component/Resources/bead_" + bead.ColorBead + "_Cut.png";
-            string pathUnCut = "pack://application:,,,/LondonTowerLibrary;component/Resources/bead_" + bead.ColorBead + ".png";
+            if (_visualHelp)
+            {
+                 pathCut = "pack://application:,,,/LondonTowerLibrary;component/Resources/bead_" + bead.ColorBead + "_Cut_vh.png"; ;
+                pathUncut = "pack://application:,,,/LondonTowerLibrary;component/Resources/bead_" + bead.ColorBead + "_vh.png"; ;
+            }
+            else
+            {
+                 pathCut = "pack://application:,,,/LondonTowerLibrary;component/Resources/bead_" + bead.ColorBead + "_Cut.png";
+                pathUncut = "pack://application:,,,/LondonTowerLibrary;component/Resources/bead_" + bead.ColorBead + ".png";
+            }
+            
+
+
+
 
             ImgCut = new BitmapImage();
             ImgCut.BeginInit();
@@ -63,12 +73,20 @@ namespace LondonTowerLibrary.ViewModels
 
             ImgUnCut = new BitmapImage();
             ImgUnCut.BeginInit();
-            ImgUnCut.UriSource = new Uri(pathUnCut, UriKind.RelativeOrAbsolute);
+            ImgUnCut.UriSource = new Uri(pathUncut, UriKind.RelativeOrAbsolute);
             ImgUnCut.EndInit();
 
             this.Source = ImgCut;
             this.VerticalAlignment = System.Windows.VerticalAlignment.Bottom;
 
+        }
+        public void SetImgCut()
+        {
+            this.Source = ImgCut;
+        }
+        public void SetImgUnCut()
+        {
+            this.Source = ImgUnCut;
         }
 
         private void RefreshMargin(object sender, EventArgs e)

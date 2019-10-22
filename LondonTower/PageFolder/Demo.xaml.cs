@@ -25,13 +25,13 @@ namespace LondonTower.PageFolder
     public partial class Demo : Page
     {
         Trial trial;
-        public Demo(Trial _t)
+        public Demo(Trial _t, bool _visualhelp)
         {
             InitializeComponent();
             ButNextPage.Click += ButNextPage_Click;
             trial = _t;
             this.DataContext = trial;
-            ViewTrial vtrailtest = new ViewTrial(_t);
+            ViewTrial vtrailtest = new ViewTrial(_t, _visualhelp);
             vtrailtest.TrialComplet+= EnableNextPage;
             GameUc gameGoal = new GameUc(vtrailtest, true);
             GameUc gameTrial = new GameUc(vtrailtest, false);

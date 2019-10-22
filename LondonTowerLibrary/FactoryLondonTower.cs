@@ -19,7 +19,7 @@ namespace LondonTowerLibrary
             ToL.DateAndTime = towerVM.DateAndTime;
             ToL.Personn = towerVM.Personne;
             ToL.VisualHelp = towerVM.VisualHelp;
-            //SaveTn(ToL);
+
             return ToL;
         }
 

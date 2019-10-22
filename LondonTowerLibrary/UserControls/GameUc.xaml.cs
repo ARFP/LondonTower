@@ -230,7 +230,7 @@ namespace LondonTowerLibrary.UserControls
                     if (VBeadTempo != null)
                     {
                         pegFrom = vpeg;
-
+                        VBeadTempo.SetImgUnCut();
                         VBeadTempo.Margin = new Thickness(0, 0, 0, 370);
                         translateViewBead = new TranslateTransform();
                         VBeadTempo.RenderTransform = translateViewBead;
@@ -244,6 +244,7 @@ namespace LondonTowerLibrary.UserControls
                 {
                     if (vpeg.CanAddViewBead()|| vpeg == pegFrom)/*ajout possible au peg*/
                     {
+                        VBeadTempo.SetImgCut();
                         VTrial.MoveBead(pegFrom, vpeg);
                         grid.Children.Remove(VBeadTempo);
                         //vpeg.AddViewBead( pegFrom.RemoveTopViewBead());

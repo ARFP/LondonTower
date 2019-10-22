@@ -22,7 +22,7 @@ namespace LondonTowerLibrary.ViewModels
             ListViewBead = new List<ViewBead>();
         }
 
-        public ViewPeg(Peg _peg) : this()
+        public ViewPeg(Peg _peg, bool _visualHelp) : this()
         {
             peg = _peg;
             BitmapImage bp = new BitmapImage();
@@ -35,7 +35,7 @@ namespace LondonTowerLibrary.ViewModels
             this.Margin = new System.Windows.Thickness(0, 0, 0, 54);
             this.VerticalAlignment = System.Windows.VerticalAlignment.Bottom;
             this.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
-            CreateListViewBead();
+            CreateListViewBead(_visualHelp);
 
         }
 
@@ -54,15 +54,9 @@ namespace LondonTowerLibrary.ViewModels
             return peg.PegNumber;
         }
 
-        public bool AddViewBead(ViewBead _vbead)
+        public void AddViewBead(ViewBead _vbead)
         {
-            if (peg.CanAdd())
-            {
                 this.ListViewBead.Add(_vbead);
-                
-                return true;
-            }
-            return false;
         }
 
         public ViewBead RemoveTopViewBead()
@@ -81,11 +75,11 @@ namespace LondonTowerLibrary.ViewModels
             return this.ListViewBead;
         }
 
-        private void CreateListViewBead()
+        private void CreateListViewBead(bool _visualhelp)
         {
             for(int i=0; i<peg.BeadList.Count; i++)
             {
-                ViewBead vb = new ViewBead(peg.BeadList[i]);
+                ViewBead vb = new ViewBead(peg.BeadList[i], _visualhelp);
                 vb.Row = i;
                 this.ListViewBead.Add(vb);
             }
