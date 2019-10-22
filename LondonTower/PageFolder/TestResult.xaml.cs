@@ -1,4 +1,5 @@
-﻿using LondonTowerLibrary;
+﻿using ClosedXML.Excel;
+using LondonTowerLibrary;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace LondonTower.PageFolder
         private double upperStrat;
         private int totalTime;
         private double moyenneTime;
-        private int TotalTimeTower;
+        private double TotalTimeTower;
 
         public TowerOfLondon Tower { get => tower; set => tower = value; }
 
@@ -83,10 +84,15 @@ namespace LondonTower.PageFolder
             tower = _tower;
             this.DataContext = this;
             InitializeComponent();
-            dataGrid1.ItemsSource = tower.TrialList.Where(x=>x.TrialNumber !=0);
+            dataGrid1.ItemsSource = tower.TrialList.Where(x => x.TrialNumber != 0);
             ButNextPage.Click += ButNextPage_OnCick;
-            SaveTest();
+
+            string datestr = tower.DateAndTime.Hour + "." + tower.DateAndTime.Month + "." + tower.DateAndTime.Year + " " + tower.DateAndTime.Hour + "h" + tower.DateAndTime.Minute;
+            string path = (tower.Personn.LastName + " " + tower.Personn.FirstName + " Lv" + tower.Level + " " + datestr + ".xlsx");
+
+
             DataCalcul();
+            SaveTest(path);
 
         }
 
@@ -96,11 +102,54 @@ namespace LondonTower.PageFolder
             main.LoadingPage("Identification");
         }
 
-        private void SaveTest()
+        private void SaveTest(string _path)
         {
-            string path = "./Tower" + tower.Level + ".txt";
-            string str = JsonConvert.SerializeObject(tower, Formatting.Indented);
-            File.WriteAllText(path, str);
+            var workbook = new XLWorkbook("./Config/Template.xlsx");
+            var worksheet = workbook.Worksheet(1);
+
+            worksheet.Cell("C5").Value = tower.Personn.LastName;
+            worksheet.Cell("C6").Value = tower.Personn.FirstName;
+            worksheet.Cell("C7").Value = tower.Personn.DayofBirth;
+            worksheet.Cell("C8").Value = tower.Personn.Genre;
+            worksheet.Cell("C9").Value = tower.DateAndTime;
+            worksheet.Cell("C10").Value = tower.Fdback;
+
+            int row = 16;
+
+            foreach (Trial _t in tower.TrialList)
+            {
+                if (_t.TrialNumber != 0)
+                {
+                    worksheet.Cell("C" + row).Value = _t.TryMoveMade;
+                    worksheet.Cell("D" + row).Value = _t.MinimalMoveExpect;
+                    worksheet.Cell("E" + row).Value = _t.TimeToResolve;
+                    row++;
+                }
+            }
+
+            worksheet.Cell("D31").Value = MinimalMove + " coups";
+            worksheet.Cell("D32").Value = ExcesMove + " coups";
+            worksheet.Cell("D33").Value = (UpperStrat + " %");
+            worksheet.Cell("D34").Value = TotalTime + " secondes";
+            worksheet.Cell("D35").Value = MoyenneTime + " secondes";
+            worksheet.Cell("D36").Value = TotalTimeTower + " secondes";
+
+
+            //workbook.SaveAs(_path);
+
+            string p = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "TestLaurence", _path);
+
+            string directorySave = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "TestLaurence");
+            //Directory.CreateDirectory(directo);
+
+            if (!Directory.Exists(directorySave))
+            {
+                Directory.CreateDirectory(directorySave);
+
+            }
+
+            workbook.SaveAs(p);
+
         }
 
         private void DataCalcul()
@@ -109,13 +158,15 @@ namespace LondonTower.PageFolder
 
             MinimalMove = listtest.Sum(x => x.MinimalMoveExpect);
 
-            ExcesMove = listtest.Sum(x => x.TryMoveMade)-MinimalMove;
+            ExcesMove = listtest.Sum(x => x.TryMoveMade) - MinimalMove;
 
             UpperStrat = Math.Floor(((listtest.Sum(x => x.TryMoveMade) / MinimalMove) - 1) * 100);
-            
+
             TotalTime = listtest.Sum(x => x.TimeToResolve);
 
             MoyenneTime = Math.Floor((double)(TotalTime / 10));
+
+            TotalTimeTower = Math.Floor((tower.TestDate - DateTime.Now).TotalSeconds);
         }
 
 

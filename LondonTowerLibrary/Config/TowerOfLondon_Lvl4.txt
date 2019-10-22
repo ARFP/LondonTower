@@ -1,6 +1,6 @@
 {
   "Level": 4,
-  "TestDate": "2019-10-17T12:33:04.172823+02:00",
+  "TestDate": "0001-01-01T00:00:00",
   "TrialList": [
     {
       "PegListGoal": [
@@ -109,7 +109,7 @@
           ]
         }
       ],
-      "MinimalMoveExpect": 5,
+      "MinimalMoveExpect": 6,
       "TrialNumber": 1,
       "TimeToResolve": 0,
       "TimeDisplayUntilResolve": 0,
@@ -253,7 +253,7 @@
           ]
         }
       ],
-      "MinimalMoveExpect": 5,
+      "MinimalMoveExpect": 9,
       "TrialNumber": 3,
       "TimeToResolve": 0,
       "TimeDisplayUntilResolve": 0,
@@ -398,7 +398,7 @@
           ]
         }
       ],
-      "MinimalMoveExpect": 5,
+      "MinimalMoveExpect": 4,
       "TrialNumber": 5,
       "TimeToResolve": 0,
       "TimeDisplayUntilResolve": 0,
@@ -470,7 +470,7 @@
           ]
         }
       ],
-      "MinimalMoveExpect": 5,
+      "MinimalMoveExpect": 3,
       "TrialNumber": 6,
       "TimeToResolve": 0,
       "TimeDisplayUntilResolve": 0,
@@ -541,7 +541,7 @@
           ]
         }
       ],
-      "MinimalMoveExpect": 5,
+      "MinimalMoveExpect": 4,
       "TrialNumber": 7,
       "TimeToResolve": 0,
       "TimeDisplayUntilResolve": 0,
@@ -613,7 +613,7 @@
           ]
         }
       ],
-      "MinimalMoveExpect": 5,
+      "MinimalMoveExpect": 7,
       "TrialNumber": 8,
       "TimeToResolve": 0,
       "TimeDisplayUntilResolve": 0,
@@ -684,7 +684,7 @@
           ]
         }
       ],
-      "MinimalMoveExpect": 5,
+      "MinimalMoveExpect": 8,
       "TrialNumber": 9,
       "TimeToResolve": 0,
       "TimeDisplayUntilResolve": 0,
@@ -756,7 +756,7 @@
           "BeadList": []
         }
       ],
-      "MinimalMoveExpect": 5,
+      "MinimalMoveExpect": 4,
       "TrialNumber": 10,
       "TimeToResolve": 0,
       "TimeDisplayUntilResolve": 0,

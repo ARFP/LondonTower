@@ -7,7 +7,6 @@
              xmlns:libBorder="clr-namespace:LondonTowerLibrary.Border"
              xmlns:libConverts="clr-namespace:LondonTowerLibrary.Converters"
              mc:Ignorable="d" 
-             d:DesignHeight="290" d:DesignWidth="470"
              DataContext="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Page}}, Path= Tower}">
 
     <StackPanel Background="Transparent" HorizontalAlignment="Left" Height="290" Margin="0,0,0,0" VerticalAlignment="Top" Width="470">

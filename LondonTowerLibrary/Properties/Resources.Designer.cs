@@ -381,9 +381,19 @@ namespace LondonTowerLibrary.Properties {
         }
         
         /// <summary>
+        ///   Recherche une ressource localisée de type System.Byte[].
+        /// </summary>
+        internal static byte[] Template {
+            get {
+                object obj = ResourceManager.GetObject("Template", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à {
         ///  &quot;Level&quot;: 3,
-        ///  &quot;TestDate&quot;: &quot;2019-10-17T12:28:40.7505447+02:00&quot;,
+        ///  &quot;TestDate&quot;: &quot;0001-01-01T00:00:00&quot;,
         ///  &quot;TrialList&quot;: [
         ///    {
         ///      &quot;PegListGoal&quot;: [
@@ -407,7 +417,8 @@ namespace LondonTowerLibrary.Properties {
         ///          &quot;PegNumber&quot;: 3,
         ///          &quot;BeadList&quot;: [
         ///            {
-        ///              &quot;Colo [le reste de la chaîne a été tronqué]&quot;;.
+        ///              &quot;ColorBead&quot;: 2
+        ///    [le reste de la chaîne a été tronqué]&quot;;.
         /// </summary>
         internal static string TowerOfLondon_Lvl3 {
             get {
@@ -418,7 +429,7 @@ namespace LondonTowerLibrary.Properties {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à {
         ///  &quot;Level&quot;: 4,
-        ///  &quot;TestDate&quot;: &quot;2019-10-17T12:33:04.172823+02:00&quot;,
+        ///  &quot;TestDate&quot;: &quot;0001-01-01T00:00:00&quot;,
         ///  &quot;TrialList&quot;: [
         ///    {
         ///      &quot;PegListGoal&quot;: [
@@ -442,7 +453,8 @@ namespace LondonTowerLibrary.Properties {
         ///          &quot;PegNumber&quot;: 3,
         ///          &quot;BeadList&quot;: [
         ///            {
-        ///              &quot;Color [le reste de la chaîne a été tronqué]&quot;;.
+        ///              &quot;ColorBead&quot;: 1
+        ///    [le reste de la chaîne a été tronqué]&quot;;.
         /// </summary>
         internal static string TowerOfLondon_Lvl4 {
             get {
@@ -453,7 +465,7 @@ namespace LondonTowerLibrary.Properties {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à {
         ///  &quot;Level&quot;: 5,
-        ///  &quot;TestDate&quot;: &quot;2019-10-17T15:46:26.5461952+02:00&quot;,
+        ///  &quot;TestDate&quot;: &quot;0001-01-01T00:00:00&quot;,
         ///  &quot;TrialList&quot;: [
         ///    {
         ///      &quot;PegListGoal&quot;: [
@@ -477,7 +489,8 @@ namespace LondonTowerLibrary.Properties {
         ///          &quot;PegNumber&quot;: 3,
         ///          &quot;BeadList&quot;: [
         ///            {
-        ///              &quot;Colo [le reste de la chaîne a été tronqué]&quot;;.
+        ///              &quot;ColorBead&quot;: 0
+        ///    [le reste de la chaîne a été tronqué]&quot;;.
         /// </summary>
         internal static string TowerOfLondon_Lvl5 {
             get {

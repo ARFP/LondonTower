@@ -1,6 +1,6 @@
 {
   "Level": 3,
-  "TestDate": "2019-10-17T12:28:40.7505447+02:00",
+  "TestDate": "0001-01-01T00:00:00",
   "TrialList": [
     {
       "PegListGoal": [
