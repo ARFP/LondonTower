@@ -129,11 +129,76 @@
     <Content Include="Config\Template.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\woodRadio1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\woodRadio1s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\woodRadio2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\woodRadio2s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\woodRadio3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\woodRadio3s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\woodRadio4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\woodRadio4s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\woodRadio5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\woodRadio5s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\woodRadio6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\woodRadio6s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\woodRadio7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\woodRadio7s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\woodRadio8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\woodRadio8s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\woodRadio9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\woodRadio9s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\woodRadio10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\woodRadio10s.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="sound\Buzzer.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Resources\Buzzer.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <None Include="packages.config" />
-    <None Include="Resources\Template.xlsx" />
+    <Resource Include="Resources\Template.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Page Include="Button\WoodButtonUc.xaml">
@@ -169,202 +234,234 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\peg1.png" />
+    <Resource Include="Resources\peg1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Blue.png" />
+    <Resource Include="Resources\bead_Blue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Blue_Cut.png" />
+    <Resource Include="Resources\bead_Blue_Cut.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Blue_Cut_vh.png" />
+    <Resource Include="Resources\bead_Blue_Cut_vh.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Blue_vh.png" />
+    <Resource Include="Resources\bead_Blue_vh.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Green.png" />
+    <Resource Include="Resources\bead_Green.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Green_Cut.png" />
+    <Resource Include="Resources\bead_Green_Cut.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Green_Cut_vh.png" />
+    <Resource Include="Resources\bead_Green_Cut_vh.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Green_vh.png" />
+    <Resource Include="Resources\bead_Green_vh.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Orange.png" />
+    <Resource Include="Resources\bead_Orange.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Orange_Cut.png" />
+    <Resource Include="Resources\bead_Orange_Cut.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Orange_Cut_vh.png" />
+    <Resource Include="Resources\bead_Orange_Cut_vh.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Orange_vh.png" />
+    <Resource Include="Resources\bead_Orange_vh.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Pink.png" />
+    <Resource Include="Resources\bead_Pink.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Pink_Cut.png" />
+    <Resource Include="Resources\bead_Pink_Cut.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Pink_Cut_vh.png" />
+    <Resource Include="Resources\bead_Pink_Cut_vh.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Pink_vh.png" />
+    <Resource Include="Resources\bead_Pink_vh.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Yellow.png" />
+    <Resource Include="Resources\bead_Yellow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Yellow_Cut.png" />
+    <Resource Include="Resources\bead_Yellow_Cut.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Yellow_Cut_vh.png" />
+    <Resource Include="Resources\bead_Yellow_Cut_vh.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bead_Yellow_vh.png" />
+    <Resource Include="Resources\bead_Yellow_vh.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Border.png" />
+    <Resource Include="Resources\Border.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\exitButton.png" />
+    <Resource Include="Resources\exitButton.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\exitButtonko.png" />
+    <Resource Include="Resources\exitButtonko.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\exitButtonok.png" />
+    <Resource Include="Resources\exitButtonok.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\mainboard.png" />
+    <Resource Include="Resources\mainboard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\mainboard_ex.png" />
+    <Resource Include="Resources\mainboard_ex.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Pointeur.png" />
+    <Resource Include="Resources\Pointeur.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\WallpaperTower.png" />
+    <Resource Include="Resources\WallpaperTower.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\wood.png" />
+    <Resource Include="Resources\wood.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\woodarrow.png" />
+    <Resource Include="Resources\woodarrow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\woodarrowko.png" />
+    <Resource Include="Resources\woodarrowko.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\woodarrowok.png" />
+    <Resource Include="Resources\woodarrowok.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\woodbutton3.png" />
+    <Resource Include="Resources\woodbutton3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\woodbutton3ko.png" />
+    <Resource Include="Resources\woodbutton3ko.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\woodbutton3ok.png" />
+    <Resource Include="Resources\woodbutton3ok.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\woodbutton4.png" />
+    <Resource Include="Resources\woodbutton4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\woodbutton4ko.png" />
+    <Resource Include="Resources\woodbutton4ko.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\woodbutton4ok.png" />
+    <Resource Include="Resources\woodbutton4ok.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\woodbutton5.png" />
+    <Resource Include="Resources\woodbutton5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\woodbutton5ko.png" />
+    <Resource Include="Resources\woodbutton5ko.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\woodbutton5ok.png" />
+    <Resource Include="Resources\woodbutton5ok.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\woodRadio01.png" />
+    <Resource Include="Resources\peg2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\woodRadio01s.png" />
+    <Resource Include="Resources\peg3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\woodRadio02.png" />
+    <Resource Include="Resources\peg4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\woodRadio02s.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\woodRadio03.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\woodRadio03s.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\woodRadio04.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\woodRadio04s.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\woodRadio05.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\woodRadio05s.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\woodRadio06.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\woodRadio06s.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\woodRadio07.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\woodRadio07s.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\woodRadio08.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\woodRadio08s.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\woodRadio09.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\woodRadio09s.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\woodRadio10.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\woodRadio10s.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\peg2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\peg3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\peg4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\peg5.png" />
+    <Resource Include="Resources\peg5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Config\TowerOfLondon_Lvl3.txt">
@@ -376,9 +473,15 @@
     <Content Include="Config\TowerOfLondon_Lvl5.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\TowerOfLondon_Lvl5.txt" />
-    <None Include="Resources\TowerOfLondon_Lvl4.txt" />
-    <None Include="Resources\TowerOfLondon_Lvl3.txt" />
+    <Resource Include="Resources\TowerOfLondon_Lvl5.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\TowerOfLondon_Lvl4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\TowerOfLondon_Lvl3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

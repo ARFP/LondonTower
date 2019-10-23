@@ -44,15 +44,15 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <libControls:WoodRadioUC RadValue="01" Grid.Column="0" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
-                    <libControls:WoodRadioUC RadValue="02" Grid.Column="1" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
-                    <libControls:WoodRadioUC RadValue="03" Grid.Column="2" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
-                    <libControls:WoodRadioUC RadValue="04" Grid.Column="3" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
-                    <libControls:WoodRadioUC RadValue="05" Grid.Column="4" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
-                    <libControls:WoodRadioUC RadValue="06" Grid.Column="5" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
-                    <libControls:WoodRadioUC RadValue="07" Grid.Column="6" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
-                    <libControls:WoodRadioUC RadValue="08" Grid.Column="7" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
-                    <libControls:WoodRadioUC RadValue="09" Grid.Column="8" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
+                    <libControls:WoodRadioUC RadValue="1" Grid.Column="0" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
+                    <libControls:WoodRadioUC RadValue="2" Grid.Column="1" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
+                    <libControls:WoodRadioUC RadValue="3" Grid.Column="2" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
+                    <libControls:WoodRadioUC RadValue="4" Grid.Column="3" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
+                    <libControls:WoodRadioUC RadValue="5" Grid.Column="4" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
+                    <libControls:WoodRadioUC RadValue="6" Grid.Column="5" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
+                    <libControls:WoodRadioUC RadValue="7" Grid.Column="6" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
+                    <libControls:WoodRadioUC RadValue="8" Grid.Column="7" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
+                    <libControls:WoodRadioUC RadValue="9" Grid.Column="8" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
                     <libControls:WoodRadioUC RadValue="10" Grid.Column="9" GName="Radio" WhyThou="WoodRadioUC_WhyThou"/>
                 </Grid>
                 <Grid>

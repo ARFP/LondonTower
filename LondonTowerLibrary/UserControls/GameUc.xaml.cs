@@ -267,7 +267,9 @@ namespace LondonTowerLibrary.UserControls
                         {
                             MessageBox.Show("Media Failed!!");
                         };
-                        mp.Open(new Uri(Environment.CurrentDirectory + @"../../../../LondonTowerLibrary/Resources/Buzzer.mp3", UriKind.RelativeOrAbsolute));
+                        //mp.Open(new Uri(Environment.CurrentDirectory + @"../../../../LondonTowerLibrary/Resources/Buzzer.mp3", UriKind.RelativeOrAbsolute));
+                        mp.Open(new Uri(Environment.CurrentDirectory + @"/sound/Buzzer.mp3", UriKind.RelativeOrAbsolute));
+
                         mp.Play();
                         grid.Children.Remove(VBeadTempo);
                             VBeadTempo.RenderTransform = null;

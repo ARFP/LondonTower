@@ -5,44 +5,50 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LondonTowerLibrary.UserControls"
              xmlns:libBorder="clr-namespace:LondonTowerLibrary.Border"
-             mc:Ignorable="d" 
-             d:DesignHeight="290" d:DesignWidth="470">
+             mc:Ignorable="d">
 
-    <StackPanel Background="Transparent" HorizontalAlignment="Left" Height="290" Margin="0,0,0,0" VerticalAlignment="Top" Width="470">
+    <StackPanel Background="Transparent" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="470">
         <libBorder:AdornedBorder Style="{StaticResource WoodBorder}">
             <StackPanel>
-                <Grid>
-                    <Label Content="Mouvements minimum :" HorizontalAlignment="Left" Margin="22,11,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" Height="30"/>
-                    <TextBlock HorizontalAlignment="Right" Margin="150,11,16,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="18" Height="30">
+                <Grid Margin="22,0,16,5">
+                    <Label Content="Mouvements minimum :" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" Height="30"/>
+                    <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="18" Height="30">
                                     <Run Text="{Binding MinimalMove}"/>
                                     <Run Text=" coups"/>
                     </TextBlock>
                 </Grid>
-                <Grid>
-                    <Label Content="Mouvements en exces :" HorizontalAlignment="Left" Margin="22,11,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" Height="30"/>
-                    <TextBlock HorizontalAlignment="Right" Margin="150,11,16,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="18" Height="30">
+                <Grid Margin="22,0,16,5">
+                    <Label Content="Mouvements en exces :" HorizontalAlignment="Left"  VerticalAlignment="Top" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" Height="30"/>
+                    <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="18" Height="30">
                                     <Run Text="{Binding ExcesMove}"/>
                                     <Run Text="coup(s)"/>
                     </TextBlock>
                 </Grid>
-                <Grid>
-                    <Label Content="Au dessus de la stratégie :" HorizontalAlignment="Left" Margin="22,11,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" Height="30"/>
-                    <TextBlock HorizontalAlignment="Right" Margin="150,11,16,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="18" Height="30">
+                <Grid Margin="22,0,16,5">
+                    <Label Content="Au dessus de la stratégie :" HorizontalAlignment="Left"  VerticalAlignment="Top" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" Height="30"/>
+                    <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="18" Height="30">
                                     <Run Text="{Binding UpperStrat}"/>
                                     <Run Text=" %"/>
                     </TextBlock>
                 </Grid>
-                <Grid>
-                    <Label Content="Temps totals des épreuves :" HorizontalAlignment="Left" Margin="22,11,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" Height="30"/>
-                    <TextBlock HorizontalAlignment="Right" Margin="150,11,16,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="18" Height="30">
+                <Grid Margin="22,0,16,5">
+                    <Label Content="Temps totals des épreuves :" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" Height="30"/>
+                    <TextBlock HorizontalAlignment="Right"  VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="18" Height="30">
                                     <Run Text="{Binding TotalTime}"/>
                                     <Run Text=" secondes"/>
                     </TextBlock>
                 </Grid>
-                <Grid>
-                    <Label Content="Temps moyen par epreuve :" HorizontalAlignment="Left" Margin="22,11,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" Height="30"/>
-                    <TextBlock Margin="150,11,16,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="18" Height="30" HorizontalAlignment="Right">
+                <Grid Margin="22,0,16,5">
+                    <Label Content="Temps moyen par epreuve :" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" Height="30"/>
+                    <TextBlock  VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="18" Height="30" HorizontalAlignment="Right">
                                     <Run Text="{Binding MoyenneTime}"/>
+                                    <Run Text=" secondes"/>
+                    </TextBlock>
+                </Grid>
+                <Grid Margin="22,0,16,5">
+                    <Label Content="Temps total du test :" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" Height="30"/>
+                    <TextBlock  VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="18" Height="30" HorizontalAlignment="Right">
+                                    <Run Text="{Binding TotalTimeTower}"/>
                                     <Run Text=" secondes"/>
                     </TextBlock>
                 </Grid>

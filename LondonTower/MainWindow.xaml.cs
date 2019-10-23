@@ -28,6 +28,7 @@ namespace LondonTower
             
             //LoadingPage("Demo");
             //LoadingPage("TestResult");
+            //LoadingPage("TestResult");
             
         }
 
@@ -41,7 +42,7 @@ namespace LondonTower
                 case "Demo":
                     InitTower((LondonTowerVM)sentback);
                     this.Navigate(new Demo(tower.GetNextTrial(), tower.VisualHelp));
-                   // this.Navigate(new TestResult(tower));
+                    this.Navigate(new FeedBack());
                     break;
                 case "Trial":
                     if (tower.HastNextTrial())

@@ -241,66 +241,6 @@
   <data name="woodbutton5ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\woodbutton5ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="woodRadio01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="woodRadio01s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio01s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="woodRadio02" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="woodRadio02s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio02s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="woodRadio03" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="woodRadio03s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio03s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="woodRadio04" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="woodRadio04s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio04s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="woodRadio05" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="woodRadio05s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio05s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="woodRadio06" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="woodRadio06s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio06s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="woodRadio07" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="woodRadio07s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio07s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="woodRadio08" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="woodRadio08s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio08s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="woodRadio09" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="woodRadio09s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio09s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="woodRadio10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="woodRadio10s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\woodRadio10s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="peg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\peg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -327,5 +267,65 @@
   </data>
   <data name="TowerOfLondon_Lvl5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TowerOfLondon_Lvl5.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="woodRadio1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woodRadio10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woodRadio10s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio10s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woodRadio1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woodRadio2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woodRadio2s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio2s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woodRadio3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woodRadio3s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio3s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woodRadio4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woodRadio4s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio4s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woodRadio5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woodRadio5s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio5s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woodRadio6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woodRadio6s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio6s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woodRadio7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woodRadio7s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio7s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woodRadio8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woodRadio8s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio8s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woodRadio9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woodRadio9s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\woodRadio9s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

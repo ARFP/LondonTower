@@ -24,7 +24,7 @@ namespace LondonTower.PageFolder
         private double upperStrat;
         private int totalTime;
         private double moyenneTime;
-        private double TotalTimeTower;
+        private double totalTimeTower;
 
         public TowerOfLondon Tower { get => tower; set => tower = value; }
 
@@ -69,7 +69,15 @@ namespace LondonTower.PageFolder
                 OnPropertyChanged(nameof(MoyenneTime));
             }
         }
-
+        public double TotalTimeTower
+        {
+            get => totalTimeTower;
+            set
+            {
+                totalTimeTower = value;
+                OnPropertyChanged(nameof(TotalTimeTower));
+            }
+        }
 
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -132,7 +140,7 @@ namespace LondonTower.PageFolder
             worksheet.Cell("D33").Value = (UpperStrat + " %");
             worksheet.Cell("D34").Value = TotalTime + " secondes";
             worksheet.Cell("D35").Value = MoyenneTime + " secondes";
-            worksheet.Cell("D36").Value = TotalTimeTower + " secondes";
+            worksheet.Cell("D36").Value = totalTimeTower + " secondes";
 
 
             //workbook.SaveAs(_path);
