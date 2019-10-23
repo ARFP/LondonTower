@@ -263,11 +263,12 @@ namespace LondonTowerLibrary.UserControls
                     }
                     else /*ajout impossible au peg*/
                     {
-                        // mp.MediaFailed += (o, args) =>
-                        // {
-                        //    MessageBox.Show("Media Failed!!");
-                        // };   
-                        mp.Open(new Uri(Environment.CurrentDirectory + @"/Buzzer.mp3", UriKind.RelativeOrAbsolute));                        mp.Play();
+                        mp.MediaFailed += (o, args) =>
+                        {
+                            MessageBox.Show("Media Failed!!");
+                        };
+                        mp.Open(new Uri(Environment.CurrentDirectory + @"../../../../LondonTowerLibrary/Resources/Buzzer.mp3", UriKind.RelativeOrAbsolute));
+                        mp.Play();
                         grid.Children.Remove(VBeadTempo);
                             VBeadTempo.RenderTransform = null;
                             translateViewBead = new TranslateTransform();

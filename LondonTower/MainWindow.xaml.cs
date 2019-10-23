@@ -15,7 +15,8 @@ namespace LondonTower
         public MainWindow()
         {
             InitializeComponent();
-            NavigationCommands.BrowseBack.InputGestures.Clear();            NavigationCommands.BrowseForward.InputGestures.Clear();
+            NavigationCommands.BrowseBack.InputGestures.Clear();
+            NavigationCommands.BrowseForward.InputGestures.Clear();
             ShowsNavigationUI = false;
 
              //tower = FactoryLondonTower.InitialiseTowerOfLondon();
