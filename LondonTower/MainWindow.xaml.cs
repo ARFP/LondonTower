@@ -1,8 +1,7 @@
 ﻿using LondonTower.PageFolder;
 using LondonTowerLibrary;
 using LondonTowerLibrary.ViewModels;
-using System;
-using System.Windows;
+using System.Windows.Input;
 using System.Windows.Navigation;
 
 namespace LondonTower
@@ -16,6 +15,7 @@ namespace LondonTower
         public MainWindow()
         {
             InitializeComponent();
+            NavigationCommands.BrowseBack.InputGestures.Clear();            NavigationCommands.BrowseForward.InputGestures.Clear();
             ShowsNavigationUI = false;
 
              //tower = FactoryLondonTower.InitialiseTowerOfLondon();

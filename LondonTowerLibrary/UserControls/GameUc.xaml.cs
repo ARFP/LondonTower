@@ -21,7 +21,7 @@ namespace LondonTowerLibrary.UserControls
         int sequence;
         int col;
         bool firstMove = true;
-
+        MediaPlayer mp = new MediaPlayer();
 
         double largeur;
         double largeurCol;
@@ -263,7 +263,12 @@ namespace LondonTowerLibrary.UserControls
                     }
                     else /*ajout impossible au peg*/
                     {
-                            grid.Children.Remove(VBeadTempo);
+                        // mp.MediaFailed += (o, args) =>
+                        // {
+                        //    MessageBox.Show("Media Failed!!");
+                        // };   
+                        mp.Open(new Uri(Environment.CurrentDirectory + @"/Buzzer.mp3", UriKind.RelativeOrAbsolute));                        mp.Play();
+                        grid.Children.Remove(VBeadTempo);
                             VBeadTempo.RenderTransform = null;
                             translateViewBead = new TranslateTransform();
                             VBeadTempo.RenderTransform = translateViewBead;
