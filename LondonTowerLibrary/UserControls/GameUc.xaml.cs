@@ -1,4 +1,5 @@
-﻿using LondonTowerLibrary.ViewModels;
+﻿using LondonTowerLibrary.Event;
+using LondonTowerLibrary.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,20 +44,25 @@ namespace LondonTowerLibrary.UserControls
         ViewTrial VTrial;
         List<ViewPeg> listPeg;
 
-        public delegate void EndTrial(object sender, EventArgs e);
+        //public delegate void EndTrial(object sender, EventArgs e);
 
-        
+        //public delegate void TrialCompleteEventHandler(object sender, TrialCompleteEvent arg);
+
+        //public event TrialCompleteEventHandler TrialComplet;
+
 
         private GameUc()
         {
             InitializeComponent();
             this.VerticalAlignment = VerticalAlignment.Top;
+            
         }
 
         //public GameUc(IList<Peg> _listpeg, bool UcGoal) : this()
         public GameUc(ViewTrial _trial, bool UcGoal) : this()
         {
             VTrial = _trial;
+            VTrial.TrialComplet += TrialCompleteUc;
 
             if (UcGoal)
             {
@@ -210,7 +216,7 @@ namespace LondonTowerLibrary.UserControls
             col = 1;
             Point position = Mouse.GetPosition(grid);
             double width = largeur;
-            for(;width<position.X; col++)
+            for(;width<position.X && col< nbrPeg; col++)
             {
                 width += largeur;
             }
@@ -257,14 +263,14 @@ namespace LondonTowerLibrary.UserControls
                     }
                     else /*ajout impossible au peg*/
                     {
-                        grid.Children.Remove(VBeadTempo);
-                        VBeadTempo.RenderTransform = null;
-                        translateViewBead = new TranslateTransform();
-                        VBeadTempo.RenderTransform = translateViewBead;
-                        translateViewBead.X = Mouse.GetPosition(grid).X - (imgPointeur.Width / 2) - ((col - 1) * largeur);
-                        Grid.SetColumn(VBeadTempo, col);
-                        grid.Children.Add(VBeadTempo);
-                        VBeadTempo.Margin = new Thickness(0, 0, 0, 360);
+                            grid.Children.Remove(VBeadTempo);
+                            VBeadTempo.RenderTransform = null;
+                            translateViewBead = new TranslateTransform();
+                            VBeadTempo.RenderTransform = translateViewBead;
+                            translateViewBead.X = Mouse.GetPosition(grid).X - (imgPointeur.Width / 2) - ((col - 1) * largeur);
+                            Grid.SetColumn(VBeadTempo, col);
+                            grid.Children.Add(VBeadTempo);
+                            VBeadTempo.Margin = new Thickness(0, 0, 0, 370);                        
                     }
                 }
             }
@@ -296,7 +302,13 @@ namespace LondonTowerLibrary.UserControls
             this.Cursor = Cursors.Arrow;
         }
 
-
+        private void TrialCompleteUc(object sender, TrialCompleteEvent arg)
+        {
+            grid.MouseEnter -= Grid_MouseEnter;
+            grid.MouseLeave -= Grid_MouseLeave;
+            grid.MouseMove -= Grid_MouseMove;
+            grid.MouseDown -= Grid_OnClick;
+        }
 
     }
 }
