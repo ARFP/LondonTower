@@ -189,6 +189,15 @@
     <Resource Include="Resources\woodRadio10s.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\homeButton.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\homeButtonko.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\homeButtonok.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Content Include="sound\Buzzer.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -96,8 +96,8 @@
                 </StackPanel>
             </Grid>
         </libBorder:AdornedBorder>
-        
-        <libComponent:WoodButtonUc Name="ButNextPage" ImgName="exitButton" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,30,30" MAGICEnabled="True"/>
+        <libComponent:WoodButtonUc Name="ButNextPage" ImgName="homeButton" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,140,30" MAGICEnabled="True"/>
+        <libComponent:WoodButtonUc Name="ButQuit" ImgName="exitButton" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,30,30" MAGICEnabled="True"/>
 
     </Grid>
 </Page>
