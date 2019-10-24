@@ -147,8 +147,5 @@ namespace LondonTowerLibrary
                 OnComplete(this, new TrialCompleteEvent(true));
             }
         }
-
-
-
     }
 }
