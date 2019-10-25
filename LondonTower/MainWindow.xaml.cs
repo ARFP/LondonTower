@@ -42,7 +42,6 @@ namespace LondonTower
                 case "Demo":
                     InitTower((LondonTowerVM)sentback);
                     this.Navigate(new Demo(tower.GetNextTrial(), tower.VisualHelp));
-                    //this.Navigate(new TestResult(tower));
                     break;
                 case "Trial":
                     if (tower.HastNextTrial())
@@ -67,6 +66,7 @@ namespace LondonTower
             }
 
         }
+
 
         //private void MainWindow_LoadCompleted(object sender, NavigationEventArgs e)
         //{

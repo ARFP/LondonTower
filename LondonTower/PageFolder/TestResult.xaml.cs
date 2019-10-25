@@ -94,6 +94,7 @@ namespace LondonTower.PageFolder
             InitializeComponent();
             dataGrid1.ItemsSource = tower.TrialList.Where(x => x.TrialNumber != 0);
             ButNextPage.Click += ButNextPage_OnCick;
+            ButQuit.Click += ButLeaveApp_OnClick;
 
             string datestr = tower.DateAndTime.Hour + "." + tower.DateAndTime.Month + "." + tower.DateAndTime.Year + " " + tower.DateAndTime.Hour + "h" + tower.DateAndTime.Minute;
             string path = (tower.Personn.LastName + " " + tower.Personn.FirstName + " Lv" + tower.Level + " " + datestr + ".xlsx");
@@ -108,6 +109,11 @@ namespace LondonTower.PageFolder
         {
             MainWindow main = (MainWindow)Window.GetWindow(this);
             main.LoadingPage("Identification");
+        }
+        private void ButLeaveApp_OnClick(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = (MainWindow)Window.GetWindow(this);
+            main.Close();
         }
 
         private void SaveTest(string _path)
