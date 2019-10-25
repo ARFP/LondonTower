@@ -88,13 +88,13 @@ namespace LondonTowerLibrary.ViewModels
             foreach (Peg p in _listPeg)
             {
                 ViewPeg Vpeg = new ViewPeg(p, _visualhelp);
-                position = _listPeg.Count - p.PegNumber + 1;
+                position = _listPeg.Count - p.PegNumber + 2;
                 Grid.SetColumn(Vpeg, position);
                 if (Vpeg.GetListViewBead().Count > 0)
                 {
                     foreach (ViewBead vb in Vpeg.GetListViewBead())
                     {
-                        Grid.SetColumn(vb, position);
+                        Grid.SetColumn(vb, position );
                     }
                 }
                 listViewPeg.Add(Vpeg);

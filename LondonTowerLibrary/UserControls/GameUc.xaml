@@ -11,7 +11,7 @@
     <libBorder:AdornedBorder Style="{StaticResource WoodBorderShadow}" VerticalAlignment="Top" Width="620" Height="493">
         <StackPanel Name="StackPane" Background="Transparent" HorizontalAlignment="Left" Margin="-13,-10,-12,-10" Width="577">
 
-            <Grid Name="GridGame" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="448" Width="561">
+            <Grid Name="GridGame" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="448" Width="572">
                 <!--<Image Margin="-3,286,1,3" Source="pack://application:,,,/Resources/mainboard.png" Stretch="Fill" Panel.ZIndex="3"/>-->
                 <Image Name="imgBoard" Margin="5,294,-8,1" Source="/LondonTowerLibrary;Component/Resources/mainboard.png" Stretch="None"/>
                 <!--<Image Margin="-3,286,1,3" Source="{Binding Source={x:Static properties:Resources.mainboard}}" Stretch="Fill"/>-->

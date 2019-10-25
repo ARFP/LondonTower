@@ -22,7 +22,8 @@ namespace LondonTowerLibrary.UserControls
         int col;
         bool firstMove = true;
         MediaPlayer mp = new MediaPlayer();
-
+        const int largeurBoard = 572;
+        int sidesize;
         double largeur;
         double largeurCol;
 
@@ -82,7 +83,7 @@ namespace LondonTowerLibrary.UserControls
             sequence = 546 / (nbrPeg+1);
             largeurCol = (566 - (sequence * (nbrPeg - 1) + 65)) / 2;
             largeur = (sequence * (nbrPeg - 1) + 65) / nbrPeg;
-
+            
             InitGrid();
             CreateVisualElement();
 
@@ -98,7 +99,7 @@ namespace LondonTowerLibrary.UserControls
         {
             grid = new Grid();
             /*AFFICHAGE DU QUADRILLAGE DE LA GRID ET CONFIGURATION DE LA GRID*/
-            //grid.ShowGridLines = true;
+            grid.ShowGridLines = true;
 
 
             /*ENCRAGE ET AJOUT DE LA GRID AU CONTAINER*/
@@ -107,18 +108,21 @@ namespace LondonTowerLibrary.UserControls
             grid.Margin = new Thickness(0, 0, 0, 10);
             GridGame.Children.Add(grid);
 
-            grid.Width = sequence * (nbrPeg - 1) + 65;
+            //grid.Width = sequence * (nbrPeg - 1) + 65;
+            grid.Width = largeurBoard;
             grid.Height = 436;
-
+            sidesize = (largeurBoard - (sequence * (nbrPeg - 1) + 65)) / 2 -1; 
             /*CREATION DES COLONNES DE LA GRID */
-            for(int i = 0; i <= nbrPeg + 1; i++)
+            for(int i = 0; i <= nbrPeg + 3; i++)
             {
                 ColumnDefinition gridColm = new ColumnDefinition();
                 grid.ColumnDefinitions.Add(gridColm);
             }
             grid.Background = new SolidColorBrush(Colors.Transparent);
             grid.ColumnDefinitions.ElementAt(0).Width = new GridLength(0);
+            grid.ColumnDefinitions.ElementAt(1).Width = new GridLength(sidesize);
             int counter = grid.ColumnDefinitions.Count;
+            grid.ColumnDefinitions.ElementAt(counter - 1).Width = new GridLength(sidesize);
             grid.ColumnDefinitions.ElementAt(counter - 1).Width = new GridLength(0);
 
 
@@ -166,7 +170,7 @@ namespace LondonTowerLibrary.UserControls
             imgPointeur.HorizontalAlignment = HorizontalAlignment.Left;
             imgPointeur.Stretch = Stretch.None;
             imgPointeur.Margin = new Thickness(0, 0, 0, 22);
-            Grid.SetColumn(imgPointeur, 1);
+            Grid.SetColumn(imgPointeur, 2);
             grid.Children.Add(imgPointeur);
 
             /*COLORATION DU RECTANGLE*/
@@ -213,10 +217,10 @@ namespace LondonTowerLibrary.UserControls
 
         private void Grid_OnClick(object sender, MouseEventArgs e)
         {
-            col = 1;
+            col = 2;
             Point position = Mouse.GetPosition(grid);
-            double width = largeur;
-            for(;width<position.X && col< nbrPeg; col++)
+            double width = largeur +sidesize;
+            for(;width<position.X && col < nbrPeg +1; col++)
             {
                 width += largeur;
             }
@@ -240,9 +244,9 @@ namespace LondonTowerLibrary.UserControls
                         VBeadTempo.Margin = new Thickness(0, 0, 0, 370);
                         translateViewBead = new TranslateTransform();
                         VBeadTempo.RenderTransform = translateViewBead;
-                        if (Mouse.GetPosition(grid).X > Step - Offset && Mouse.GetPosition(grid).X < grid.Width - Step + Offset)
+                        if (Mouse.GetPosition(grid).X > 0 && Mouse.GetPosition(grid).X < grid.Width )
                         {
-                            translateViewBead.X = Mouse.GetPosition(grid).X - (imgPointeur.Width / 2) - ((col - 1) * largeur);
+                            translateViewBead.X = translate.X - ((col - 2) * largeur) ;
                         }
                     }
                 }
@@ -288,14 +292,14 @@ namespace LondonTowerLibrary.UserControls
 
         private void Grid_MouseMove(object sender, MouseEventArgs e)
         {
-            Step = (grid.ColumnDefinitions[1].ActualWidth / 2);
-            Offset = (grid.ColumnDefinitions[1].ActualWidth / 2) - imgPointeur.Width / 2;
-            if (Mouse.GetPosition(grid).X > Step-Offset && Mouse.GetPosition(grid).X < grid.Width - Step + Offset)
+            //Step = (grid.ColumnDefinitions[1].ActualWidth / 2);
+            //Offset = (grid.ColumnDefinitions[1].ActualWidth / 2) - imgPointeur.Width / 2;
+            if (Mouse.GetPosition(grid).X > 72 && Mouse.GetPosition(grid).X < grid.Width - 60)
             {
-                translate.X = Mouse.GetPosition(grid).X - ((imgPointeur.Width / 2));
+                translate.X = Mouse.GetPosition(grid).X - ((imgPointeur.Width /2)) - grid.ColumnDefinitions[1].ActualWidth;
                 if (VBeadTempo != null)
                 {
-                    translateViewBead.X = Mouse.GetPosition(grid).X - (imgPointeur.Width / 2) - ((col - 1) * largeur);
+                    translateViewBead.X = Mouse.GetPosition(grid).X - (imgPointeur.Width/2 ) - ((col - 2) * grid.ColumnDefinitions[2].ActualWidth) - grid.ColumnDefinitions[1].ActualWidth  ;
                 }
             }
         }
