@@ -12,7 +12,7 @@
 
 
     <Grid >
-        <libBorders:AdornedBorder Style="{StaticResource WoodBorder}" Margin="150">
+        <libBorders:AdornedBorder Style="{StaticResource WoodBorder}" Margin="150" Width="900">
             <StackPanel   Background="Transparent" >
                 <TextBlock Width="750" Text="Merci de votre participation" Padding="40" Grid.Row="2" TextAlignment="Center"    FontSize="160"                                   
                       FontFamily="{StaticResource Tangerine}" TextWrapping="Wrap" FontWeight="Bold" LineStackingStrategy="BlockLineHeight"  LineHeight="105" >

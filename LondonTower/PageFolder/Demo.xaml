@@ -12,7 +12,12 @@
     
     <Grid Name="GridWindow" Margin="0">        
         <TextBlock Name="labelTitleWindow" Text="Démonstration" Margin="0,34,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="64" FontSize="36" Style="{StaticResource TextBlockTitle}"/>
-
+        <Grid Name="GridUc">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+        </Grid>
         <libBorders:AdornedBorder Style="{StaticResource WoodBorderShadow}"  Height="270" Margin="0,0,0,30" VerticalAlignment="Bottom" Width="900">
             <StackPanel  Name="StackpanelInstru" Background="Transparent">
             

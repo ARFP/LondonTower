@@ -19,16 +19,10 @@ namespace LondonTower
             NavigationCommands.BrowseForward.InputGestures.Clear();
             ShowsNavigationUI = false;
 
-             //tower = FactoryLondonTower.InitialiseTowerOfLondon();
-
         }
         public void InitTower(LondonTowerVM towerVM)
         {
             tower = FactoryLondonTower.GetTowerOfLondon(towerVM);
-            
-            //LoadingPage("Demo");
-            //LoadingPage("TestResult");
-            //LoadingPage("TestResult");
             
         }
 
@@ -41,8 +35,9 @@ namespace LondonTower
                     this.Navigate(new Identification());
                     break;
                 case "Demo":
+                    this.Navigate(new FeedBack());
                     InitTower((LondonTowerVM)sentback);
-                    this.Navigate(new Demo(tower.GetNextTrial(), tower.VisualHelp));
+                    //this.Navigate(new Demo(tower.GetNextTrial(), tower.VisualHelp));
                     break;
                 case "Trial":
                     if (tower.HastNextTrial())
@@ -67,14 +62,6 @@ namespace LondonTower
             }
 
         }
-
-
-        //private void MainWindow_LoadCompleted(object sender, NavigationEventArgs e)
-        //{
-        //    if (e.Content != null)
-        //    {
-
-        //    }
-        //}
+        
     }
 }

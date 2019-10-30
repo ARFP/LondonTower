@@ -27,10 +27,15 @@
  
     <Grid Name="GridWindow" Margin="0">
         <TextBlock Name="labelTitleWindow" Text="Resultats" Margin="0,40,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="64" FontSize="36" Style="{StaticResource TextBlockTitle}"/>
+        <Grid Name="GridUc">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
 
-        <libUc:UCResultPersonn Margin="100,120,0,0" />
-        <libUc:UCResultGlobal HorizontalAlignment="Right" Margin="0,120,100,0" />
-
+        <libUc:UCResultPersonn Grid.Column="0" HorizontalAlignment="Center" Margin="100,120,0,0" />
+        <libUc:UCResultGlobal Grid.Column="1" HorizontalAlignment="Center" Margin="0,120,100,0" />
+        </Grid>
         <libBorder:AdornedBorder Style="{StaticResource WoodBorderShadow}" Margin="0,493,0,0" VerticalAlignment="Top" 
                   HorizontalAlignment="Center">
             <Grid Margin="-9">

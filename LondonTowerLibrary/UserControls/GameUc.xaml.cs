@@ -63,17 +63,17 @@ namespace LondonTowerLibrary.UserControls
         {
             VTrial = _trial;
             VTrial.TrialComplet += TrialCompleteUc;
-
+            HorizontalAlignment = HorizontalAlignment.Center;
             if (UcGoal)
             {
-                HorizontalAlignment = HorizontalAlignment.Right;
+                //HorizontalAlignment = HorizontalAlignment.Right;
                 this.Margin = new Thickness(0, 120, 10, 0);
                 listPeg = VTrial.ViewPegslistGoal;
                 
             }
             else
             {
-                HorizontalAlignment = HorizontalAlignment.Left;
+                //HorizontalAlignment = HorizontalAlignment.Left;
                 this.Margin = new Thickness(10, 120, 0, 0);
                 listPeg = VTrial.ViewPegsList;
             }

@@ -14,7 +14,12 @@
     
     <Grid x:Name="GridWindow" Margin="0">
         <TextBlock x:Name="labelTitleWindow" Margin="0,40,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="64" FontSize="36" Style="{StaticResource TextBlockTitle}"><Run Text="Niveau"/><Run Text=" "/><Run Text="{Binding Trial.TrialNumber }"/></TextBlock>
-
+        <Grid Name="GridUc">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+        </Grid>
         <libComponent:WoodButtonUc x:Name="ButNextPage" ImgName="woodarrow" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,30,30"  MAGICEnabled="False"/>
 
         <LibUC:MessageResultTrial Name="ResultUc" Visibility="Hidden" Margin="0,0,0,50"/>

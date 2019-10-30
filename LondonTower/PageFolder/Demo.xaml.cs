@@ -35,9 +35,13 @@ namespace LondonTower.PageFolder
             vtrailtest.TrialComplet+= EnableNextPage;
             GameUc gameGoal = new GameUc(vtrailtest, true);
             GameUc gameTrial = new GameUc(vtrailtest, false);
-            GridWindow.Children.Add(gameGoal);
-            GridWindow.Children.Add(gameTrial);
-            
+            //GridWindow.Children.Add(gameGoal);
+            //GridWindow.Children.Add(gameTrial);
+            Grid.SetColumn(gameTrial, 0);
+            Grid.SetColumn(gameGoal, 1);
+            GridUc.Children.Add(gameTrial);
+            GridUc.Children.Add(gameGoal);
+
             ConfigLabel();
         }
         private void ButNextPage_Click(object sender, EventArgs e)
