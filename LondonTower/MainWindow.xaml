@@ -4,14 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-                Title="MainWindow" Icon="LondonTower.ico" Height="960" Width="1280" Source="./PageFolder/Identification.xaml"
+                Title="Tour de Londres" Icon="LondonTower.ico" Height="960" Width="1280" Source="./PageFolder/Identification.xaml"
                   MinHeight="960" MinWidth="1280">
     <NavigationWindow.Background>
         <LinearGradientBrush>
-            <GradientStop Offset="0" Color="{StaticResource RadColDarkBlue}"/>
-            <GradientStop Offset="0.3" Color="{StaticResource RadColLightBlue}"/>
-            <GradientStop Offset="0.7" Color="{StaticResource RadColLightBlue}"/>
-            <GradientStop Offset="1" Color="{StaticResource RadColDarkBlue}" />
+            <GradientStop Offset="0" Color="{StaticResource RadColShadow}"/>
+            <GradientStop Offset="0.3" Color="{StaticResource RadColDarkBlue}"/>
+            <GradientStop Offset="0.7" Color="{StaticResource RadColDarkBlue}"/>
+            <GradientStop Offset="0.9" Color="{StaticResource RadColShadow}" />
         </LinearGradientBrush>
     </NavigationWindow.Background>
 </NavigationWindow>

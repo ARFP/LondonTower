@@ -189,6 +189,12 @@
     <Resource Include="Resources\woodRadio10s.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Content Include="Config\TowerOfLondon_Lvl4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\TowerOfLondon_Lvl5.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Resources\homeButton.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -198,12 +204,6 @@
     <Resource Include="Resources\homeButtonok.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Content Include="Config\TowerOfLondon_Lvl4.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Config\TowerOfLondon_Lvl5.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="sound\Buzzer.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
