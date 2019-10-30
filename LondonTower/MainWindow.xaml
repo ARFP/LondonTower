@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" Icon="LondonTower.ico" Height="960" Width="1280" Source="./PageFolder/Identification.xaml" ResizeMode="NoResize">
+                Title="MainWindow" Icon="LondonTower.ico" Height="960" Width="1280" Source="./PageFolder/Identification.xaml"
+                  MinHeight="960" MinWidth="1280">
     <NavigationWindow.Background>
         <LinearGradientBrush>
             <GradientStop Offset="0" Color="{StaticResource RadColDarkBlue}"/>

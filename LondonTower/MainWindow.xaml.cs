@@ -37,6 +37,7 @@ namespace LondonTower
             switch (_nextPage)
             {
                 case "Identification":
+
                     this.Navigate(new Identification());
                     break;
                 case "Demo":
