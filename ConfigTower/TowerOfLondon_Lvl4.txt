@@ -684,7 +684,7 @@
           ]
         }
       ],
-      "MinimalMoveExpect": 8,
+      "MinimalMoveExpect": 5,
       "TrialNumber": 9,
       "TimeToResolve": 0,
       "TimeDisplayUntilResolve": 0,

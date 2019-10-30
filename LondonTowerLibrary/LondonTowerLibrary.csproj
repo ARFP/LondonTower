@@ -198,6 +198,12 @@
     <Resource Include="Resources\homeButtonok.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Content Include="Config\TowerOfLondon_Lvl4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\TowerOfLondon_Lvl5.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="sound\Buzzer.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -474,12 +480,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Config\TowerOfLondon_Lvl3.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Config\TowerOfLondon_Lvl4.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Config\TowerOfLondon_Lvl5.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Resource Include="Resources\TowerOfLondon_Lvl5.txt">
