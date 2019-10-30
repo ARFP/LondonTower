@@ -60,7 +60,7 @@
                         <ColumnDefinition Width="7*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <libControls:WoodButtonUc ImgName="woodarrow"  Name="ButNextPage"  Grid.Column="1" Click="WoodButton_Click" Width="100" Height="100"/>
+                    <libControls:WoodButtonUc ImgName="woodarrow"  Name="ButNextPage"  Grid.Column="1" Click="WoodButton_Click" Width="100" Height="100" />
 
                 </Grid>
             </StackPanel>

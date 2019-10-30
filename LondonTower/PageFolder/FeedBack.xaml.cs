@@ -13,6 +13,7 @@ namespace LondonTower.PageFolder
     {
         CommandNavigate myCommand;
         string fback;
+
         public FeedBack()
         {
             InitializeComponent();
@@ -27,18 +28,22 @@ namespace LondonTower.PageFolder
         private void WoodButton_Click(object sender, RoutedEventArgs e)
         {
             //this.NavigationService.Navigate(new Identification());
-            MainWindow main = (MainWindow)Window.GetWindow(this);
-
-            main.LoadingPage("TestResult", fback);
+            if (this.ButNextPage.MAGICEnabled)
+            {
+                MainWindow main = (MainWindow)Window.GetWindow(this);
+                main.LoadingPage("TestResult", fback);
+            }
         }
 
-        public CommandNavigate MyNextCommand {
+        public CommandNavigate MyNextCommand
+        {
             get => myCommand;
-            set => myCommand = value; }
+            set => myCommand = value;
+        }
         private void WoodRadioUC_WhyThou(object sender, RoutedEventArgs e)
         {
             WoodRadioUC radio = (WoodRadioUC)sender;
-            this.fback = radio.RadValue ;
+            this.fback = radio.RadValue;
             this.ButNextPage.MAGICEnabled = true;
         }
     }
