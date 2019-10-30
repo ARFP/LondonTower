@@ -26,11 +26,11 @@ namespace LondonTower.PageFolder
             this.towerVM = new LondonTowerVM();
 
             // personne pre remplie 
-            this.towerVM.Personne.LastName = "Toto";
-            this.towerVM.Personne.FirstName = "Titi";
-            this.towerVM.Personne.Month = "12";
-            this.towerVM.Personne.Day = "31";
-            this.towerVM.Personne.Year = "2000";
+            this.towerVM.Personne.LastName = "Hawking";
+            this.towerVM.Personne.FirstName = "Stephen";
+            this.towerVM.Personne.Month = "01";
+            this.towerVM.Personne.Day = "08";
+            this.towerVM.Personne.Year = "1942";
 
                 //fin personne pre remplie 
             this.InfoStack.DataContext = this.towerVM.Personne;

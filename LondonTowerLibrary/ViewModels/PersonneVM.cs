@@ -145,6 +145,8 @@ namespace LondonTowerLibrary.ViewModels
                             else
                                 listOfStuff.Add("Day", new List<string> { " La date de naissance n'est pas valide" });
                         }
+                        else
+                            listOfStuff.Add("Day", new List<string> { " La date de naissance n'est pas valide" });
                         break;
                     case "FirstName":
                         if (!Regex.IsMatch((string)value, @"^[a-zA-Zéèçëê\s\-]{2,}$"))
