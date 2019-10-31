@@ -39,8 +39,9 @@ namespace LondonTower.PageFolder
             //GridWindow.Children.Add(gameTrial);
             Grid.SetColumn(gameTrial, 0);
             Grid.SetColumn(gameGoal, 1);
-            GridUc.Children.Add(gameTrial);
             GridUc.Children.Add(gameGoal);
+            GridUc.Children.Add(gameTrial);
+
 
             ConfigLabel();
         }

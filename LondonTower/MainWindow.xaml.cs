@@ -1,6 +1,8 @@
 ﻿using LondonTower.PageFolder;
 using LondonTowerLibrary;
 using LondonTowerLibrary.ViewModels;
+using System;
+using System.IO;
 using System.Windows.Input;
 using System.Windows.Navigation;
 
@@ -15,9 +17,30 @@ namespace LondonTower
         public MainWindow()
         {
             InitializeComponent();
+
             NavigationCommands.BrowseBack.InputGestures.Clear();
             NavigationCommands.BrowseForward.InputGestures.Clear();
             ShowsNavigationUI = false;
+
+
+            string directorySave = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "TestNeuro", "LondonTower");
+
+            if (!Directory.Exists(directorySave))
+            {
+                Directory.CreateDirectory(directorySave);
+            }
+
+
+            Properties.Settings.Default.PathSecondeSave = directorySave;
+
+            Properties.Settings.Default.Upgrade();
+            //Properties.Settings.Default.Save();
+
+
+
+
+
+
 
         }
         public void InitTower(LondonTowerVM towerVM)
@@ -62,6 +85,10 @@ namespace LondonTower
             }
 
         }
-        
+
+        private void NavigationWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Properties.Settings.Default.Save();
+        }
     }
 }

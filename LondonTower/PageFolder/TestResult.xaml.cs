@@ -151,18 +151,28 @@ namespace LondonTower.PageFolder
 
             //workbook.SaveAs(_path);
 
-            string p = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "TestLaurence", _path);
+            //string p = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "TestLaurence", _path);
 
-            string directorySave = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "TestLaurence");
+
+            //string directorySave = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "TestLaurence");
             //Directory.CreateDirectory(directo);
 
-            if (!Directory.Exists(directorySave))
+            //if (!Directory.Exists(directorySave))
+            //{
+            //    Directory.CreateDirectory(directorySave);
+
+            //}
+
+            
+            string p = @"P:\TestNeuro";
+            string save = Path.Combine(p, "LondonTower", _path);
+            if (!Directory.Exists(p))
             {
-                Directory.CreateDirectory(directorySave);
+                Directory.CreateDirectory(p);
 
             }
 
-            workbook.SaveAs(p);
+            workbook.SaveAs(save);
 
         }
 

@@ -4,8 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-                Title="Tour de Londres" Icon="LondonTower.ico" Height="960" Width="1280" Source="./PageFolder/Identification.xaml"
-                  MinHeight="960" MinWidth="1280">
+        Title="Tour de Londres" Icon="LondonTower.ico" Height="960" Width="1280" Source="./PageFolder/Identification.xaml"
+        MinHeight="960" MinWidth="1280"
+                  Closing="NavigationWindow_Closing">
     <NavigationWindow.Background>
         <LinearGradientBrush>
             <GradientStop Offset="0" Color="{StaticResource RadColShadow}"/>
