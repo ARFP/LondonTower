@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -50,9 +51,22 @@ namespace LondonTowerSetting
 
         public MainWindow()
         {
+            ExeConfigurationFileMap filemap = new ExeConfigurationFileMap();
+            //filemap.ExeConfigFilename = @"./LondonTower.exe.config";
+            string appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string localdata = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+
+            filemap.RoamingUserConfigFilename = Path.Combine(appdata, @"LondonTower");
+            filemap.LocalUserConfigFilename = Path.Combine(localdata, @"LondonTower","user.config");
+            filemap.ExeConfigFilename = "./LondonToxer.exe.config";
+
+            Configuration config = ConfigurationManager.OpenMappedExeConfiguration(filemap, ConfigurationUserLevel.PerUserRoamingAndLocal);
+
 
             FirstSaveFolder = LondonTower.Properties.Settings.Default.PathFirstSave;
             SecondeSaveFolder = LondonTower.Properties.Settings.Default.PathSecondeSave;
+            //SecondeSaveFolder = config.AppSettings.Settings["PathSecondeSave"].Value;
+            //SecondeSaveFolder = section.Settings["PathSecondeSave"].Value;
             InitializeComponent();
 
         }
