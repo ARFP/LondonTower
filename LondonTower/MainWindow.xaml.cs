@@ -37,8 +37,8 @@ namespace LondonTower
             
             Properties.Settings.Default.PathSecondeSave = directorySave;
 
-            Properties.Settings.Default.Upgrade();
-            //Properties.Settings.Default.Save();
+            //Properties.Settings.Default.Upgrade();
+            Properties.Settings.Default.Save();
 
 
 
@@ -62,9 +62,9 @@ namespace LondonTower
                     this.Navigate(new Identification());
                     break;
                 case "Demo":
-                    this.Navigate(new FeedBack());
+                    //this.Navigate(new FeedBack());
                     InitTower((LondonTowerVM)sentback);
-                    //this.Navigate(new Demo(tower.GetNextTrial(), tower.VisualHelp));
+                    this.Navigate(new Demo(tower.GetNextTrial(), tower.VisualHelp));
                     break;
                 case "Trial":
                     if (tower.HastNextTrial())

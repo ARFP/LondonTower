@@ -27,7 +27,7 @@ namespace LondonTower.PageFolder
 
         private void WoodButton_Click(object sender, RoutedEventArgs e)
         {
-            //this.NavigationService.Navigate(new Identification());
+            
             if (this.ButNextPage.MAGICEnabled)
             {
                 MainWindow main = (MainWindow)Window.GetWindow(this);
