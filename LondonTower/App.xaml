@@ -9,6 +9,7 @@
     <Application.Resources>
         <ResourceDictionary>
         <!-- FONTS -->
+        <FontFamily x:Key="FontAwesome">pack://application:,,,/Resources/#fontawesome</FontFamily>
         <FontFamily x:Key="GeneralFont" >Times New Roman</FontFamily>
         <FontFamily x:Key="Tangerine">pack://application:,,,/Fonts/#Tangerine</FontFamily>
         <!-- GENERAL COLORS SOLID BRUSH PALETE-->

@@ -7,12 +7,49 @@
       xmlns:libBorder="clr-namespace:LondonTowerLibrary.Border;assembly=LondonTowerLibrary"
       xmlns:libComponent="clr-namespace:LondonTowerLibrary.Button;assembly=LondonTowerLibrary"
       xmlns:libConverts="clr-namespace:LondonTowerLibrary.Converters;assembly=LondonTowerLibrary"
-
+      xmlns:local="clr-namespace:LondonTower"
+     xmlns:fa="http://schemas.fontawesome.io/icons/"
     mc:Ignorable="d" 
       d:DesignHeight="960" d:DesignWidth="1280"
       Title="Identification">
-
     <Grid>
+        <Grid HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10" Width="50" Height="50" >
+            <TextBlock  FontFamily="{StaticResource FontAwesome}"    MouseDown="TextBlock_MouseDown" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"> 
+            <fa:FontAwesome FontSize="38" Icon="cog"  Foreground="{StaticResource ColBrown}"  Cursor="Hand">
+                <fa:FontAwesome.Effect>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="0" Color="#2A3132" Direction="145" />
+                </fa:FontAwesome.Effect>
+            </fa:FontAwesome>
+                <TextBlock.Style>
+                    <Style TargetType="TextBlock" >
+                        <Setter Property="RenderTransformOrigin" Value="0.5 0.5"/>
+                        <Setter Property="RenderTransform">
+                            <Setter.Value>
+                                <RotateTransform Angle="0"/>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers >
+                            <EventTrigger RoutedEvent="MouseEnter" >
+                                <BeginStoryboard >
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(RotateTransform.Angle)"   From="0" To="360"  Duration="0:0:2" 
+                                    RepeatBehavior="Forever"/>
+                                    </Storyboard>
+                                </BeginStoryboard >
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <BeginStoryboard >
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(RotateTransform.Angle)" From="0" To="0" Duration="0:0:0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+        </Grid>
+
         <!-- BORDERS-->
         <libBorder:AdornedBorder Style="{StaticResource WoodBorder}" VerticalAlignment="Center" HorizontalAlignment="Center">
             <!-- MAIN PANNEL -->

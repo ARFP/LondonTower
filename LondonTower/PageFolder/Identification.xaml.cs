@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-
+using System.Windows.Markup;
 namespace LondonTower.PageFolder
 {
     /// <summary>
@@ -85,14 +85,11 @@ namespace LondonTower.PageFolder
 
         }
 
+        private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Félicitations!");
+        }
 
-        //private void Button_OnClick(object sender, RoutedEventArgs e)
-        //{
-        //    MainWindow main = (MainWindow)Window.GetWindow(this);
-        //    WoodButtonUc buttonSend = (WoodButtonUc)sender;
-        //    int lvl = int.Parse(buttonSend.Tag.ToString());
-        //    main.InitTower(lvl);
-        //}
 
     }
 }
