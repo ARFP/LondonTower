@@ -16,7 +16,9 @@
       >
     <Grid>
         <Grid Name="SettingGrid" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10" Width="50" Height="50" >
-            <TextBlock  FontFamily="{StaticResource FontAwesome}"    MouseDown="TextBlock_MouseDown" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Visibility="{Binding VisibilityAdmin}"> 
+            <TextBlock  FontFamily="{StaticResource FontAwesome}"    MouseDown="TextBlock_MouseDown" 
+                        HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" 
+                        Visibility="{Binding VisibilityAdmin}"> 
             <fa:FontAwesome FontSize="38" Icon="cog"  Foreground="{StaticResource ColBrown}"  Cursor="Hand">
                 <fa:FontAwesome.Effect>
                     <DropShadowEffect BlurRadius="5" ShadowDepth="0" Color="#2A3132" Direction="145" />

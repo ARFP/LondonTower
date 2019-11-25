@@ -1,4 +1,5 @@
-﻿using LondonTowerLibrary;
+﻿using LondonTower.Modal;
+using LondonTowerLibrary;
 using LondonTowerLibrary.Button;
 using LondonTowerLibrary.ViewModels;
 using System;
@@ -53,7 +54,8 @@ namespace LondonTower.PageFolder
             {
                 VisibilityAdmin = Visibility.Hidden;
             }
-            
+
+
 
 
 
@@ -122,7 +124,19 @@ namespace LondonTower.PageFolder
 
         private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("Félicitations!");
+
+            Settings set = new Settings();
+            set.ShowDialog();
+            if(set.DialogResult== true)
+            {
+                 Properties.Settings.Default.PathFirstSave = set.FirstSaveFolder;
+                 Properties.Settings.Default.PathSecondeSave = set.SecondeSaveFolder;
+                Properties.Settings.Default.Save();
+
+            }
+
+
+
         }
 
 

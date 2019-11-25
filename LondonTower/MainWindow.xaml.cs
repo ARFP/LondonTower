@@ -25,20 +25,20 @@ namespace LondonTower
             //string path = Properties.Settings.Default.PathSecondeSave;
 
 
-            string directorySave = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "TestNeuro", "LondonTower2");
-            var prov = Properties.Settings.Default.Providers;
+            //string directorySave = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "TestNeuro", "LondonTower2");
+            //var prov = Properties.Settings.Default.Providers;
 
-            if (!Directory.Exists(directorySave))
-            {
-                Directory.CreateDirectory(directorySave);
-            }
+            //if (!Directory.Exists(directorySave))
+            //{
+            //    Directory.CreateDirectory(directorySave);
+            //}
 
 
             
-            Properties.Settings.Default.PathSecondeSave = directorySave;
+            //Properties.Settings.Default.PathSecondeSave = directorySave;
 
-            //Properties.Settings.Default.Upgrade();
-            Properties.Settings.Default.Save();
+            ////Properties.Settings.Default.Upgrade();
+            //Properties.Settings.Default.Save();
 
 
 
