@@ -65,8 +65,7 @@ namespace LondonTowerSetting
 
             FirstSaveFolder = LondonTower.Properties.Settings.Default.PathFirstSave;
             SecondeSaveFolder = LondonTower.Properties.Settings.Default.PathSecondeSave;
-            //SecondeSaveFolder = config.AppSettings.Settings["PathSecondeSave"].Value;
-            //SecondeSaveFolder = section.Settings["PathSecondeSave"].Value;
+
             InitializeComponent();
 
         }

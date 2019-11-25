@@ -2,6 +2,8 @@
 using LondonTowerLibrary.Button;
 using LondonTowerLibrary.ViewModels;
 using System;
+using System.ComponentModel;
+using System.Security.Principal;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,16 +14,49 @@ namespace LondonTower.PageFolder
     /// <summary>
     /// Logique d'interaction pour Identification.xaml
     /// </summary>
-    public partial class Identification : Page
+    public partial class Identification : Page, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
+
+        private Visibility visibilityAdmin;
+        public Visibility VisibilityAdmin
+        {
+            get { return visibilityAdmin; }
+            set
+            {
+                if (visibilityAdmin != value)
+                {
+                    visibilityAdmin = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs(nameof(VisibilityAdmin)));
+                }
+            }
+        }
 
         public LondonTowerVM towerVM;
+
+
+
         public Identification()
         {
             InitializeComponent();
 
+            AppDomain.CurrentDomain.SetPrincipalPolicy(System.Security.Principal.PrincipalPolicy.WindowsPrincipal);
+            WindowsIdentity userI = WindowsIdentity.GetCurrent();
+            WindowsPrincipal role = new WindowsPrincipal(userI);
+
+            if (role.IsInRole(WindowsBuiltInRole.Administrator))
+            {
+                VisibilityAdmin = Visibility.Visible;
+            }
+            else
+            {
+                VisibilityAdmin = Visibility.Hidden;
+            }
             
-            
+
+
+
 
             this.towerVM = new LondonTowerVM();
 
