@@ -19,7 +19,6 @@ namespace LondonTower.PageFolder
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-
         private Visibility visibilityAdmin;
         public Visibility VisibilityAdmin
         {
@@ -35,8 +34,6 @@ namespace LondonTower.PageFolder
         }
 
         public LondonTowerVM towerVM;
-
-
 
         public Identification()
         {
@@ -57,9 +54,6 @@ namespace LondonTower.PageFolder
 
 
 
-
-
-
             this.towerVM = new LondonTowerVM();
 
             // personne pre remplie 
@@ -69,7 +63,7 @@ namespace LondonTower.PageFolder
             this.towerVM.Personne.Day = "08";
             this.towerVM.Personne.Year = "1942";
 
-                //fin personne pre remplie 
+            //fin personne pre remplie 
             this.InfoStack.DataContext = this.towerVM.Personne;
             this.TowerStack.DataContext = this.towerVM;
             this.LastNameBox.Focus();
@@ -98,7 +92,7 @@ namespace LondonTower.PageFolder
             {
                 MainWindow parent = Window.GetWindow(this) as MainWindow;
                 parent.LoadingPage("Demo", towerVM);
-                
+
             }
         }
 
@@ -127,16 +121,12 @@ namespace LondonTower.PageFolder
 
             Settings set = new Settings();
             set.ShowDialog();
-            if(set.DialogResult== true)
+            if (set.DialogResult == true)
             {
-                 Properties.Settings.Default.PathFirstSave = set.FirstSaveFolder;
-                 Properties.Settings.Default.PathSecondeSave = set.SecondeSaveFolder;
+                Properties.Settings.Default.PathFirstSave = set.FirstSaveFolder;
+                Properties.Settings.Default.PathSecondeSave = set.SecondeSaveFolder;
                 Properties.Settings.Default.Save();
-
             }
-
-
-
         }
 
 

@@ -149,30 +149,66 @@ namespace LondonTower.PageFolder
             worksheet.Cell("D36").Value = totalTimeTower + " secondes";
 
 
-            //workbook.SaveAs(_path);
+            
 
-            string p = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "TestLaurence", _path);
-
-
-            string directorySave = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "TestLaurence");
+            //string p = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LondonTower", _path);
 
 
-            if (!Directory.Exists(directorySave))
+
+
+            //string directorySave = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LondonTower");
+
+
+            //if (!Directory.Exists(directorySave))
+            //{
+            //    Directory.CreateDirectory(directorySave);
+
+            //}
+
+
+            string pathSave;
+
+            string FirstSave = Path.Combine(Properties.Settings.Default.PathFirstSave, "LondonTower");
+            string SecondSave = Path.Combine(Properties.Settings.Default.PathSecondeSave, "LondonTower");
+
+            try
             {
-                Directory.CreateDirectory(directorySave);
+                if (!Directory.Exists(FirstSave))
+                {
+                    Directory.CreateDirectory(FirstSave);
+                }
+                pathSave = FirstSave;
+                
+            }
+            catch (Exception e)
+            {
+                try
+                {
+                    if (!Directory.Exists(SecondSave))
+                    {
+                        Directory.CreateDirectory(SecondSave);
+                    }
+                    pathSave = SecondSave;
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("ERREUR : Problème d'accès aux repertoire de sauvegarde\nVeuillez contacter votre " +
+                        "Administrateur\n\n Sauvegarde du fichier sur le bureau");
+                    pathSave = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                }
 
             }
-            workbook.SaveAs(p);
 
-            //string p = @"P:\TestNeuro";
-            //string save = Path.Combine(p, "LondonTower", _path);
-            //if (!Directory.Exists(p))
-            //{
-            //    Directory.CreateDirectory(p);
-            //}
-            //workbook.SaveAs(save);
+
+            //workbook.SaveAs(p);
+
+            workbook.SaveAs(Path.Combine(pathSave,"LondonTower",_path));
+
+            
 
         }
+
+
 
         private void DataCalcul()
         {
