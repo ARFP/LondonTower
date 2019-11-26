@@ -19,8 +19,6 @@ namespace LondonTower.PageFolder
             InitializeComponent();
             this.DataContext = this;
 
-            ButNextPage.Click += WoodButton_Click;
-
             myCommand = new CommandNavigate(this.NavigationService, this);
 
         }
@@ -40,6 +38,7 @@ namespace LondonTower.PageFolder
             get => myCommand;
             set => myCommand = value;
         }
+
         private void WoodRadioUC_WhyThou(object sender, RoutedEventArgs e)
         {
             WoodRadioUC radio = (WoodRadioUC)sender;
