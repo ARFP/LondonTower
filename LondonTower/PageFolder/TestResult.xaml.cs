@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -101,7 +102,10 @@ namespace LondonTower.PageFolder
 
 
             DataCalcul();
-            SaveTest(path);
+            Task t = new Task( ()=> {
+                SaveTest(path);
+            });
+            t.Start();
 
         }
 
@@ -117,7 +121,7 @@ namespace LondonTower.PageFolder
         }
 
         private void SaveTest(string _path)
-        {
+        { 
             var workbook = new XLWorkbook("./Config/Template.xlsx");
             var worksheet = workbook.Worksheet(1);
 
@@ -147,24 +151,6 @@ namespace LondonTower.PageFolder
             worksheet.Cell("D34").Value = TotalTime + " secondes";
             worksheet.Cell("D35").Value = MoyenneTime + " secondes";
             worksheet.Cell("D36").Value = totalTimeTower + " secondes";
-
-
-            
-
-            //string p = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LondonTower", _path);
-
-
-
-
-            //string directorySave = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LondonTower");
-
-
-            //if (!Directory.Exists(directorySave))
-            //{
-            //    Directory.CreateDirectory(directorySave);
-
-            //}
-
 
             string pathSave;
 
@@ -198,14 +184,7 @@ namespace LondonTower.PageFolder
                 }
 
             }
-
-
-            //workbook.SaveAs(p);
-
-            workbook.SaveAs(Path.Combine(pathSave,"LondonTower",_path));
-
-            
-
+            workbook.SaveAs(Path.Combine(pathSave,_path));
         }
 
 

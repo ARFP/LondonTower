@@ -17,40 +17,14 @@ namespace LondonTower
         public MainWindow()
         {
             InitializeComponent();
-
             NavigationCommands.BrowseBack.InputGestures.Clear();
             NavigationCommands.BrowseForward.InputGestures.Clear();
             ShowsNavigationUI = false;
-
-            //string path = Properties.Settings.Default.PathSecondeSave;
-
-
-            //string directorySave = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "TestNeuro", "LondonTower2");
-            //var prov = Properties.Settings.Default.Providers;
-
-            //if (!Directory.Exists(directorySave))
-            //{
-            //    Directory.CreateDirectory(directorySave);
-            //}
-
-
-            
-            //Properties.Settings.Default.PathSecondeSave = directorySave;
-
-            ////Properties.Settings.Default.Upgrade();
-            //Properties.Settings.Default.Save();
-
-
-
-
-
-
-
         }
+
         public void InitTower(LondonTowerVM towerVM)
         {
-            tower = FactoryLondonTower.GetTowerOfLondon(towerVM);
-            
+            tower = FactoryLondonTower.GetTowerOfLondon(towerVM);            
         }
 
         public void LoadingPage(string _nextPage, object sentback = null)
@@ -62,9 +36,9 @@ namespace LondonTower
                     this.Navigate(new Identification());
                     break;
                 case "Demo":
-                    //this.Navigate(new FeedBack());
+                    this.Navigate(new FeedBack());
                     InitTower((LondonTowerVM)sentback);
-                    this.Navigate(new Demo(tower.GetNextTrial(), tower.VisualHelp));
+                    //this.Navigate(new Demo(tower.GetNextTrial(), tower.VisualHelp));
                     break;
                 case "Trial":
                     if (tower.HastNextTrial())

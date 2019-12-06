@@ -73,7 +73,6 @@ namespace LondonTower.PageFolder
         {
             if (e.Complete)
             {
-              
                 ButNextPage.MAGICEnabled =true;
             }
         }
