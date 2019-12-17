@@ -8,6 +8,9 @@ namespace LondonTowerLibrary.ViewModels
     {
 
         #region Constructor
+        /// <summary>
+        /// Constructeur par défaut
+        /// </summary>
         public LondonTowerVM()
         {
             this.Personne = new PersonneVM(SetFormCompleted);
@@ -18,11 +21,19 @@ namespace LondonTowerLibrary.ViewModels
 
         #endregion
 
+
         #region pegs
+        /// <summary>
+        /// Nombre de tiges sélectionné pour le test, valeur appartient à {3,4,5}
+        /// </summary>
         public int NbPegs { get; set; }
         #endregion
 
         #region DateAndTime 
+        /// <summary>
+        /// DateTime prise au lancement du test.
+        /// s'update toutes les minute via <c>RunTimer()</c> et notifie l'IHM de la modification via <c>PropertyChanged</c> 
+        /// </summary>
         private DateTime dateAndTime;
         public DateTime DateAndTime
         {
@@ -37,6 +48,9 @@ namespace LondonTowerLibrary.ViewModels
             }
         }
 
+        /// <summary>
+        /// async Timer qui update DateAndTime tant que le test n'a pas été démarré. 
+        /// </summary>
         private void RunTimer()
         {
             Task.Run(async () =>
@@ -48,10 +62,13 @@ namespace LondonTowerLibrary.ViewModels
                 }
             });
         }
-
         #endregion
 
+
         #region Personne
+        /// <summary>
+        /// PersonneVM contient tous les données de l'utilisateur passant le test. Trigger <c>PropertyChanged</c>
+        /// </summary>
         private PersonneVM personne;
         public PersonneVM Personne
         {
@@ -68,6 +85,10 @@ namespace LondonTowerLibrary.ViewModels
         #endregion
 
         #region VisualHelp
+        /// <summary>
+        /// Enregistre le choix de l'utilisateur pour l'utilisation des aides visuelles. 
+        /// Les changements trigger PropertyChanged
+        /// </summary>
         private Boolean visualHelp;
         public Boolean VisualHelp
         {
@@ -84,12 +105,21 @@ namespace LondonTowerLibrary.ViewModels
         #endregion
         #region Everything is ok! 
 
+        /// <summary>
+        /// Fonction passée en argument lors de la création d'un PersonneVM. 
+        /// Permet de retourner l'état actuel de PersonneVM au niveau des erreurs
+        /// </summary>
+        /// <param name="isOk"></param>
         public void SetFormCompleted(bool isOk)
         {
             FormCompleted = isOk;
         }
 
-
+        /// <summary>
+        /// Boolean pour l'état de complétude des infos utilisateurs. 
+        /// Vaut true si tous les champs sont remplis et sans erreur, false sinon. 
+        /// trigger PropertyChanged.
+        /// </summary>
         private bool formCompleted;
         public bool FormCompleted
         {
@@ -108,6 +138,9 @@ namespace LondonTowerLibrary.ViewModels
 
         #endregion
         #region feedback
+        /// <summary>
+        /// Stocke le retour de l'utilisateur sur sa performance qui lui est demandé sur la page IHM "FeedBack".
+        /// </summary>
         private Int16 feedback;
         public Int16 Feedback
         {
@@ -123,11 +156,18 @@ namespace LondonTowerLibrary.ViewModels
         }
         #endregion 
         #region NotifyChanges Event Handler
+        /// <summary>
+        /// event implemente <c>INotifyPropertyChanged</c> 
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
 
         #endregion
 
         #region Implicit Operators
+        /// <summary>
+        /// Implicit operator ViewModel -> Model
+        /// </summary>
+        /// <param name="ltvm"> ViewModel </param>
         public static implicit operator TowerOfLondon(LondonTowerVM ltvm)
         {
             return new TowerOfLondon

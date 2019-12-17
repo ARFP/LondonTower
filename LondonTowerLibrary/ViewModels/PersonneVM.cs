@@ -24,74 +24,123 @@ namespace LondonTowerLibrary.ViewModels
             this.IsCompleted = _IsCompleted;
         }
         #endregion
-
+        /// <summary>
+        /// Délégué utilisé pour notifier LondonTowerVM qui contient PersonneVM de l'état des erreurs.
+        /// </summary>
+        /// <param name="IsOk"> True is aucune erreur et tous les champs sont remplus, False sinon</param>
         public delegate void ReturnForm(bool IsOk);
         public event ReturnForm IsCompleted;
 
-        // this region is only in dataview for convenience purpose / 
+
         #region Age
         /// <summary>
-        /// 
+        /// <c>ThingsGotChanged</c> se charge de la gestion d'INotifyPropertyChanged et INotifyDataErrorInfo, toutes les properties deleguent leur gestion à cette methode. 
+        /// La région age n'est pas répercutée du coté du model, elle est uniquement présente coté VM pour des raisons pratiques lors des tests d'erreurs et pour l'affichage.
         /// </summary>
         private int age;
         public int Age
         {
             get { return age; }
-            set { if (age != value) ThingsGotChanged("Age", this, age = value); }
+            set { if (age != value) ThingsGotChanged(nameof(Age), this, age = value); }
         }
         #endregion
 
         #region LastName
         /// <summary>
-        /// 
+        /// <c>ThingsGotChanged</c> se charge de la gestion d'INotifyPropertyChanged et INotifyDataErrorInfo, toutes les properties deleguent leur gestion à cette methode. 
+        /// réflete la propriété du même nom coté model 
         /// </summary>
         private string lastName;
         public string LastName
         {
             get { return lastName; }
-            set { if (lastName != value) ThingsGotChanged("LastName", this, lastName = value); }
+            set { if (lastName != value) ThingsGotChanged(nameof(LastName), this, lastName = value); }
         }
         #endregion
 
         #region BirthDate
         /// <summary>
-        /// 
+        /// <c>ThingsGotChanged</c> se charge de la gestion d'<c>INotifyPropertyChanged</c> et <c>INotifyDataErrorInfo</c>, toutes les properties deleguent leur gestion à cette methode. 
+        /// réflete la propriété du même nom coté model 
         /// </summary>
         private DateTime birthDate;
         public DateTime BirthDate
         {
             get { return birthDate; }
-            set { if (birthDate != value) ThingsGotChanged("BirthDate", this, birthDate = value); }
+            set { if (birthDate != value) ThingsGotChanged(nameof(BirthDate), this, birthDate = value); }
         }
         #endregion
 
+        #region separated Birthdate
+        /// <summary>
+        /// <c>ThingsGotChanged</c> se charge de la gestion d'<c>INotifyPropertyChanged</c> et <c>INotifyDataErrorInfo</c>, toutes les properties deleguent leur gestion à cette methode. 
+        /// Séparation en jours/mois/années de la date pour l'affichage, la propriété n'est pas répercuté coté model, <c>Birthdate</c> qui est présent coté model est update à la place.
+        /// partie jour.
+        /// </summary>
+        private string day;
+        public string Day
+        {
+            get { return day; }
+            set { if (day != value) ThingsGotChanged(nameof(Day), this, day = value); }
+
+        }
+
+        /// <summary>
+        /// <c>ThingsGotChanged</c> se charge de la gestion d'<c>INotifyPropertyChanged</c> et <c>INotifyDataErrorInfo</c>, toutes les properties deleguent leur gestion à cette methode. 
+        /// Séparation en jours/mois/années de la date pour l'affichage, la propriété n'est pas répercuté coté model, <c>Birthdate</c> qui est présent coté model est update à la place.
+        /// partie mois.
+        /// </summary>
+        private string month;
+        public string Month
+        {
+            get { return month; }
+            set { if (month != value) ThingsGotChanged(nameof(Day), this, month = value); }
+        }
+
+        /// <summary>
+        /// <c>ThingsGotChanged</c> se charge de la gestion d'<c>INotifyPropertyChanged</c> et <c>INotifyDataErrorInfo</c>, toutes les properties deleguent leur gestion à cette methode. 
+        /// Séparation en jours/mois/années de la date pour l'affichage, la propriété n'est pas répercuté coté model, <c>Birthdate</c> qui est présent coté model est update à la place.
+        /// partie année.
+        /// </summary>
+        private string year;
+        public string Year
+        {
+            get { return year; }
+            set { if (year != value) ThingsGotChanged(nameof(Day), this, year = value); }
+        }
+        #endregion
+
+
         #region Genre
         /// <summary>
-        /// 
+        /// <c>ThingsGotChanged</c> se charge de la gestion d'<c>INotifyPropertyChanged</c> et <c>INotifyDataErrorInfo</c>, toutes les properties deleguent leur gestion à cette methode. 
+        /// réflete la propriété du même nom coté model 
         /// </summary>
         private Genre genre;
         public Genre Genre
         {
             get { return genre; }
-            set { if (value != genre) ThingsGotChanged("Genre", this, genre = value); }
+            set { if (value != genre) ThingsGotChanged(nameof(Genre), this, genre = value); }
         }
         #endregion
 
         #region FirstName
         /// <summary>
-        /// 
+        /// <c>ThingsGotChanged</c> se charge de la gestion d'<c>INotifyPropertyChanged</c> et <c>INotifyDataErrorInfo</c>, toutes les properties deleguent leur gestion à cette methode. 
+        /// réflete la propriété du même nom coté model 
         /// </summary>
         private string firstName;
         public string FirstName
         {
             get { return firstName; }
-            set { if (value != firstName) ThingsGotChanged("FirstName", this, firstName = value); }
+            set { if (value != firstName) ThingsGotChanged(nameof(FirstName), this, firstName = value); }
         }
         #endregion
 
         #region ErrorHandling
         /// <summary>
-        /// 
+        /// Fait partie d'<c>INotifyDataErrorInfo</c>
+        /// <c>ThingsGotChanged</c> se charge de la gestion d'<c>INotifyPropertyChanged</c> et <c>INotifyDataErrorInfo</c>, toutes les properties deleguent leur gestion à cette methode. 
         /// </summary>
         public bool HasErrors
         {
@@ -118,20 +167,24 @@ namespace LondonTowerLibrary.ViewModels
         }
 
         /// <summary>
-        /// 
+        /// Défaut eventhandler faisant partie  d'<c>INotifyDataErrorInfo</c>
+        /// notifie un changement dans la liste d'erreur d' <c>errorList</c>, 
+        /// appelé par <c>ThingsGotChanged</c>
         /// </summary>
         public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged = delegate { };
 
         /// <summary>
-        /// 
+        /// liste  d'erreurs pour les différentes propriétés,
+        /// le contenu est géré par ThingsGotChanged.
         /// </summary>
         private Dictionary<String, List<String>> errorList;
 
         /// <summary>
-        /// 
+        /// Fait partie d'<c>INotifyDataErrorInfo</c>
+        /// est appelée l' IHM pour récupérer une erreur pour un champ précis
         /// </summary>
-        /// <param name="propertyName"></param>
-        /// <returns></returns>
+        /// <param name="propertyName"> Nom de la propriétée que l'on teste pour vérifier si elle possède des erreurs</param>
+        /// <returns>le texte associé à toute erreur stocké sous le nom de la propriété passé en paramêtre</returns>
         public IEnumerable GetErrors(string propertyName)
         {
             lock (errorList)
@@ -146,11 +199,13 @@ namespace LondonTowerLibrary.ViewModels
 
 
         /// <summary>
-        /// 
+        /// Se charge de la gestion d'<c>INotifyPropertyChanged</c> et <c>INotifyDataErrorInfo</c>, toutes les properties deleguent leur gestion à cette methode.
+        /// Call <c>PropertyChanged</c>, puis call en async <c>GetErrorForProperty</c> uniquement pour les champs qui peuvent posséder des erreurs.
+        /// Utilise une promise pour update errorlist et notify ErrorsChanged du résultat rendu par la task GetErrorForProperty
         /// </summary>
-        /// <param name="propertyname"></param>
-        /// <param name="sender"></param>
-        /// <param name="value"></param>
+        /// <param name="propertyname"> Nom de la propriété qui a reçu un changement de valeur</param>
+        /// <param name="sender"> la propriété changée qui s'est envoyée elle même en référence</param>
+        /// <param name="value"> la nouvelle valeur de la propriété</param>
         private void ThingsGotChanged(string propertyname, object sender, object value)
         {
             PropertyChanged(sender, new PropertyChangedEventArgs(propertyname));
@@ -168,11 +223,17 @@ namespace LondonTowerLibrary.ViewModels
 
 
         /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="value"></param>
-        /// <param name="property"></param>
-        /// <returns></returns>
+        /// Run en async
+        /// chargé de tester la validité de la valeur contenu dans une propriété donnée
+        /// le test est effectué sur les modifications de date, du prénom, du nom.
+        /// le dictionnaire reste vide dans le cas où la valeur est valide.
+        /// simple switchcase pour effectuer un test spécific à chaque propriété.
+        /// Pour la date, le test est uniquement effectué si tous les champs <c>Day</c>, <c>Year</c>, <c>Month</c> sont remplis,
+        /// et le champ <c>Birthdate</c>  et <c>Age</c> est update dans le cas où la date est une date valide.
+        /// </summary> 
+        /// <param name="value"> valeur de la propriété modifiée</param>
+        /// <param name="property">nom de la propriété</param>
+        /// <returns>un dictionnaire contenant la liste clé-> valeur (nom de la propriété -> string pour l'énnoncé de l'erreur)</returns>
         Task<Dictionary<string, List<string>>> GetErrorForProperty(object value, string property)
         {
             return Task.Factory.StartNew<Dictionary<string, List<string>>>(() =>
@@ -217,7 +278,8 @@ namespace LondonTowerLibrary.ViewModels
 
         #region NotifyChanges Event Handler
         /// <summary>
-        /// 
+        /// Implémente <c>INotifyPropertyChanged</c>
+        /// event déclenché lors d'une modification de valeur, appelé directement par le setter des propriétés
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
         #endregion
@@ -226,9 +288,9 @@ namespace LondonTowerLibrary.ViewModels
 
         #region Implicit Operators
         /// <summary>
-        /// 
+        /// Implicit Operator ViewModel -> Model
         /// </summary>
-        /// <param name="pvm"></param>
+        /// <param name="pvm">View Model pour personne</param>
         public static implicit operator Personn(PersonneVM pvm)
         {
             return new Personn
@@ -242,38 +304,6 @@ namespace LondonTowerLibrary.ViewModels
         #endregion
 
 
-        #region separated Birthdate
-        /// <summary>
-        /// 
-        /// </summary>
-        private string day;
-        public string Day
-        {
-            get { return day; }
-            set { if (day != value) ThingsGotChanged("Day", this, day = value); }
-
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private string month;
-        public string Month
-        {
-            get { return month; }
-            set { if (month != value) ThingsGotChanged("Day", this, month = value); }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private string year;
-        public string Year
-        {
-            get { return year; }
-            set { if (year != value) ThingsGotChanged("Day", this, year = value); }
-        }
-        #endregion
 
 
     }
