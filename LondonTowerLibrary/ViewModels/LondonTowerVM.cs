@@ -88,6 +88,8 @@ namespace LondonTowerLibrary.ViewModels
         {
             FormCompleted = isOk;
         }
+
+
         private bool formCompleted;
         public bool FormCompleted
         {

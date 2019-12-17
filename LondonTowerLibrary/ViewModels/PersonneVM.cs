@@ -10,7 +10,12 @@ namespace LondonTowerLibrary.ViewModels
 {
     public class PersonneVM : INotifyPropertyChanged, INotifyDataErrorInfo
     {
+
         #region Constructor 
+        /// <summary>
+        /// Constructeur paramétré 
+        /// </summary>
+        /// <param name="_IsCompleted"></param>
         public PersonneVM(ReturnForm _IsCompleted)
         {
             this.Genre = Genre.Homme;
@@ -24,7 +29,10 @@ namespace LondonTowerLibrary.ViewModels
         public event ReturnForm IsCompleted;
 
         // this region is only in dataview for convenience purpose / 
-        #region Age 
+        #region Age
+        /// <summary>
+        /// 
+        /// </summary>
         private int age;
         public int Age
         {
@@ -34,6 +42,9 @@ namespace LondonTowerLibrary.ViewModels
         #endregion
 
         #region LastName
+        /// <summary>
+        /// 
+        /// </summary>
         private string lastName;
         public string LastName
         {
@@ -43,6 +54,9 @@ namespace LondonTowerLibrary.ViewModels
         #endregion
 
         #region BirthDate
+        /// <summary>
+        /// 
+        /// </summary>
         private DateTime birthDate;
         public DateTime BirthDate
         {
@@ -52,6 +66,9 @@ namespace LondonTowerLibrary.ViewModels
         #endregion
 
         #region Genre
+        /// <summary>
+        /// 
+        /// </summary>
         private Genre genre;
         public Genre Genre
         {
@@ -61,6 +78,9 @@ namespace LondonTowerLibrary.ViewModels
         #endregion
 
         #region FirstName
+        /// <summary>
+        /// 
+        /// </summary>
         private string firstName;
         public string FirstName
         {
@@ -70,6 +90,9 @@ namespace LondonTowerLibrary.ViewModels
         #endregion
 
         #region ErrorHandling
+        /// <summary>
+        /// 
+        /// </summary>
         public bool HasErrors
         {
             get
@@ -94,10 +117,21 @@ namespace LondonTowerLibrary.ViewModels
             }
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged = delegate { };
+
+        /// <summary>
+        /// 
+        /// </summary>
         private Dictionary<String, List<String>> errorList;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
         public IEnumerable GetErrors(string propertyName)
         {
             lock (errorList)
@@ -109,6 +143,14 @@ namespace LondonTowerLibrary.ViewModels
                 return null;
             }
         }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="propertyname"></param>
+        /// <param name="sender"></param>
+        /// <param name="value"></param>
         private void ThingsGotChanged(string propertyname, object sender, object value)
         {
             PropertyChanged(sender, new PropertyChangedEventArgs(propertyname));
@@ -123,6 +165,14 @@ namespace LondonTowerLibrary.ViewModels
                     }
                 });
         }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="property"></param>
+        /// <returns></returns>
         Task<Dictionary<string, List<string>>> GetErrorForProperty(object value, string property)
         {
             return Task.Factory.StartNew<Dictionary<string, List<string>>>(() =>
@@ -166,12 +216,19 @@ namespace LondonTowerLibrary.ViewModels
 
 
         #region NotifyChanges Event Handler
+        /// <summary>
+        /// 
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
         #endregion
 
 
 
         #region Implicit Operators
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pvm"></param>
         public static implicit operator Personn(PersonneVM pvm)
         {
             return new Personn
@@ -185,7 +242,10 @@ namespace LondonTowerLibrary.ViewModels
         #endregion
 
 
-        #region separated Birthdate 
+        #region separated Birthdate
+        /// <summary>
+        /// 
+        /// </summary>
         private string day;
         public string Day
         {
@@ -193,6 +253,10 @@ namespace LondonTowerLibrary.ViewModels
             set { if (day != value) ThingsGotChanged("Day", this, day = value); }
 
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
         private string month;
         public string Month
         {
@@ -200,6 +264,9 @@ namespace LondonTowerLibrary.ViewModels
             set { if (month != value) ThingsGotChanged("Day", this, month = value); }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private string year;
         public string Year
         {

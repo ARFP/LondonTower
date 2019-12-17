@@ -60,7 +60,7 @@ namespace LondonTowerLibrary.UserControls
         /// Recuperation de la list des Bead grace au param UcGoal determinant si c'est la zone de travail ou la zone Goal
         /// Initialisation de la grid <c>InitGrid()</c>
         /// Creation du rendu visuel <c>CreateVisualElement()</c>
-        /// Creation du curseur de selection si <c>UcGoal = false</c>, indiquant que l'UC reprensente la zone de travail
+        /// Creation du curseur de selection si <paramref name="UcGoal"/> est a false, indiquant que l'UC reprensente la zone de travail
         /// </summary>
         /// <param name="_trial">ViewTrial du Trial (niveau) actuel </param>
         /// <param name="UcGoal">Boolean permettant de différencié la zone de travail et la zone Goal contenant le placement final des Bead</param>
