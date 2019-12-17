@@ -35,21 +35,7 @@ namespace LondonTowerLibrary.ViewModels
 
             Trial.StartTimeDisplayTrial();
         }
-
-        //public bool TrialSolve
-        //{
-        //    get
-        //    {
-        //        return Trial.TrialSolve;
-        //    }
-        //    set
-        //    {
-        //        Trial.TrialSolve = value;
-        //        Trial.EndTrial();
-        //        OnProperty_Change("TrialSolve");
-        //    }
-        //}
-
+        
         public int GetTrialNumber
         {
             get { return this.trial.TrialNumber; }

@@ -44,7 +44,10 @@ namespace LondonTowerLibrary.UserControls
         ViewTrial VTrial;
         List<ViewPeg> listPeg;
 
-
+        /// <summary>
+        /// Constructeur par defaut
+        /// Initialise le placement vertical par defaut à Top
+        /// </summary>
         private GameUc()
         {
             InitializeComponent();
@@ -52,7 +55,15 @@ namespace LondonTowerLibrary.UserControls
 
         }
 
-      
+        /// <summary>
+        /// Constructeur paramétré appelant le constructeur par defaut
+        /// Recuperation de la list des Bead grace au param UcGoal determinant si c'est la zone de travail ou la zone Goal
+        /// Initialisation de la grid <c>InitGrid()</c>
+        /// Creation du rendu visuel <c>CreateVisualElement()</c>
+        /// Creation du curseur de selection si <c>UcGoal = false</c>, indiquant que l'UC reprensente la zone de travail
+        /// </summary>
+        /// <param name="_trial">ViewTrial du Trial (niveau) actuel </param>
+        /// <param name="UcGoal">Boolean permettant de différencié la zone de travail et la zone Goal contenant le placement final des Bead</param>
         public GameUc(ViewTrial _trial, bool UcGoal) : this()
         {
             VTrial = _trial;
@@ -84,7 +95,10 @@ namespace LondonTowerLibrary.UserControls
             }
 
         }
-
+        /// <summary>
+        /// Initialisation et placement de la Grid de travail
+        /// creation des colonnes en fonction du nombre de Peg <c>nbrPeg</c> selectionné 
+        /// </summary>
         private void InitGrid()
         {
             grid = new Grid();
@@ -113,31 +127,13 @@ namespace LondonTowerLibrary.UserControls
             grid.ColumnDefinitions.ElementAt(counter - 1).Width = new GridLength(0);
 
 
-
-            /*CREATION DES COLONNES DE LIMITATION */
-
-            //ColumnDefinition gridColumn2 = grid.ColumnDefinitions.First();
-            //gridColumn2.Width = new GridLength();
-            //gridColumn2 = grid.ColumnDefinitions.Last();
-            //gridColumn2.Width = new GridLength();
-
-
-
-            //ColumnDefinition gridColumn2 = new ColumnDefinition();
-            //gridColumn2.Width = new GridLength();
-            //gridColumn2.Name = "Column" + 0;
-            //grid.ColumnDefinitions.Insert(0, gridColumn2);
-            //gridColumn2 = new ColumnDefinition();
-            //gridColumn2.Width = new GridLength();
-            //gridColumn2.Name = "Column" + grid.ColumnDefinitions.Count;
-            //grid.ColumnDefinitions.Insert(grid.ColumnDefinitions.Count, gridColumn2);
-
         }
-
+        /// <summary>
+        /// Creation du Curseur sous la Zone de travail permettant les actions sur les Bead
+        /// </summary>
         private void InitRectangleSelect()
         {
-            /*CREATION DU POINTEUR SOUS LA ZONE DE TEST POUR LA SELECTION DE LA BILLE A BOUGER*/
-            
+                      
             BitmapImage pointeur = new BitmapImage();
             string pathBoard = "pack://application:,,,/LondonTowerLibrary;component/Resources/Pointeur.png";
             pointeur.BeginInit();
@@ -158,7 +154,9 @@ namespace LondonTowerLibrary.UserControls
             imgPointeur.RenderTransform = translate;
 
         }
-
+        /// <summary>
+        /// Creation des visuels Bead et Peg
+        /// </summary>
         private void CreateVisualElement()
         {
             /*CREATION DES PIQUES ET DES BOULES*/
@@ -183,7 +181,17 @@ namespace LondonTowerLibrary.UserControls
             grid.MouseMove += Grid_MouseMove;
             grid.MouseDown += Grid_OnClick;
         }
-
+        /// <summary>
+        /// Gestion de l'action Cick dans la zone de travail :
+        /// Determination de la colonne dans la grille
+        /// Selection du Peg dans la colonne de l'action de la souris verification qu'il ne soit pas null<c>if (vpeg != null)</c>
+        /// Verification de la selection d'une Bead ou non <c>if (VBeadTempo == null)</c>
+        /// Si aucune Bead selectionné, selection de la bille supérieur SI présence d'une Bead
+        /// SINON verif de la possibilité de posé la Bead <c>if (vpeg.CanAddViewBead() || vpeg == pegFrom)</c>
+        /// SI ajout impossible de Bead sur le peg déclenchement d'un son erreur et mise a jour de la position graphique de la Bead
+        /// </summary>
+        /// <param name="sender">Correspond à la grid de la zone de travail</param>
+        /// <param name="e">Evenement lié à la souris</para
         private void Grid_OnClick(object sender, MouseEventArgs e)
         {
             col = 1;
@@ -257,7 +265,12 @@ namespace LondonTowerLibrary.UserControls
 
 
         }
-
+        /// <summary>
+        /// Gestion du mouvement de la souris dans la Zone de travail
+        /// SI une Bead est sélectionné ajustement de sa représentation graphique avec TranslateTransform
+        /// </summary>
+        /// <param name="sender">Correspond à la grid de la zone de travail</param>
+        /// <param name="e">Evenement lié à la souris</param>
         private void Grid_MouseMove(object sender, MouseEventArgs e)
         {
             Step = (grid.ColumnDefinitions[1].ActualWidth / 2);
@@ -292,8 +305,8 @@ namespace LondonTowerLibrary.UserControls
         /// <summary>
         /// Méthode permettant le desabonnement des evenements une fois le test terminé
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="arg"></param>
+        /// <param name="sender">ViewTrial contenant le est actuel</param>
+        /// <param name="arg">Evenement prevenant la fin du test</param>
         private void TrialCompleteUc(object sender, TrialCompleteEvent arg)
         {
             grid.MouseEnter -= Grid_MouseEnter;
