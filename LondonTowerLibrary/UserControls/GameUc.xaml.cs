@@ -44,42 +44,33 @@ namespace LondonTowerLibrary.UserControls
         ViewTrial VTrial;
         List<ViewPeg> listPeg;
 
-        //public delegate void EndTrial(object sender, EventArgs e);
-
-        //public delegate void TrialCompleteEventHandler(object sender, TrialCompleteEvent arg);
-
-        //public event TrialCompleteEventHandler TrialComplet;
-
 
         private GameUc()
         {
             InitializeComponent();
             this.VerticalAlignment = VerticalAlignment.Top;
-            
+
         }
 
-        //public GameUc(IList<Peg> _listpeg, bool UcGoal) : this()
+      
         public GameUc(ViewTrial _trial, bool UcGoal) : this()
         {
             VTrial = _trial;
             VTrial.TrialComplet += TrialCompleteUc;
             HorizontalAlignment = HorizontalAlignment.Center;
             if (UcGoal)
-            {
-                //HorizontalAlignment = HorizontalAlignment.Right;
+            {              
                 this.Margin = new Thickness(0, 120, 10, 0);
                 listPeg = VTrial.ViewPegslistGoal;
-                
             }
             else
             {
-                //HorizontalAlignment = HorizontalAlignment.Left;
                 this.Margin = new Thickness(10, 120, 0, 0);
                 listPeg = VTrial.ViewPegsList;
             }
 
             nbrPeg = listPeg.Count();
-            sequence = 546 / (nbrPeg+1);
+            sequence = 546 / (nbrPeg + 1);
             largeurCol = (566 - (sequence * (nbrPeg - 1) + 65)) / 2;
             largeur = (sequence * (nbrPeg - 1) + 65) / nbrPeg;
 
@@ -111,7 +102,7 @@ namespace LondonTowerLibrary.UserControls
             grid.Height = 436;
 
             /*CREATION DES COLONNES DE LA GRID */
-            for(int i = 0; i <= nbrPeg + 1; i++)
+            for (int i = 0; i <= nbrPeg + 1; i++)
             {
                 ColumnDefinition gridColm = new ColumnDefinition();
                 grid.ColumnDefinitions.Add(gridColm);
@@ -146,13 +137,7 @@ namespace LondonTowerLibrary.UserControls
         private void InitRectangleSelect()
         {
             /*CREATION DU POINTEUR SOUS LA ZONE DE TEST POUR LA SELECTION DE LA BILLE A BOUGER*/
-            //RectSelection = new Rectangle();
-            //RectSelection.Width = 86;
-            //RectSelection.Height = 10;
-            //RectSelection.HorizontalAlignment = HorizontalAlignment.Left;
-            //RectSelection.VerticalAlignment = VerticalAlignment.Bottom;
-            //RectSelection.Margin = new Thickness(0, 0, 0, 34);
-
+            
             BitmapImage pointeur = new BitmapImage();
             string pathBoard = "pack://application:,,,/LondonTowerLibrary;component/Resources/Pointeur.png";
             pointeur.BeginInit();
@@ -169,18 +154,6 @@ namespace LondonTowerLibrary.UserControls
             Grid.SetColumn(imgPointeur, 1);
             grid.Children.Add(imgPointeur);
 
-            /*COLORATION DU RECTANGLE*/
-            //SolidColorBrush brush = new SolidColorBrush();
-            //brush.Color = Color.FromArgb(255, 0, 0, 0);
-            //RectSelection.Fill = brush;
-
-            /*AJOUT DE LA COLONNE DANS LAQUEL L OBJET SERA AJOUTER*/
-            //Grid.SetColumn(RectSelection, 1);
-            //grid.Children.Add(RectSelection);
-
-            /*AJOUT DU TRANSLATETRANSFORM AU RENDERTRANSFORM DE L OBJET POUR GERER LE MOUVEMENT*/
-            //translate = new TranslateTransform();
-            //RectSelection.RenderTransform = translate;
             translate = new TranslateTransform();
             imgPointeur.RenderTransform = translate;
 
@@ -195,7 +168,7 @@ namespace LondonTowerLibrary.UserControls
 
                 if (_peg.GetListViewBead().Count > 0)
                 {
-                    foreach(ViewBead vb in _peg.GetListViewBead())
+                    foreach (ViewBead vb in _peg.GetListViewBead())
                     {
                         grid.Children.Add(vb);
                     }
@@ -216,7 +189,7 @@ namespace LondonTowerLibrary.UserControls
             col = 1;
             Point position = Mouse.GetPosition(grid);
             double width = largeur;
-            for(;width<position.X && col< nbrPeg; col++)
+            for (; width < position.X && col < nbrPeg; col++)
             {
                 width += largeur;
             }
@@ -227,9 +200,9 @@ namespace LondonTowerLibrary.UserControls
             }
 
             ViewPeg vpeg = grid.Children.OfType<ViewPeg>().FirstOrDefault(el => Grid.GetColumn(el) == col);
-            if(vpeg != null)
+            if (vpeg != null)
             {
-                
+
                 if (VBeadTempo == null)
                 {
                     VBeadTempo = vpeg.GetViewBeadUpper();
@@ -248,15 +221,15 @@ namespace LondonTowerLibrary.UserControls
                 }
                 else
                 {
-                    if (vpeg.CanAddViewBead()|| vpeg == pegFrom)/*ajout possible au peg*/
+                    /*ajout possible au peg*/
+                    if (vpeg.CanAddViewBead() || vpeg == pegFrom)
                     {
                         VBeadTempo.SetImgCut();
                         VTrial.MoveBead(pegFrom, vpeg);
                         grid.Children.Remove(VBeadTempo);
-                        //vpeg.AddViewBead( pegFrom.RemoveTopViewBead());
                         pegFrom = null;
                         VBeadTempo.RenderTransform = null;
-                        VBeadTempo.Row = vpeg.GetListViewBead().Count-1;
+                        VBeadTempo.Row = vpeg.GetListViewBead().Count - 1;
                         Grid.SetColumn(VBeadTempo, col);
                         grid.Children.Add(VBeadTempo);
                         VBeadTempo = null;
@@ -267,18 +240,17 @@ namespace LondonTowerLibrary.UserControls
                         {
                             MessageBox.Show("Media Failed!!");
                         };
-                        //mp.Open(new Uri(Environment.CurrentDirectory + @"../../../../LondonTowerLibrary/Resources/Buzzer.mp3", UriKind.RelativeOrAbsolute));
                         mp.Open(new Uri(Environment.CurrentDirectory + @"/sound/Buzzer.mp3", UriKind.RelativeOrAbsolute));
 
                         mp.Play();
                         grid.Children.Remove(VBeadTempo);
-                            VBeadTempo.RenderTransform = null;
-                            translateViewBead = new TranslateTransform();
-                            VBeadTempo.RenderTransform = translateViewBead;
-                            translateViewBead.X = Mouse.GetPosition(grid).X - (imgPointeur.Width / 2) - ((col - 1) * largeur);
-                            Grid.SetColumn(VBeadTempo, col);
-                            grid.Children.Add(VBeadTempo);
-                            VBeadTempo.Margin = new Thickness(0, 0, 0, 370);                        
+                        VBeadTempo.RenderTransform = null;
+                        translateViewBead = new TranslateTransform();
+                        VBeadTempo.RenderTransform = translateViewBead;
+                        translateViewBead.X = Mouse.GetPosition(grid).X - (imgPointeur.Width / 2) - ((col - 1) * largeur);
+                        Grid.SetColumn(VBeadTempo, col);
+                        grid.Children.Add(VBeadTempo);
+                        VBeadTempo.Margin = new Thickness(0, 0, 0, 370);
                     }
                 }
             }
@@ -290,7 +262,7 @@ namespace LondonTowerLibrary.UserControls
         {
             Step = (grid.ColumnDefinitions[1].ActualWidth / 2);
             Offset = (grid.ColumnDefinitions[1].ActualWidth / 2) - imgPointeur.Width / 2;
-            if (Mouse.GetPosition(grid).X > Step-Offset && Mouse.GetPosition(grid).X < grid.Width - Step + Offset)
+            if (Mouse.GetPosition(grid).X > Step - Offset && Mouse.GetPosition(grid).X < grid.Width - Step + Offset)
             {
                 translate.X = Mouse.GetPosition(grid).X - ((imgPointeur.Width / 2));
                 if (VBeadTempo != null)
@@ -299,17 +271,29 @@ namespace LondonTowerLibrary.UserControls
                 }
             }
         }
-
-        private void Grid_MouseEnter(object sender,MouseEventArgs e)
+        /// <summary>
+        /// Detection de l'entré de la souris dans la Zone de travail
+        /// </summary>
+        /// <param name="sender">Correspond à la grid de la zone de travail</param>
+        /// <param name="e">Evenement lié à la souris</param>
+        private void Grid_MouseEnter(object sender, MouseEventArgs e)
         {
             this.Cursor = Cursors.None;
         }
-
+        /// <summary>
+        /// Detection de la sortie de la souris de la Zone de travail
+        /// </summary>
+        /// <param name="sender">Correspond à la grid de la zone de travail</param>
+        /// <param name="e">Evenement lié à la souris</param>
         private void Grid_MouseLeave(object sender, MouseEventArgs e)
         {
             this.Cursor = Cursors.Arrow;
         }
-
+        /// <summary>
+        /// Méthode permettant le desabonnement des evenements une fois le test terminé
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="arg"></param>
         private void TrialCompleteUc(object sender, TrialCompleteEvent arg)
         {
             grid.MouseEnter -= Grid_MouseEnter;
