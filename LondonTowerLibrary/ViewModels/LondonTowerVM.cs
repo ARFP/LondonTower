@@ -4,6 +4,11 @@ using System.Threading.Tasks;
 
 namespace LondonTowerLibrary.ViewModels
 {
+    /// <summary>
+    /// Classe ViewModel de LondonTower
+    /// Partie métier/ interaction avec L'IHM
+    /// Contient les infos sur la partie en cours de LondonTower, ainsi qu'un viewmodel de Personne remplie avec les infos utilisateur
+    /// </summary>
     public class LondonTowerVM :  INotifyPropertyChanged
     {
 

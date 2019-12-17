@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace LondonTowerLibrary
 {
+    /// <summary>
+    /// Liste les genres possible pour l'utilisateur passant le test.
+    /// </summary>
     public enum Genre
     {
         Homme,

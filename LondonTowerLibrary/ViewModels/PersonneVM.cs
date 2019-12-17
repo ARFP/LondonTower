@@ -8,6 +8,11 @@ using System.Threading.Tasks;
 
 namespace LondonTowerLibrary.ViewModels
 {
+    /// <summary>
+    /// Classe ViewModel de Personn
+    /// Partie métier/ interaction avec L'IHM
+    /// Contient les infos sur l'utilisateur actuel
+    /// </summary>
     public class PersonneVM : INotifyPropertyChanged, INotifyDataErrorInfo
     {
 

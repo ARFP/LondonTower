@@ -35,6 +35,12 @@ namespace LondonTower.PageFolder
 
         public LondonTowerVM towerVM;
 
+        /// <summary>
+        /// Constructeur par défaut
+        /// bloque la possibilité de naviguer de page en page via les touches du clavier
+        /// Affiche l'icone de paramétrage uniquement si le lancement de l'application s'est fait en mode administrateur 
+        /// Initialise les data context de la page d'iHM correspondante
+        /// </summary>
         public Identification()
         {
             InitializeComponent();
@@ -56,46 +62,73 @@ namespace LondonTower.PageFolder
 
             this.towerVM = new LondonTowerVM();
 
-            // personne pre remplie 
+            // personne pre remplie A ENLEVER AVANT RELEASE 
             this.towerVM.Personne.LastName = "Hawking";
             this.towerVM.Personne.FirstName = "Stephen";
             this.towerVM.Personne.Month = "01";
             this.towerVM.Personne.Day = "08";
             this.towerVM.Personne.Year = "1942";
-
             //fin personne pre remplie 
+
             this.InfoStack.DataContext = this.towerVM.Personne;
             this.TowerStack.DataContext = this.towerVM;
             this.LastNameBox.Focus();
         }
+        /// <summary>
+        /// Gestion d'event click sur le bouton pour lancer le test avec 3 tiges
+        /// trigger la méthode <c>ChangePage(int)</c> et passe le nombre de tige en paramètre
+        /// </summary>
+        /// <param name="sender">le boutton qui a send l'event</param>
+        /// <param name="e">le contexte de l'event</param>
         private void Button3peg_MouseUp(object sender, RoutedEventArgs e)
         {
-            towerVM.NbPegs = 3;
-            ChangePage();
+            ChangePage(3);
         }
-
+        /// <summary>
+        /// Gestion d'event click sur le bouton pour lancer le test avec 4 tiges
+        /// trigger la méthode <c>ChangePage(int)</c> et passe le nombre de tige en paramètre
+        /// </summary>
+        /// <param name="sender">le boutton qui a send l'event</param>
+        /// <param name="e">le contexte de l'event</param>
         private void Button4peg_MouseUp(object sender, RoutedEventArgs e)
         {
-            towerVM.NbPegs = 4;
-            ChangePage();
+            ChangePage(4);
         }
-
+        /// <summary>
+        /// Gestion d'event click sur le bouton pour lancer le test avec 5 tiges
+        /// trigger la méthode <c>ChangePage(int)</c> et passe le nombre de tige en paramètre
+        /// </summary>
+        /// <param name="sender">le boutton qui a send l'event</param>
+        /// <param name="e">le contexte de l'event</param>
         private void Button5peg_MouseUp(object sender, RoutedEventArgs e)
         {
-            towerVM.NbPegs = 5;
-            ChangePage();
-
+            ChangePage(5);
         }
-        private void ChangePage()
+
+        /// <summary>
+        /// Trigger le changement de page vers la démo du test avec le nombre de peg selectionné si PersonnVM est complet 
+        /// et n'a aucune erreur et modifie le champ nombre de tige de LondonTowerVM, 
+        /// ne fait rien sinon
+        /// </summary>
+        /// <param name="_nbpeg">nombre de tiges choisies</param>
+        private void ChangePage( int _nbpeg)
         {
             if (!this.towerVM.Personne.HasErrors)
             {
+                towerVM.NbPegs = _nbpeg;
                 MainWindow parent = Window.GetWindow(this) as MainWindow;
                 parent.LoadingPage("Demo", towerVM);
 
             }
         }
 
+        /// <summary>
+        /// Event sur les 3 textbox de date lors d'un changement de text. 
+        /// -Refuse le changement si celui ci introduit autrechose qu'un chiffre
+        /// -passe à la case de date suivante si le maximum de caractère dans cette textbox a déjà été entré
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Birthdate_TextChanged(object sender, TextCompositionEventArgs e)
         {
 
@@ -111,11 +144,11 @@ namespace LondonTower.PageFolder
 
         }
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// trigger le pop up de l'ecran de configuration lors du mouse down sur le texblock contenant l'icone.
+        /// </summary>
+        /// <param name="sender">object sender</param>
+        /// <param name="e"> context de levenement </param>
         private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
         {
 
