@@ -19,7 +19,10 @@ namespace LondonTowerLibrary.UserControls
     /// Logique d'interaction pour UCResultGlobal.xaml
     /// </summary>
     public partial class UCResultGlobal : UserControl
-    {
+    {/// <summary>
+    /// UserControl servant à l'affichage des informations lié au test LondonTower passé par l'utilisateur.
+    /// Tel que les temps, les nombres de coups etc....
+    /// </summary>
         public UCResultGlobal()
         {
             InitializeComponent();

@@ -19,7 +19,10 @@ namespace LondonTowerLibrary.UserControls
     /// Logique d'interaction pour MessageResultTrial.xaml
     /// </summary>
     public partial class MessageResultTrial : UserControl
-    {
+    {/// <summary>
+    /// UserControl de fin de Trial affichant après résolution le nombre de coup effectué
+    /// ainsi que le nombre de coup minimal pour résoudre se Trial
+    /// </summary>
         public MessageResultTrial()
         {
             InitializeComponent();

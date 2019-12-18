@@ -17,42 +17,99 @@ namespace LondonTowerLibrary.UserControls
     /// </summary>
     public partial class GameUc : UserControl
     {
-        int nbrPeg;
-        int sequence;
-        int col;
-        bool firstMove = true;
-        MediaPlayer mp = new MediaPlayer();
+        /// <summary>
+        /// Nombre de Peg correspondant au choix de la difficulté (3,4 ou 5)
+        /// </summary>
+        private int nbrPeg;
 
-        double largeur;
-        double largeurCol;
+        /// <summary>
+        /// Entier permettant le calcule de la largeur des colonnes de la Grid
+        /// </summary>
+        private int sequence;
 
-        double Offset;
-        double Step;
+        /// <summary>
+        /// Entier représentant le numero de colonne. Sert dans la fonction <c>Grid_OnClick()</c> 
+        /// </summary>
+        private int col;
 
-        ViewBead VBeadTempo;
+        /// <summary>
+        /// Booleen representant le 1er coup. Passe a false après le 1er mouvement dans la zone de travail
+        /// </summary>
+        private bool firstMove;
 
-        Grid grid;
-        Rectangle RectSelection;
+        /// <summary>
+        /// Instance de MediaPlayer utiliser pour jouer un son lors d'une action impossible
+        /// </summary>
+        private MediaPlayer mp;
 
-        Image imgPointeur;
+        /// <summary>
+        /// Largeur en Pixel d'une colonne de la grid contenant les Pegs
+        /// </summary>
+        private double largeur;
 
+        //private double largeurCol;
+
+            /// <summary>
+            /// Offset servant à l affichage correct des Beads en mouvement
+            /// </summary>
+        private double Offset;
+
+        /// <summary>
+        /// Distance en Pixel entre la bordure gauche de la colonne et l'Image du Peg
+        /// </summary>
+        private double Step;
+
+        /// <summary>
+        /// ViewBead ayant été sélectionné
+        /// </summary>
+        private ViewBead VBeadTempo;
+
+        /// <summary>
+        /// Grid de positionnement des Pegs sur les zone de travail et zone goal
+        /// </summary>
+        private Grid grid;
+
+        /// <summary>
+        /// Image du curseur de selection visible sous les Pegs dans la zone de travail
+        /// </summary>
+        private Image imgPointeur;
+
+        /// <summary>
+        /// ViewPeg utilisé dans la fonction <c>Grid_OnClick()</c>, servant a sauvegarder le Peg d'ou le Bead selectionné a été retiré
+        /// </summary>
         private ViewPeg pegFrom;
 
-        TranslateTransform translate;
-        TranslateTransform translateViewBead;
+        /// <summary>
+        /// Object de Translation graphique 
+        /// </summary>
+        private TranslateTransform translate;
 
-        ViewTrial VTrial;
-        List<ViewPeg> listPeg;
+        /// <summary>
+        /// Object de Translation graphique 
+        /// </summary>
+        private TranslateTransform translateViewBead;
+
+        /// <summary>
+        /// Object ViewTrial contenant toute les configurations de départ
+        /// </summary>
+        private ViewTrial VTrial;
+
+        /// <summary>
+        /// Liste des ViewPeg a affiché dans la Zone soit de travail soit dans la zone goal
+        /// </summary>
+        private List<ViewPeg> listPeg;
 
         /// <summary>
         /// Constructeur par defaut
-        /// Initialise le placement vertical par defaut à Top
+        /// Initialise le placement vertical par defaut à Top,
+        /// Initialise le MediaPlayer et le Booleen firstMove à true
         /// </summary>
         private GameUc()
         {
             InitializeComponent();
+            mp = new MediaPlayer();
+            firstMove = true;
             this.VerticalAlignment = VerticalAlignment.Top;
-
         }
 
         /// <summary>
@@ -82,7 +139,7 @@ namespace LondonTowerLibrary.UserControls
 
             nbrPeg = listPeg.Count();
             sequence = 546 / (nbrPeg + 1);
-            largeurCol = (566 - (sequence * (nbrPeg - 1) + 65)) / 2;
+            //largeurCol = (566 - (sequence * (nbrPeg - 1) + 65)) / 2;
             largeur = (sequence * (nbrPeg - 1) + 65) / nbrPeg;
 
             InitGrid();
@@ -103,7 +160,7 @@ namespace LondonTowerLibrary.UserControls
         {
             grid = new Grid();
             /*AFFICHAGE DU QUADRILLAGE DE LA GRID ET CONFIGURATION DE LA GRID*/
-            //grid.ShowGridLines = true;
+            grid.ShowGridLines = true;
 
 
             /*ENCRAGE ET AJOUT DE LA GRID AU CONTAINER*/
