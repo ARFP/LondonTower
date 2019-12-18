@@ -7,29 +7,46 @@ namespace LondonTowerLibrary.Button
 {
     /// <summary>
     /// Logique d'interaction pour WoodRadioUC.xaml
+    /// Radio custom permetant d'utiliser une image de notre choix au lieu de l'object graphique par défaut.
     /// </summary>
     public partial class WoodRadioUC : UserControl
     {
+        /// <summary>
+        /// Defaut URI racine pour les ressources "image" utilisées. 
+        /// </summary>
         private const string uriPart = "pack://application:,,,/LondonTowerLibrary;Component/Resources/woodRadio";
+
+        /// <summary>
+        /// Constructeur par défaut
+        /// </summary>
         public WoodRadioUC()
         {
             InitializeComponent();
-
         }
 
 
         #region GroupName
-
+        /// <summary>
+        /// Partie propriété de la DependencyProperty GName.
+        /// Permet de set le GroupName pour le  RadioButton
+        /// </summary>
         public string GName
         {
             get { return (string)GetValue(GNameProperty); }
             set { SetValue(GNameProperty, this.MyRadio.GroupName = value); }
         }
 
+        /// <summary>
+        /// Dependency Property pour GName;
+        /// Permet de set le GroupName pour le RadioButton
+        /// </summary>
         public static readonly DependencyProperty GNameProperty = DependencyProperty.Register("GName", typeof(string), typeof(WoodRadioUC), new PropertyMetadata(null));
         #endregion
 
         #region Radio Value
+        /// <summary>
+        /// Set la valeur du RadioButton. DependencyProperty.
+        /// </summary>
         public string RadValue
         {
             get { return (string)GetValue(RadValueProperty); }
@@ -38,13 +55,19 @@ namespace LondonTowerLibrary.Button
                 SetValue(RadValueProperty, value);
             }
         }
-
+        /// <summary>
+        /// Set la valeur du RadioButton.
+        /// Declaration de la DepencyProperty
+        /// </summary>
         public static readonly DependencyProperty RadValueProperty = DependencyProperty.Register(
             "RadValue", typeof(string), typeof(WoodRadioUC), new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.AffectsRender));
         #endregion
 
         #region Image Sources
         private ImageSource StoredImageSource;
+        /// <summary>
+        /// 
+        /// </summary>
         public ImageSource SelectedImageSource
         {
             get { return (ImageSource)GetValue(SelectedImageSourceProperty); }

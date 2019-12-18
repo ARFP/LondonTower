@@ -12,8 +12,14 @@ namespace LondonTower.PageFolder
     public partial class FeedBack : Page
     {
         CommandNavigate myCommand;
+        /// <summary>
+        /// récupère la valeur de 1 à 10 du ressenti de l'utilisateur. Elle sera renvoyé à la mainwindow qui l'attribuera à londontowerVM.
+        /// </summary>
         string fback;
 
+        /// <summary>
+        /// Constructeur par défaut
+        /// </summary>
         public FeedBack()
         {
             InitializeComponent();
@@ -23,6 +29,12 @@ namespace LondonTower.PageFolder
 
         }
 
+        /// <summary>
+        /// Déclenché lors du click sur le bouton <c>WoodButton</c>
+        /// appelle la fonction de mainwindow pour passer à la page suivante si <c>ButNextPage.MAGICEnabled</c> est true
+        /// </summary>
+        /// <param name="sender">bouton sender</param>
+        /// <param name="e">informations sur l'evenement</param>
         private void WoodButton_Click(object sender, RoutedEventArgs e)
         {
             
@@ -32,13 +44,22 @@ namespace LondonTower.PageFolder
                 main.LoadingPage("TestResult", fback);
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public CommandNavigate MyNextCommand
         {
             get => myCommand;
             set => myCommand = value;
         }
 
+        /// <summary>
+        /// Refèrence la DependencyProperty de woodradioUC
+        /// Set la propriété MagicEnabled de WoodRadioUC sur true si l'utilsiateur a coché l'un des boutons du radiobutton.
+        /// Set la propriété fback  sur la valeur choisie par l'utilisateur dans le radiobutton. 
+        /// </summary>
+        /// <param name="sender">objet envoyant l'evenement</param>
+        /// <param name="e">informations sur l'evenement</param>
         private void WoodRadioUC_WhyThou(object sender, RoutedEventArgs e)
         {
             WoodRadioUC radio = (WoodRadioUC)sender;

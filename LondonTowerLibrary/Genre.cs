@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LondonTowerLibrary
-{/// <summary>
-/// Enumerable representant le sexe de la personne
-/// </summary>
+{
+    /// <summary>
+    /// Liste les genres possible pour l'utilisateur passant le test.
+    /// </summary>
     public enum Genre
     {
         Homme,
