@@ -160,7 +160,7 @@ namespace LondonTowerLibrary.UserControls
         {
             grid = new Grid();
             /*AFFICHAGE DU QUADRILLAGE DE LA GRID ET CONFIGURATION DE LA GRID*/
-            grid.ShowGridLines = true;
+            //grid.ShowGridLines = true;
 
 
             /*ENCRAGE ET AJOUT DE LA GRID AU CONTAINER*/

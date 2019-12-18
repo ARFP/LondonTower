@@ -30,17 +30,17 @@ namespace LondonTowerLibrary.ViewModels
         private List<ViewPeg> viewPegslistGoal;
 
         /// <summary>
-        /// Assesseur de viewPegsList Liste des ViewPegs de la zone de travail, là ou la personne bouge les Beads
+        /// Accesseur de viewPegsList Liste des ViewPegs de la zone de travail, là ou la personne bouge les Beads
         /// </summary>
         public List<ViewPeg> ViewPegsList { get => viewPegsList; set => viewPegsList = value; }
 
         /// <summary>
-        /// Assesseur de viewPegslistGoal Liste des ViewPegs de la zone Goal représentant le placement à réalisé
+        /// Accesseur de viewPegslistGoal Liste des ViewPegs de la zone Goal représentant le placement à réalisé
         /// </summary>
         public List<ViewPeg> ViewPegslistGoal { get => viewPegslistGoal; set => viewPegslistGoal = value; }
 
         /// <summary>
-        /// Assesseur de trial Classe métié representant un niveau du test de london tower
+        /// Accesseur de trial Classe métié representant un niveau du test de london tower
         /// </summary>
         public Trial Trial { get => trial; set => trial = value; }
 
@@ -74,9 +74,9 @@ namespace LondonTowerLibrary.ViewModels
 
             Trial.StartTimeDisplayTrial();
         }
-        
+
         /// <summary>
-        /// Assesseur lecture/ecriture pour le numero de Trial, stocké dans <c>trial</c>
+        /// Accesseur lecture/ecriture pour le numero de Trial, stocké dans <c>trial</c>
         /// </summary>
         public int GetTrialNumber
         {
@@ -85,7 +85,7 @@ namespace LondonTowerLibrary.ViewModels
         }
 
         /// <summary>
-        /// Assesseur lecture et declenchement INotifyPropertyChanged sur la propriété
+        /// Accesseur lecture et declenchement INotifyPropertyChanged sur la propriété
         /// </summary>
         public int NbrMoveMade
         {
@@ -97,7 +97,7 @@ namespace LondonTowerLibrary.ViewModels
         }
 
         /// <summary>
-        /// Assesseur Lecture/Ecriture sur le nombre minimal de coup pour le trial <c>MinimalMoveExpect</c>
+        /// Accesseur Lecture/Ecriture sur le nombre minimal de coup pour le trial <c>MinimalMoveExpect</c>
         /// </summary>
         public int NbrMoveExpect
         {

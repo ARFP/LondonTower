@@ -190,9 +190,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UserControls\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\LondonTowerLibrary\LondonTowerLibrary.csproj">
       <Project>{0867f03e-c3cd-48ae-a658-b28a0d9276df}</Project>
