@@ -21,10 +21,19 @@ namespace LondonTower.PageFolder
 {
     /// <summary>
     /// Logique d'interaction pour Demo.xaml
+    /// Page de demonstration de LondonTower
     /// </summary>
     public partial class Demo : Page
     {
         Trial trial;
+
+        /// <summary>
+        /// Constructeur parametré de la page de demonstration de LondonTower. 
+        /// Initialise les 2 zone d'affichage, zone de travail et zone Goal.
+        /// Initialisation 
+        /// </summary>
+        /// <param name="_t">Trial correspondant à la démo</param>
+        /// <param name="_visualhelp">Booleen pour l'option d'aide visuel</param>
         public Demo(Trial _t, bool _visualhelp)
         {
             InitializeComponent();
@@ -45,6 +54,12 @@ namespace LondonTower.PageFolder
 
             ConfigLabel();
         }
+
+        /// <summary>
+        /// Changement de page en cliquant sur la fleche 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButNextPage_Click(object sender, EventArgs e)
         {
             if (ButNextPage.MAGICEnabled)
@@ -53,6 +68,10 @@ namespace LondonTower.PageFolder
                 main.LoadingPage("Trial");
             }
         }
+
+        /// <summary>
+        /// Configuration des labels contenu dans la page
+        /// </summary>
         private void ConfigLabel()
         {
             labelTitreInstru.Content = "Tour de Londres : Instructions";
@@ -69,6 +88,11 @@ namespace LondonTower.PageFolder
 
         }
 
+        /// <summary>
+        /// Fonction déclenché par l'evenement TrialCompletEventHandler notifiant que le trial est réussi et que le passage a l'épreuve suivante est autorisé
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EnableNextPage(object sender, TrialCompleteEvent e)
         {
             if (e.Complete)

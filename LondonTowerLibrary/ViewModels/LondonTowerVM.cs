@@ -37,7 +37,7 @@ namespace LondonTowerLibrary.ViewModels
         #region DateAndTime 
         /// <summary>
         /// DateTime prise au lancement du test.
-        /// s'update toutes les minute via <c>RunTimer()</c> et notifie l'IHM de la modification via <c>PropertyChanged</c> 
+        /// s'update toutes les minutes via <c>RunTimer()</c> et notifie l'IHM de la modification via <c>PropertyChanged</c> 
         /// </summary>
         private DateTime dateAndTime;
         public DateTime DateAndTime
@@ -173,9 +173,9 @@ namespace LondonTowerLibrary.ViewModels
         /// Implicit operator ViewModel -> Model
         /// </summary>
         /// <param name="ltvm"> ViewModel </param>
-        public static implicit operator TowerOfLondon(LondonTowerVM ltvm)
+        public static implicit operator LondonTower(LondonTowerVM ltvm)
         {
-            return new TowerOfLondon
+            return new LondonTower
             {
                 VisualHelp = ltvm.VisualHelp,
                 DateAndTime = ltvm.DateAndTime,
