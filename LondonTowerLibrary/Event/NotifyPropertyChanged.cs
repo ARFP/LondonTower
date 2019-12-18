@@ -8,7 +8,9 @@ using System.Threading.Tasks;
 namespace LondonTowerLibrary.Event
 {
     public class NotifyPropertyChanged : INotifyPropertyChanged
-    {
+    {/// <summary>
+    /// Implémentation de l'interface INotifyPropertyChanged
+    /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
         public void OnProperty_Change(string propertyName)

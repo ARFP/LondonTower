@@ -11,7 +11,6 @@ namespace LondonTower.PageFolder
     /// </summary>
     public partial class FeedBack : Page
     {
-        CommandNavigate myCommand;
         /// <summary>
         /// récupère la valeur de 1 à 10 du ressenti de l'utilisateur. Elle sera renvoyé à la mainwindow qui l'attribuera à londontowerVM.
         /// </summary>
@@ -24,9 +23,6 @@ namespace LondonTower.PageFolder
         {
             InitializeComponent();
             this.DataContext = this;
-
-            myCommand = new CommandNavigate(this.NavigationService, this);
-
         }
 
         /// <summary>
@@ -43,14 +39,6 @@ namespace LondonTower.PageFolder
                 MainWindow main = (MainWindow)Window.GetWindow(this);
                 main.LoadingPage("TestResult", fback);
             }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public CommandNavigate MyNextCommand
-        {
-            get => myCommand;
-            set => myCommand = value;
         }
 
         /// <summary>

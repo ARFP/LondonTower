@@ -53,7 +53,9 @@ namespace LondonTower.Modal
                 }
             }
         }
-
+        /// <summary>
+        /// Constructeur par defaut
+        /// </summary>
         public Settings()
         {
             InitializeComponent();
@@ -61,7 +63,7 @@ namespace LondonTower.Modal
             SecondeSaveFolder = Properties.Settings.Default.PathSecondeSave;
         }
 
-        private void BrowneFolder_Click(object sender, RoutedEventArgs e)
+        private void BrowseFolder_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Controls.Button but = (System.Windows.Controls.Button)sender;
             folder = new FolderBrowserDialog();

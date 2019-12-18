@@ -11,6 +11,7 @@ namespace LondonTowerLibrary.ViewModels
     /// <summary>
     /// Classe représentant un Trial, contenant la liste des ViewPegs (representation graphique des pegs) des 2 zones
     /// </summary>
+   // public class ViewTrial : NotifyPropertyChanged
     public class ViewTrial : NotifyPropertyChanged
     {
         /// <summary>
@@ -29,10 +30,18 @@ namespace LondonTowerLibrary.ViewModels
         private List<ViewPeg> viewPegslistGoal;
 
         /// <summary>
-        /// Assesseur
+        /// Assesseur de viewPegsList Liste des ViewPegs de la zone de travail, là ou la personne bouge les Beads
         /// </summary>
         public List<ViewPeg> ViewPegsList { get => viewPegsList; set => viewPegsList = value; }
+
+        /// <summary>
+        /// Assesseur de viewPegslistGoal Liste des ViewPegs de la zone Goal représentant le placement à réalisé
+        /// </summary>
         public List<ViewPeg> ViewPegslistGoal { get => viewPegslistGoal; set => viewPegslistGoal = value; }
+
+        /// <summary>
+        /// Assesseur de trial Classe métié representant un niveau du test de london tower
+        /// </summary>
         public Trial Trial { get => trial; set => trial = value; }
 
         /// <summary>

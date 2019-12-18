@@ -25,9 +25,9 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="90"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Sauvegarde Principal" FontSize="18" HorizontalAlignment="Center" FontWeight="Bold"/>
+                <TextBlock Grid.Column="0" Text="Sauvegarde principale" FontSize="18" HorizontalAlignment="Center" FontWeight="Bold"/>
                 <TextBox Grid.Column="1" FontSize="18" Text="{Binding FirstSaveFolder, UpdateSourceTrigger=PropertyChanged}"/>
-                <Button Tag="First" Name="FirstSaveBut" Grid.Column="2" HorizontalAlignment="Center" Content="Parcourir" Padding="5" Click="BrowneFolder_Click"/>
+                <Button Tag="First" Name="FirstSaveBut" Grid.Column="2" HorizontalAlignment="Center" Content="Parcourir" Padding="5" Click="BrowseFolder_Click"/>
             </Grid>
 
             <Grid Margin="0,30,0,0">
@@ -38,7 +38,7 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" Text="Sauvegarde de secours" FontSize="18" HorizontalAlignment="Center" FontWeight="Bold"/>
                 <TextBox Grid.Column="1" FontSize="18"  MinWidth="120" Text="{Binding SecondeSaveFolder, UpdateSourceTrigger=PropertyChanged}"/>
-                <Button Tag="Second" Name="SecondSaveBut" Grid.Column="2" HorizontalAlignment="Center" Content="Parcourir" Padding="5" Click="BrowneFolder_Click"/>
+                <Button Tag="Second" Name="SecondSaveBut" Grid.Column="2" HorizontalAlignment="Center" Content="Parcourir" Padding="5" Click="BrowseFolder_Click"/>
             </Grid>
         </StackPanel>
         <StackPanel Margin="0,50,0,0" Orientation="Horizontal" HorizontalAlignment="Center">

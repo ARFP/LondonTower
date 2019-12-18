@@ -16,10 +16,12 @@ using System.Windows.Shapes;
 namespace LondonTowerLibrary.UserControls
 {
     /// <summary>
-    /// Logique d'interaction pour UCResultPersonn.xaml
+    /// Logique d'interaction pour UCResultPersonn.xaml 
     /// </summary>
     public partial class UCResultPersonn : UserControl
-    {
+    {/// <summary>
+    /// UserControl servant à l'affichage des informations sur la personne ayant passé le test
+    /// </summary>
         public UCResultPersonn()
         {
             InitializeComponent();
