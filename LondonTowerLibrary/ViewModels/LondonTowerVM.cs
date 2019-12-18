@@ -168,9 +168,9 @@ namespace LondonTowerLibrary.ViewModels
         /// Implicit operator ViewModel -> Model
         /// </summary>
         /// <param name="ltvm"> ViewModel </param>
-        public static implicit operator TowerOfLondon(LondonTowerVM ltvm)
+        public static implicit operator LondonTower(LondonTowerVM ltvm)
         {
-            return new TowerOfLondon
+            return new LondonTower
             {
                 VisualHelp = ltvm.VisualHelp,
                 DateAndTime = ltvm.DateAndTime,

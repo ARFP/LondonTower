@@ -17,7 +17,7 @@ namespace LondonTower.PageFolder
     /// </summary>
     public partial class TestResult : Page, INotifyPropertyChanged
     {
-        private TowerOfLondon tower;
+        private LondonTowerLibrary.LondonTower tower;
 
 
         private double minimalMove;
@@ -27,7 +27,7 @@ namespace LondonTower.PageFolder
         private double moyenneTime;
         private double totalTimeTower;
 
-        public TowerOfLondon Tower { get => tower; set => tower = value; }
+        public LondonTowerLibrary.LondonTower Tower { get => tower; set => tower = value; }
 
         public double MinimalMove
         {
@@ -88,7 +88,7 @@ namespace LondonTower.PageFolder
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public TestResult(TowerOfLondon _tower)
+        public TestResult(LondonTowerLibrary.LondonTower _tower)
         {
             tower = _tower;
             this.DataContext = this;

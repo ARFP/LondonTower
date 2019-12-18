@@ -11,11 +11,11 @@ namespace LondonTowerLibrary
     public class FactoryLondonTower
     {
 
-        public static TowerOfLondon GetTowerOfLondon(LondonTowerVM towerVM)
+        public static LondonTower GetTowerOfLondon(LondonTowerVM towerVM)
         {
 
 
-            TowerOfLondon ToL = LoadTowerOfLondon<TowerOfLondon>(towerVM.NbPegs);
+            LondonTower ToL = LoadTowerOfLondon<LondonTower>(towerVM.NbPegs);
             ToL.DateAndTime = towerVM.DateAndTime;
             ToL.Personn = towerVM.Personne;
             ToL.VisualHelp = towerVM.VisualHelp;
@@ -31,7 +31,7 @@ namespace LondonTowerLibrary
             return Tempo;
         }
 
-        public static void SaveTowerOfLondon(TowerOfLondon _t)
+        public static void SaveTowerOfLondon(LondonTower _t)
         {
             string path = "pack://application:,,,/Component/Resources/Config/TowerOfLondon_Lvl" + _t.Level + "_save.txt";
             string str = JsonConvert.SerializeObject(_t, Formatting.Indented);

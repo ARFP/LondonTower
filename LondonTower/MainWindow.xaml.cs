@@ -13,7 +13,7 @@ namespace LondonTower
     /// </summary>
     public partial class MainWindow : NavigationWindow
     {
-        TowerOfLondon tower;
+        LondonTowerLibrary.LondonTower tower;
         /// <summary>
         /// Point d'entrée du programmes 
         /// </summary>

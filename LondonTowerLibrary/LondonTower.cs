@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace LondonTowerLibrary
 {
     [Serializable]
-    public class TowerOfLondon
+    public class LondonTower
     {
         
         private int level;
@@ -24,11 +24,11 @@ namespace LondonTowerLibrary
         public DateTime DateAndTime { get => dateAndTime; set => dateAndTime = value; }
         public string Fdback { get => fdback; set => fdback = value; }
 
-        public TowerOfLondon()
+        public LondonTower()
         {
             trialNumber = 0;
         }
-        public TowerOfLondon(int _level, List<Trial> _trialList, Personn _personn) : this()
+        public LondonTower(int _level, List<Trial> _trialList, Personn _personn) : this()
         {
             this.level = _level;
             this.trialList = _trialList;
