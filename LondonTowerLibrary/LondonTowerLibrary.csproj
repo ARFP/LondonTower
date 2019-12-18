@@ -121,7 +121,6 @@
     <Compile Include="ViewModels\LondonTowerVM.cs" />
     <Compile Include="ViewModels\PersonneVM.cs" />
     <Compile Include="ViewModels\ViewBead.cs" />
-    <Compile Include="ViewModels\ViewLondonTower.cs" />
     <Compile Include="ViewModels\ViewPeg.cs" />
     <Compile Include="ViewModels\ViewTrial.cs" />
   </ItemGroup>

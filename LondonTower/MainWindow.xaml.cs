@@ -14,6 +14,9 @@ namespace LondonTower
     public partial class MainWindow : NavigationWindow
     {
         TowerOfLondon tower;
+        /// <summary>
+        /// Point d'entrée du programmes 
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -22,11 +25,20 @@ namespace LondonTower
             ShowsNavigationUI = false;
         }
 
+        /// <summary>
+        /// Creation de TowerOfLondon avec la pattern Factory 
+        /// </summary>
+        /// <param name="towerVM">View Model London Tower contenant les paramètre du test LondonTower </param>
         public void InitTower(LondonTowerVM towerVM)
         {
             tower = FactoryLondonTower.GetTowerOfLondon(towerVM);            
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="_nextPage"></param>
+        /// <param name="sentback"></param>
         public void LoadingPage(string _nextPage, object sentback = null)
         {
             switch (_nextPage)
@@ -36,9 +48,9 @@ namespace LondonTower
                     this.Navigate(new Identification());
                     break;
                 case "Demo":
-                    this.Navigate(new FeedBack());
+                    //this.Navigate(new FeedBack());
                     InitTower((LondonTowerVM)sentback);
-                    //this.Navigate(new Demo(tower.GetNextTrial(), tower.VisualHelp));
+                    this.Navigate(new Demo(tower.GetNextTrial(), tower.VisualHelp));
                     break;
                 case "Trial":
                     if (tower.HastNextTrial())
