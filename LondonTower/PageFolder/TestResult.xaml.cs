@@ -27,8 +27,14 @@ namespace LondonTower.PageFolder
         private double moyenneTime;
         private double totalTimeTower;
 
+        /// <summary>
+        /// Accesseur de l'instance de LondonTower
+        /// </summary>
         public LondonTowerLibrary.LondonTower Tower { get => tower; set => tower = value; }
 
+        /// <summary>
+        /// Accesseur de minimalMove, Double representant la somme des coups minimum de chaque Trial
+        /// </summary>
         public double MinimalMove
         {
             get => minimalMove;
@@ -38,6 +44,10 @@ namespace LondonTower.PageFolder
                 OnPropertyChanged(nameof(MinimalMove));
             }
         }
+
+        /// <summary>
+        /// Accesseur de excesMove, Double representant la somme du nombre de coup en plus par rapport au mouvement minimal prévu par Trial
+        /// </summary>
         public double ExcesMove
         {
             get => excesMove; set
@@ -46,6 +56,10 @@ namespace LondonTower.PageFolder
                 OnPropertyChanged(nameof(ExcesMove));
             }
         }
+
+        /// <summary>
+        /// Accesseur de upperStrat, Double representant en pourcentage le nombre de coup en exces
+        /// </summary>
         public double UpperStrat
         {
             get => upperStrat; set
@@ -54,6 +68,11 @@ namespace LondonTower.PageFolder
                 OnPropertyChanged(nameof(UpperStrat));
             }
         }
+
+        /// <summary>
+        /// Accesseur totalTime, Entier representant le temps en seconde 
+        /// la somme des temps de resolution des Trials, a partir du 1er mouvement jusqu a la resolution
+        /// </summary>
         public int TotalTime
         {
             get => totalTime; set
@@ -62,6 +81,10 @@ namespace LondonTower.PageFolder
                 OnPropertyChanged(nameof(TotalTime));
             }
         }
+
+        /// <summary>
+        /// Accesseur de moyenneTime, Double représentant le temps moyen passé par Trial
+        /// </summary>
         public double MoyenneTime
         {
             get => moyenneTime; set
@@ -70,6 +93,11 @@ namespace LondonTower.PageFolder
                 OnPropertyChanged(nameof(MoyenneTime));
             }
         }
+
+        /// <summary>
+        /// Accesseur de totalTimeTower, Double représentant la durée total du test London Tower, du lancement de la page 
+        /// démonstration jusqu'a la validation du ressenti apres le test
+        /// </summary>
         public double TotalTimeTower
         {
             get => totalTimeTower;
@@ -85,11 +113,19 @@ namespace LondonTower.PageFolder
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
+
         public void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        /// <summary>
+        /// Constructeur paramétré initialisant l'ItemsSource de la datagrid, 
+        /// appelant la fonction pour le formatage du nom fichier de sauvegarde, 
+        /// appelant la fonction de calcule des résultat
+        /// puis sauvegarde des resultats en async dans une task
+        /// </summary>
+        /// <param name="_tower"></param>
         public TestResult(LondonTowerLibrary.LondonTower _tower)
         {
             tower = _tower;
@@ -99,9 +135,7 @@ namespace LondonTower.PageFolder
             ButNextPage.Click += ButNextPage_OnCick;
             ButQuit.Click += ButLeaveApp_OnClick;
 
-            string datestr = tower.DateAndTime.Hour + "." + tower.DateAndTime.Month + "." + tower.DateAndTime.Year + " " + tower.DateAndTime.Hour + "h" + tower.DateAndTime.Minute;
-            string path = (tower.Personn.LastName + " " + tower.Personn.FirstName + " Lv" + tower.Level + " " + datestr + ".xlsx");
-
+            string path = FormatageNomFichier();
 
             DataCalcul();
             Task t = new Task( ()=> {
@@ -137,6 +171,10 @@ namespace LondonTower.PageFolder
         /// <summary>
         /// Fonction de sauvegarde des résultats en fichier EXCEL avec l'extension XLSX.
         /// Chargement d'un template, remplissage des cellules avec les résultats et enregistrement du fichier
+        /// 3 Tentatives de sauvegardes différente, 
+        /// 1ere en prenant le path de Properties.Settings.Default.PathFirstSave
+        /// 2eme en prenant le path de Properties.Settings.Default.PathSecondeSave
+        /// 3eme sauvegarde sur le bureau avec affichage message d'erreur
         /// </summary>
         /// <param name="_path">Chemin de sauvegarde du fichier xlsx</param>
         private void SaveTest(string _path)
@@ -225,6 +263,16 @@ namespace LondonTower.PageFolder
             MoyenneTime = Math.Floor((double)(TotalTime / 10));
 
             TotalTimeTower = Math.Floor(( DateTime.Now-tower.DateAndTime).TotalSeconds);
+        }
+
+        /// <summary>
+        /// Fonction de formatage pour le nom du fichier XLSX sauvegarder
+        /// </summary>
+        /// <returns>String représentant le nom du fichier pour la sauvegarde</returns>
+        private string FormatageNomFichier()
+        {
+            string datestr = tower.DateAndTime.Hour + "." + tower.DateAndTime.Month + "." + tower.DateAndTime.Year + " " + tower.DateAndTime.Hour + "h" + tower.DateAndTime.Minute;
+            return (tower.Personn.LastName + " " + tower.Personn.FirstName + " Lv" + tower.Level + " " + datestr + ".xlsx");
         }
 
 

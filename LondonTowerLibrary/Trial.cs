@@ -65,32 +65,32 @@ namespace LondonTowerLibrary
         private ObservableCollection<Peg> pegListGoal;
 
         /// <summary>
-        /// Accesseur de pegListGoal
+        /// Accesseur de pegListGoal, Liste des Pegs pour la zone Goal avec placement final des Beads
         /// </summary>
         public ObservableCollection<Peg> PegListGoal { get => pegListGoal; set => pegListGoal = value; }
 
         /// <summary>
-        /// Accesseur de minimalMoveExpect 
+        /// Accesseur de minimalMoveExpect, Entier représentant le nombre de coup minimal pour résoudre le Trial actuel
         /// </summary>
         public int MinimalMoveExpect { get => minimalMoveExpect; set => minimalMoveExpect = value; }
 
         /// <summary>
-        /// Accesseur de trialNumber
+        /// Accesseur de trialNumber, Entier représentant le numero du trial actuel
         /// </summary>
         public int TrialNumber { get => trialNumber; set => trialNumber = value; }
 
         /// <summary>
-        /// Accesseur de timeToResolve
+        /// Accesseur de timeToResolve, Entier représentant le nombre de seconde écoulé entre le 1er mouvement et la résolution du Trial
         /// </summary>
         public int TimeToResolve { get => timeToResolve; set => timeToResolve = value; }
 
         /// <summary>
-        /// Accesseur de timeDisplayUntilResolve
+        /// Accesseur de timeDisplayUntilResolve, Entier représentant le nombre de seconde écoulé entre le chargement du Trial et sa résolution
         /// </summary>
         public int TimeDisplayUntilResolve { get => timeDisplayUntilResolve; set => timeDisplayUntilResolve = value; }
 
         /// <summary>
-        /// Accesseur de tryMoveMade
+        /// Accesseur de tryMoveMade, Entier représentant le nombre de mouvement effectué
         /// Declenche l'evenement TryMoveMadeChange 
         /// </summary>
         public int TryMoveMade
@@ -108,7 +108,7 @@ namespace LondonTowerLibrary
         }
 
         /// <summary>
-        /// Accesseur de pegList
+        /// Accesseur de pegList, Liste des Pegs pour la zone de travail avec placement initial des Beads
         /// </summary>
         public ObservableCollection<Peg> PegList
         {

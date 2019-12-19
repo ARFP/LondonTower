@@ -27,18 +27,20 @@ namespace LondonTower.PageFolder
     {
 
         private Trial trial;
-        GameUc gameTrial ;
-        GameUc gameGoal ;
+        private GameUc gameTrial ;
+        private GameUc gameGoal ;
 
 
-
+        /// <summary>
+        /// Constructeur paramétré instanciant la page et les UserControls ainsi que leur ajout a la page
+        /// </summary>
+        /// <param name="_t">Trial actuel contenant les listes des Pegs zone de travail et zone goal</param>
+        /// <param name="_visualhelp">Boolean pour l'option d'aide visuel</param>
         public TrialPage(Trial _t, bool _visualhelp)
         {
             InitializeComponent();
             ButNextPage.Click += ButNextPage_Click;
             trial = _t;
-            //this.DataContext = trial;
-            //this.Resources["MyContent"]=trial;
             
             ViewTrial vtrailtest = new ViewTrial(_t, _visualhelp);
             this.DataContext = vtrailtest;
@@ -52,6 +54,12 @@ namespace LondonTower.PageFolder
             
         }
 
+        /// <summary>
+        /// Foction declenché par l'evenement TrialComplet de ViewTrial informant la résolution du Trial, 
+        /// permettant l'affichage du bouton Fleche pour le changement de page
+        /// </summary>
+        /// <param name="sender">ViewTrial ayant déclencher l evenement</param>
+        /// <param name="e">Evenement custom pour la resolution du Trial</param>
         private void EnableNextPage(object sender, TrialCompleteEvent e)
         {
             if(e.Complete)
@@ -61,6 +69,12 @@ namespace LondonTower.PageFolder
             }
         }
 
+        /// <summary>
+        /// Déclenché lors du click sur le bouton <c>WoodButtonUc</c>
+        /// appelle la fonction de mainwindow pour passer à la page suivante si <c>ButNextPage.MAGICEnabled</c> est true
+        /// </summary>
+        /// <param name="sender">Bouton declencheur de l eventement</param>
+        /// <param name="e">Evenement declenché</param>
         private void ButNextPage_Click(object sender, EventArgs e)
         {
             if (ButNextPage.MAGICEnabled)
