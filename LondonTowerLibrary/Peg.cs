@@ -12,18 +12,20 @@ namespace LondonTowerLibrary
     [Serializable]
     public class Peg : IEquatable<Peg>
     {
+
+        private int pegNumber;
         /// <summary>
         /// Entier representant le numero du Peg pour le placement.
         /// Placement de droite a gauche, du plus petit (Peg 1) au plus grand (Peg 3 ou 4 ou 5 suivant le nombre de Peg choisi)
         /// </summary>
-        private int pegNumber;
         public int PegNumber { get => pegNumber; set => pegNumber = value; }
 
 
+       
+        private ObservableCollection<Bead> beadList;
         /// <summary>
         /// Liste de Bead empilé sur le Peg
         /// </summary>
-        private ObservableCollection<Bead> beadList;
         public ObservableCollection<Bead> BeadList {
             get {
                 return beadList;
