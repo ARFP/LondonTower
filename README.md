@@ -1,6 +1,8 @@
 # LondonTower
 Projet Neuro London Tower
 
+Le test “tower of London” (littérallement “la tour de Londres”) a été créé par Shallice en 1982 pour examiner la résolution de problèmes chez des patients souffrant de dommages au lobes frontale.
+
 ## Authors
 
     - BULLY Sébastien - Stagiaire CDA (Concepteur Developpeur d'Application) au CRM de Mulhouse
