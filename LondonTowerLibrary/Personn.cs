@@ -14,7 +14,7 @@ namespace LondonTowerLibrary
         private string lastName;
 
         /// <summary>
-        /// Assesseur de lastName correspondant au Nom de l'utilisateur
+        /// Accesseur de lastName correspondant au Nom de l'utilisateur
         /// </summary>
         public string LastName { get => lastName; set => lastName = value; }
 
@@ -25,7 +25,7 @@ namespace LondonTowerLibrary
         private string firstName;
 
         /// <summary>
-        /// Assesseur de firstName correspondant au Prénom de l'utilisateur
+        /// Accesseur de firstName correspondant au Prénom de l'utilisateur
         /// </summary>
         public string FirstName { get => firstName; set => firstName = value; }
 
@@ -35,7 +35,7 @@ namespace LondonTowerLibrary
         private Genre genre;
 
         /// <summary>
-        /// Assesseur de genre correspondant au Sexe de l'utilisateur
+        /// Accesseur de genre correspondant au Sexe de l'utilisateur
         /// </summary>
         public Genre Genre { get => genre; set => genre = value; }
 
@@ -45,7 +45,7 @@ namespace LondonTowerLibrary
         private DateTime dayOfBirth;
 
         /// <summary>
-        /// Assesseur de dayOfBirth correspondant a la Date de naissance de l'utilisateur
+        /// Accesseur de dayOfBirth correspondant a la Date de naissance de l'utilisateur
         /// </summary>
         public DateTime DayofBirth { get => dayOfBirth; set => dayOfBirth = value; }
 
@@ -55,7 +55,7 @@ namespace LondonTowerLibrary
         private int age;
 
         /// <summary>
-        /// Assesseur de Age correspondant a l'Age de l'utilisateur
+        /// Accesseur de Age correspondant a l'Age de l'utilisateur
         /// </summary>
         public int Age { get => age; set => age = value; }
                 

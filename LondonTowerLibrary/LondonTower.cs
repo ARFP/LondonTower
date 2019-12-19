@@ -8,7 +8,7 @@ namespace LondonTowerLibrary
     {
         
         private int level;
-        //private DateTime testDate;
+       
         private List<Trial> trialList;
         private int trialNumber;
         private Personn personn;
@@ -17,7 +17,7 @@ namespace LondonTowerLibrary
         private string fdback;
 
         public int Level { get => level; set => level = value; }
-        //public DateTime TestDate { get => testDate; set => testDate = value; }
+
         public List<Trial> TrialList { get => trialList; set => trialList = value; }
         public Personn Personn { get => personn; set => personn = value; }
         public bool VisualHelp { get => visualHelp; set => visualHelp = value; }

@@ -65,32 +65,32 @@ namespace LondonTowerLibrary
         private ObservableCollection<Peg> pegListGoal;
 
         /// <summary>
-        /// Assesseur de pegListGoal
+        /// Accesseur de pegListGoal
         /// </summary>
         public ObservableCollection<Peg> PegListGoal { get => pegListGoal; set => pegListGoal = value; }
 
         /// <summary>
-        /// Assesseur de minimalMoveExpect 
+        /// Accesseur de minimalMoveExpect 
         /// </summary>
         public int MinimalMoveExpect { get => minimalMoveExpect; set => minimalMoveExpect = value; }
 
         /// <summary>
-        /// Assesseur de trialNumber
+        /// Accesseur de trialNumber
         /// </summary>
         public int TrialNumber { get => trialNumber; set => trialNumber = value; }
 
         /// <summary>
-        /// Assesseur de timeToResolve
+        /// Accesseur de timeToResolve
         /// </summary>
         public int TimeToResolve { get => timeToResolve; set => timeToResolve = value; }
 
         /// <summary>
-        /// Assesseur de timeDisplayUntilResolve
+        /// Accesseur de timeDisplayUntilResolve
         /// </summary>
         public int TimeDisplayUntilResolve { get => timeDisplayUntilResolve; set => timeDisplayUntilResolve = value; }
 
         /// <summary>
-        /// Assesseur de tryMoveMade
+        /// Accesseur de tryMoveMade
         /// Declenche l'evenement TryMoveMadeChange 
         /// </summary>
         public int TryMoveMade
@@ -108,7 +108,7 @@ namespace LondonTowerLibrary
         }
 
         /// <summary>
-        /// Assesseur de pegList
+        /// Accesseur de pegList
         /// </summary>
         public ObservableCollection<Peg> PegList
         {

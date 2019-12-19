@@ -80,7 +80,9 @@ namespace LondonTower.PageFolder
             }
         }
 
-
+        /// <summary>
+        /// Implimentation de INotifyPropertyChanged
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
         public void OnPropertyChanged(string propertyName)
@@ -109,17 +111,34 @@ namespace LondonTower.PageFolder
 
         }
 
+        /// <summary>
+        /// Gestion d'evenement au Click sur le bouton Home
+        /// </summary>
+        /// <param name="sender">Object declencheur de l'evenement</param>
+        /// <param name="e">Evenement routé</param>
         private void ButNextPage_OnCick(object sneder, RoutedEventArgs e)
         {
             MainWindow main = (MainWindow)Window.GetWindow(this);
             main.LoadingPage("Identification");
         }
+
+        /// <summary>
+        /// Gestion d'evenement au Click sur le bouton Quitter
+        /// </summary>
+        /// <param name="sender">Object declencheur de l'evenement</param>
+        /// <param name="e">Evenement routé</param>
         private void ButLeaveApp_OnClick(object sender, RoutedEventArgs e)
         {
             MainWindow main = (MainWindow)Window.GetWindow(this);
             main.Close();
         }
 
+
+        /// <summary>
+        /// Fonction de sauvegarde des résultats en fichier EXCEL avec l'extension XLSX.
+        /// Chargement d'un template, remplissage des cellules avec les résultats et enregistrement du fichier
+        /// </summary>
+        /// <param name="_path">Chemin de sauvegarde du fichier xlsx</param>
         private void SaveTest(string _path)
         { 
             var workbook = new XLWorkbook("./Config/Template.xlsx");
@@ -188,7 +207,9 @@ namespace LondonTower.PageFolder
         }
 
 
-
+        /// <summary>
+        /// Fonction de récuperation et de calcul des résultats
+        /// </summary>
         private void DataCalcul()
         {
             IEnumerable<Trial> listtest = tower.TrialList.Where(x => x.TrialNumber != 0);

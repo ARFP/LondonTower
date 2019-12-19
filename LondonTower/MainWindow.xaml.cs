@@ -35,7 +35,7 @@ namespace LondonTower
         }
 
         /// <summary>
-        /// 
+        /// Navigation entre les differentes pages
         /// </summary>
         /// <param name="_nextPage"></param>
         /// <param name="sentback"></param>
@@ -77,7 +77,7 @@ namespace LondonTower
         }
 
         /// <summary>
-        /// 
+        /// Fonction appelé lors de la fermeture du programmes sauvegardant les Propriétés.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

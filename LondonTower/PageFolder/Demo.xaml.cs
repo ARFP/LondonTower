@@ -56,10 +56,10 @@ namespace LondonTower.PageFolder
         }
 
         /// <summary>
-        /// Changement de page en cliquant sur la fleche 
+        /// Gestion d'evenement au Click sur le bouton Fleche 
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">Object declencheur de l evenement</param>
+        /// <param name="e">Evenement déclenché</param>
         private void ButNextPage_Click(object sender, EventArgs e)
         {
             if (ButNextPage.MAGICEnabled)
@@ -91,8 +91,8 @@ namespace LondonTower.PageFolder
         /// <summary>
         /// Fonction déclenché par l'evenement TrialCompletEventHandler notifiant que le trial est réussi et que le passage a l'épreuve suivante est autorisé
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">object declencheur de l evenement</param>
+        /// <param name="e">Evenement declenché</param>
         private void EnableNextPage(object sender, TrialCompleteEvent e)
         {
             if (e.Complete)
