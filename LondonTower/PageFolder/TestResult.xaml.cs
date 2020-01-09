@@ -109,11 +109,14 @@ namespace LondonTower.PageFolder
         }
 
         /// <summary>
-        /// Implimentation de INotifyPropertyChanged
+        /// Implimentation de INotifyPropertyChanged, Evenement declenché lors d'un changement de propriété
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
-
+        /// <summary>
+        /// Méthode appelé lorsque l'evenement <c>PropertyChanged</c> est declénché lors d'un changement de propriété
+        /// </summary>
+        /// <param name="propertyName">Name of the property.</param>
         public void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

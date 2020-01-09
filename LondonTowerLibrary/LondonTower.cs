@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 
 namespace LondonTowerLibrary
-{
+{/// <summary>
+/// Classe Metier LondonTower représentant un test complet avec 1 trial de démonstration et ses 10 trials
+/// </summary>
+
     [Serializable]
     public class LondonTower
     {

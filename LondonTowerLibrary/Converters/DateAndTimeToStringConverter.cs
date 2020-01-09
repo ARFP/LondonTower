@@ -5,7 +5,7 @@ using System.Windows.Data;
 namespace LondonTowerLibrary.Converters
 {
     /// <summary>
-    /// Le converter transforme un type DateTime en un string formaté et vice-versa.     /// 
+    /// Le converter transforme un type DateTime en un string formaté et vice-versa. 
     /// </summary>
     [ValueConversion(typeof(DateTime), typeof(String))]
     public class DateAndTimeToStringConverter : IValueConverter
