@@ -17,9 +17,16 @@ namespace LondonTower.PageFolder
     /// </summary>
     public partial class Identification : Page, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Evenement déclencher lorsque se produit la modification d'une valeur de propriété.
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
+
         private Visibility visibilityAdmin;
+        /// <summary>
+        /// Champs permettant la visibilité de "setting" pour la configuration des chemins de sauvegarde
+        /// </summary>
         public Visibility VisibilityAdmin
         {
             get { return visibilityAdmin; }
@@ -33,6 +40,9 @@ namespace LondonTower.PageFolder
             }
         }
 
+        /// <summary>
+        /// voir <see cref="LondonTowerVM"/>
+        /// </summary>
         public LondonTowerVM towerVM;
 
         /// <summary>

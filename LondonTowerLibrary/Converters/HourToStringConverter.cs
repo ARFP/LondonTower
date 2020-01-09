@@ -5,7 +5,7 @@ using System.Windows.Data;
 namespace LondonTowerLibrary.Converters
 {
     /// <summary>
-    /// Le converter extrait l'heure et les minutes d'un type DateTime et les format avant d'envoyer le résultat en string.     /// 
+    /// Le converter extrait l'heure et les minutes d'un type DateTime et les format avant d'envoyer le résultat en string. 
     /// </summary>
     [ValueConversion(typeof(DateTime), typeof(String))]
     public class HourToStringConverter : IValueConverter
