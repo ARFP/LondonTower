@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="16.7" version="16.7" Modules="simple" RootPath="." Language="en" Id="{545C1226-7D98-466B-9008-574141BC0360}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;FixupComponent"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Buzzer.mp3" Value="..\LondonTowerLibrary\bin\Debug\sound"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Buzzer.mp3_1" Value="..\LondonTower\bin\Debug\sound"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ClosedXML.dll" Value="..\packages\ClosedXML.0.94.2\lib\net46"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ClosedXML.dll_1" Value="..\packages\ClosedXML.0.94.2\lib\net46"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_DateToStringConverter.cs" Value="..\LondonTowerLibrary\bin\Debug\Converters"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_DateToStringConverter.cs_1" Value="..\LondonTower\bin\Debug\Converters"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_DocumentFormat.OpenXml.dll" Value="..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_DocumentFormat.OpenXml.dll_1" Value="..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ExcelNumberFormat.dll" Value="..\packages\ExcelNumberFormat.1.0.3\lib\net20"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ExcelNumberFormat.dll_1" Value="..\packages\ExcelNumberFormat.1.0.3\lib\net20"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_FastMember.dll" Value="..\packages\FastMember.1.3.0\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_FastMember.dll_1" Value="..\packages\FastMember.1.3.0\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_FontAwesome.WPF.dll" Value="..\packages\FontAwesome.WPF.4.7.0.9\lib\net40"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_FontAwesome.WPF.dll_1" Value="..\packages\FontAwesome.WPF.4.7.0.9\lib\net40"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_LondonTower.exe" Value="..\LondonTower\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_LondonTower.exe.config" Value="..\LondonTower\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_LondonTower.pdb" Value="..\LondonTower\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_LondonTowerLibrary.dll" Value="..\LondonTowerLibrary\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_LondonTowerLibrary.dll_1" Value="..\LondonTowerLibrary\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_LondonTowerLibrary.pdb" Value="..\LondonTowerLibrary\bin\Debug"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Newtonsoft.Json.dll" Value="..\packages\Newtonsoft.Json.12.0.2\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Newtonsoft.Json.dll_1" Value="..\packages\Newtonsoft.Json.12.0.2\lib\net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.IO.Packaging.dll" Value="..\packages\System.IO.Packaging.4.0.0\lib\net46"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_System.IO.Packaging.dll_1" Value="..\packages\System.IO.Packaging.4.0.0\lib\net46"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Template.xlsx" Value="..\LondonTowerLibrary\bin\Debug\Config"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Template.xlsx_1" Value="..\LondonTower\bin\Debug\Config"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_TowerOfLondon_Lvl3.txt" Value="..\LondonTowerLibrary\bin\Debug\Config"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_TowerOfLondon_Lvl3.txt_1" Value="..\LondonTower\bin\Debug\Config"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_TowerOfLondon_Lvl4.txt" Value="..\LondonTowerLibrary\bin\Debug\Config"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_TowerOfLondon_Lvl4.txt_1" Value="..\LondonTower\bin\Debug\Config"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_TowerOfLondon_Lvl5.txt" Value="..\LondonTowerLibrary\bin\Debug\Config"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_TowerOfLondon_Lvl5.txt_1" Value="..\LondonTower\bin\Debug\Config"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Buzzer.mp3" Value="Buzzer.mp3"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Buzzer.mp3_1" Value="Buzzer.mp3"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ClosedXML.dll" Value="ClosedXML.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ClosedXML.dll_1" Value="ClosedXML.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_DateToStringConverter.cs" Value="DateToStringConverter.cs"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_DateToStringConverter.cs_1" Value="DateToStringConverter.cs"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_DocumentFormat.OpenXml.dll" Value="DocumentFormat.OpenXml.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_DocumentFormat.OpenXml.dll_1" Value="DocumentFormat.OpenXml.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ExcelNumberFormat.dll" Value="ExcelNumberFormat.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ExcelNumberFormat.dll_1" Value="ExcelNumberFormat.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_FastMember.dll" Value="FastMember.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_FastMember.dll_1" Value="FastMember.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_FontAwesome.WPF.dll" Value="FontAwesome.WPF.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_FontAwesome.WPF.dll_1" Value="FontAwesome.WPF.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_LondonTower.exe" Value="LondonTower.exe"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_LondonTower.exe.config" Value="LondonTower.exe.config"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_LondonTower.pdb" Value="LondonTower.pdb"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_LondonTowerLibrary.dll" Value="LondonTowerLibrary.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_LondonTowerLibrary.dll_1" Value="LondonTowerLibrary.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_LondonTowerLibrary.pdb" Value="LondonTowerLibrary.pdb"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll" Value="Newtonsoft.Json.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll_1" Value="Newtonsoft.Json.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.IO.Packaging.dll" Value="System.IO.Packaging.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_System.IO.Packaging.dll_1" Value="System.IO.Packaging.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Template.xlsx" Value="Template.xlsx"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Template.xlsx_1" Value="Template.xlsx"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_TowerOfLondon_Lvl3.txt" Value="TowerOfLondon_Lvl3.txt"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_TowerOfLondon_Lvl3.txt_1" Value="TowerOfLondon_Lvl3.txt"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_TowerOfLondon_Lvl4.txt" Value="TowerOfLondon_Lvl4.txt"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_TowerOfLondon_Lvl4.txt_1" Value="TowerOfLondon_Lvl4.txt"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_TowerOfLondon_Lvl5.txt" Value="TowerOfLondon_Lvl5.txt"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_TowerOfLondon_Lvl5.txt_1" Value="TowerOfLondon_Lvl5.txt"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="Manufacturer" Value="Your Company"/>
+    <ROW Property="ProductCode" Value="1033:{222618C4-7617-4318-AC2B-731B49B8D06D} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="London Tower Setup"/>
+    <ROW Property="ProductVersion" Value="1.0.0" Type="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{71B3C8B0-2D97-4C2F-B9B3-8935D70F9B5A}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="Config_1_Dir" Directory_Parent="LondonTower_Dir" DefaultDir="Config"/>
+    <ROW Directory="Config_Dir" Directory_Parent="LondonTowerLibrary_Dir" DefaultDir="Config"/>
+    <ROW Directory="Converters_1_Dir" Directory_Parent="LondonTower_Dir" DefaultDir="CONVER~1|Converters"/>
+    <ROW Directory="Converters_Dir" Directory_Parent="LondonTowerLibrary_Dir" DefaultDir="CONVER~1|Converters"/>
+    <ROW Directory="LondonTowerLibrary_Dir" Directory_Parent="APPDIR" DefaultDir="LONDON~1|LondonTowerLibrary"/>
+    <ROW Directory="LondonTower_Dir" Directory_Parent="APPDIR" DefaultDir="LONDON~2|LondonTower"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="sound_1_Dir" Directory_Parent="LondonTower_Dir" DefaultDir="sound"/>
+    <ROW Directory="sound_Dir" Directory_Parent="LondonTowerLibrary_Dir" DefaultDir="sound"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="APPDIR" ComponentId="{FE369850-4D6C-4CE1-AEF6-A47757763AEC}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="LondonTowerLibrary_ContentOutput_Config" ComponentId="{0834F597-9927-41EB-9E82-B8C37BB6972B}" Directory_="Config_Dir" Attributes="0" KeyPath="Template.xlsx" Type="0"/>
+    <ROW Component="LondonTowerLibrary_ContentOutput_Converters" ComponentId="{F5A13FED-022F-4DE9-B04E-31DB5070BFDC}" Directory_="Converters_Dir" Attributes="0" KeyPath="DateToStringConverter.cs" Type="0"/>
+    <ROW Component="LondonTowerLibrary_ContentOutput_sound" ComponentId="{B799FBCC-3F28-4D5E-8947-C8B6AA1E06F1}" Directory_="sound_Dir" Attributes="0" KeyPath="Buzzer.mp3" Type="0"/>
+    <ROW Component="LondonTowerLibrary_PrimaryOutput" ComponentId="{D45E4FEC-3AFD-4354-BAE9-B4794AA755AB}" Directory_="LondonTowerLibrary_Dir" Attributes="0" KeyPath="LondonTowerLibrary.dll"/>
+    <ROW Component="LondonTowerLibrary_References" ComponentId="{CBCE2E67-77A0-4C6C-BB2E-6F7AF9FA2180}" Directory_="LondonTowerLibrary_Dir" Attributes="0" KeyPath="System.IO.Packaging.dll"/>
+    <ROW Component="LondonTowerLibrary_SymbolsOutput" ComponentId="{6F62607B-EAE1-45BB-953A-8C1C5A090FD7}" Directory_="LondonTowerLibrary_Dir" Attributes="0" KeyPath="LondonTowerLibrary.pdb"/>
+    <ROW Component="LondonTower_ContentOutput_Config" ComponentId="{508E9631-43C0-499D-B78D-93152E069593}" Directory_="Config_1_Dir" Attributes="0" KeyPath="Template.xlsx_1" Type="0"/>
+    <ROW Component="LondonTower_ContentOutput_Converters" ComponentId="{093CE9B6-013A-44FD-8532-EFA3C7F223CA}" Directory_="Converters_1_Dir" Attributes="0" KeyPath="DateToStringConverter.cs_1" Type="0"/>
+    <ROW Component="LondonTower_ContentOutput_sound" ComponentId="{145C1EC2-5E88-4D19-8542-74F3EF9CB5C3}" Directory_="sound_1_Dir" Attributes="0" KeyPath="Buzzer.mp3_1" Type="0"/>
+    <ROW Component="LondonTower_PrimaryOutput" ComponentId="{DC6F2468-9CF8-4746-A4EA-FD9425DF6228}" Directory_="LondonTower_Dir" Attributes="0" KeyPath="LondonTower.exe"/>
+    <ROW Component="LondonTower_References" ComponentId="{166C5825-5FDE-4502-965B-1EF009D549D5}" Directory_="LondonTower_Dir" Attributes="0" KeyPath="System.IO.Packaging.dll_1"/>
+    <ROW Component="LondonTower_SymbolsOutput" ComponentId="{38C8AA4A-A3C5-48FE-A8A0-4F39028F4A68}" Directory_="LondonTower_Dir" Attributes="0" KeyPath="LondonTower.pdb"/>
+    <ROW Component="ProductInformation" ComponentId="{DD63C369-1C2D-4C0B-B684-B6BA629F6AF9}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{99CB1441-26BE-40E1-9988-A1584EB498E3}" Directory_="SHORTCUTDIR" Attributes="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="LondonTowerLibrary.dll" Component_="LondonTowerLibrary_PrimaryOutput" FileName="LONDON~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_LondonTowerLibrary.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_LondonTowerLibrary.dll&gt;" SelfReg="false"/>
+    <ROW File="ClosedXML.dll" Component_="LondonTowerLibrary_References" FileName="CLOSED~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_ClosedXML.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ClosedXML.dll&gt;" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.dll" Component_="LondonTowerLibrary_References" FileName="DOCUME~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_DocumentFormat.OpenXml.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_DocumentFormat.OpenXml.dll&gt;" SelfReg="false"/>
+    <ROW File="ExcelNumberFormat.dll" Component_="LondonTowerLibrary_References" FileName="EXCELN~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_ExcelNumberFormat.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ExcelNumberFormat.dll&gt;" SelfReg="false"/>
+    <ROW File="FastMember.dll" Component_="LondonTowerLibrary_References" FileName="FASTME~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_FastMember.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_FastMember.dll&gt;" SelfReg="false"/>
+    <ROW File="FontAwesome.WPF.dll" Component_="LondonTowerLibrary_References" FileName="FONTAW~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_FontAwesome.WPF.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_FontAwesome.WPF.dll&gt;" SelfReg="false"/>
+    <ROW File="Newtonsoft.Json.dll" Component_="LondonTowerLibrary_References" FileName="NEWTON~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Newtonsoft.Json.dll&gt;" SelfReg="false"/>
+    <ROW File="System.IO.Packaging.dll" Component_="LondonTowerLibrary_References" FileName="SYSTEM~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.IO.Packaging.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.IO.Packaging.dll&gt;" SelfReg="false"/>
+    <ROW File="Template.xlsx" Component_="LondonTowerLibrary_ContentOutput_Config" FileName="TEMPLA~2.XLS|[|AI_PROPPATH_FILENAME_PERBUILD_Template.xlsx]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Template.xlsx&gt;" SelfReg="false"/>
+    <ROW File="TowerOfLondon_Lvl4.txt" Component_="LondonTowerLibrary_ContentOutput_Config" FileName="TOWERO~2.TXT|[|AI_PROPPATH_FILENAME_PERBUILD_TowerOfLondon_Lvl4.txt]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_TowerOfLondon_Lvl4.txt&gt;" SelfReg="false"/>
+    <ROW File="TowerOfLondon_Lvl5.txt" Component_="LondonTowerLibrary_ContentOutput_Config" FileName="TOWERO~3.TXT|[|AI_PROPPATH_FILENAME_PERBUILD_TowerOfLondon_Lvl5.txt]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_TowerOfLondon_Lvl5.txt&gt;" SelfReg="false"/>
+    <ROW File="Buzzer.mp3" Component_="LondonTowerLibrary_ContentOutput_sound" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_Buzzer.mp3]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Buzzer.mp3&gt;" SelfReg="false"/>
+    <ROW File="TowerOfLondon_Lvl3.txt" Component_="LondonTowerLibrary_ContentOutput_Config" FileName="TOWERO~4.TXT|[|AI_PROPPATH_FILENAME_PERBUILD_TowerOfLondon_Lvl3.txt]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_TowerOfLondon_Lvl3.txt&gt;" SelfReg="false"/>
+    <ROW File="DateToStringConverter.cs" Component_="LondonTowerLibrary_ContentOutput_Converters" FileName="DATETO~2.CS|[|AI_PROPPATH_FILENAME_PERBUILD_DateToStringConverter.cs]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_DateToStringConverter.cs&gt;" SelfReg="false"/>
+    <ROW File="LondonTowerLibrary.pdb" Component_="LondonTowerLibrary_SymbolsOutput" FileName="LONDON~2.PDB|[|AI_PROPPATH_FILENAME_PERBUILD_LondonTowerLibrary.pdb]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_LondonTowerLibrary.pdb&gt;" SelfReg="false"/>
+    <ROW File="LondonTower.exe" Component_="LondonTower_PrimaryOutput" FileName="LONDON~2.EXE|[|AI_PROPPATH_FILENAME_PERBUILD_LondonTower.exe]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_LondonTower.exe&gt;" SelfReg="false" DigSign="true"/>
+    <ROW File="LondonTower.exe.config" Component_="LondonTower_PrimaryOutput" FileName="LONDON~2.CON|[|AI_PROPPATH_FILENAME_PERBUILD_LondonTower.exe.config]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_LondonTower.exe.config&gt;" SelfReg="false"/>
+    <ROW File="LondonTowerLibrary.dll_1" Component_="LondonTower_References" FileName="LONDON~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_LondonTowerLibrary.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_LondonTowerLibrary.dll_1&gt;" SelfReg="false"/>
+    <ROW File="ClosedXML.dll_1" Component_="LondonTower_References" FileName="CLOSED~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_ClosedXML.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ClosedXML.dll_1&gt;" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.dll_1" Component_="LondonTower_References" FileName="DOCUME~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_DocumentFormat.OpenXml.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_DocumentFormat.OpenXml.dll_1&gt;" SelfReg="false"/>
+    <ROW File="ExcelNumberFormat.dll_1" Component_="LondonTower_References" FileName="EXCELN~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_ExcelNumberFormat.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ExcelNumberFormat.dll_1&gt;" SelfReg="false"/>
+    <ROW File="FastMember.dll_1" Component_="LondonTower_References" FileName="FASTME~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_FastMember.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_FastMember.dll_1&gt;" SelfReg="false"/>
+    <ROW File="FontAwesome.WPF.dll_1" Component_="LondonTower_References" FileName="FONTAW~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_FontAwesome.WPF.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_FontAwesome.WPF.dll_1&gt;" SelfReg="false"/>
+    <ROW File="Newtonsoft.Json.dll_1" Component_="LondonTower_References" FileName="NEWTON~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Newtonsoft.Json.dll_1&gt;" SelfReg="false"/>
+    <ROW File="System.IO.Packaging.dll_1" Component_="LondonTower_References" FileName="SYSTEM~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_System.IO.Packaging.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_System.IO.Packaging.dll_1&gt;" SelfReg="false"/>
+    <ROW File="Template.xlsx_1" Component_="LondonTower_ContentOutput_Config" FileName="TEMPLA~2.XLS|[|AI_PROPPATH_FILENAME_PERBUILD_Template.xlsx_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Template.xlsx_1&gt;" SelfReg="false"/>
+    <ROW File="TowerOfLondon_Lvl4.txt_1" Component_="LondonTower_ContentOutput_Config" FileName="TOWERO~2.TXT|[|AI_PROPPATH_FILENAME_PERBUILD_TowerOfLondon_Lvl4.txt_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_TowerOfLondon_Lvl4.txt_1&gt;" SelfReg="false"/>
+    <ROW File="TowerOfLondon_Lvl5.txt_1" Component_="LondonTower_ContentOutput_Config" FileName="TOWERO~3.TXT|[|AI_PROPPATH_FILENAME_PERBUILD_TowerOfLondon_Lvl5.txt_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_TowerOfLondon_Lvl5.txt_1&gt;" SelfReg="false"/>
+    <ROW File="Buzzer.mp3_1" Component_="LondonTower_ContentOutput_sound" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_Buzzer.mp3_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Buzzer.mp3_1&gt;" SelfReg="false"/>
+    <ROW File="TowerOfLondon_Lvl3.txt_1" Component_="LondonTower_ContentOutput_Config" FileName="TOWERO~4.TXT|[|AI_PROPPATH_FILENAME_PERBUILD_TowerOfLondon_Lvl3.txt_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_TowerOfLondon_Lvl3.txt_1&gt;" SelfReg="false"/>
+    <ROW File="DateToStringConverter.cs_1" Component_="LondonTower_ContentOutput_Converters" FileName="DATETO~2.CS|[|AI_PROPPATH_FILENAME_PERBUILD_DateToStringConverter.cs_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_DateToStringConverter.cs_1&gt;" SelfReg="false"/>
+    <ROW File="LondonTower.pdb" Component_="LondonTower_SymbolsOutput" FileName="LONDON~2.PDB|[|AI_PROPPATH_FILENAME_PERBUILD_LondonTower.pdb]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_LondonTower.pdb&gt;" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
+    <ROW Name="AI_APPPATH_PERBUILD_Buzzer.mp3" Path="[|AI_PROPPATH_DIR_PERBUILD_Buzzer.mp3]\[|AI_PROPPATH_FILENAME_PERBUILD_Buzzer.mp3]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Buzzer.mp3_1" Path="[|AI_PROPPATH_DIR_PERBUILD_Buzzer.mp3_1]\[|AI_PROPPATH_FILENAME_PERBUILD_Buzzer.mp3_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_ClosedXML.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_ClosedXML.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_ClosedXML.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_ClosedXML.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_ClosedXML.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_ClosedXML.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_DateToStringConverter.cs" Path="[|AI_PROPPATH_DIR_PERBUILD_DateToStringConverter.cs]\[|AI_PROPPATH_FILENAME_PERBUILD_DateToStringConverter.cs]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_DateToStringConverter.cs_1" Path="[|AI_PROPPATH_DIR_PERBUILD_DateToStringConverter.cs_1]\[|AI_PROPPATH_FILENAME_PERBUILD_DateToStringConverter.cs_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_DocumentFormat.OpenXml.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_DocumentFormat.OpenXml.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_DocumentFormat.OpenXml.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_DocumentFormat.OpenXml.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_DocumentFormat.OpenXml.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_DocumentFormat.OpenXml.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_ExcelNumberFormat.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_ExcelNumberFormat.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_ExcelNumberFormat.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_ExcelNumberFormat.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_ExcelNumberFormat.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_ExcelNumberFormat.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_FastMember.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_FastMember.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_FastMember.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_FastMember.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_FastMember.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_FastMember.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_FontAwesome.WPF.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_FontAwesome.WPF.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_FontAwesome.WPF.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_FontAwesome.WPF.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_FontAwesome.WPF.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_FontAwesome.WPF.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_LondonTower.exe" Path="[|AI_PROPPATH_DIR_PERBUILD_LondonTower.exe]\[|AI_PROPPATH_FILENAME_PERBUILD_LondonTower.exe]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_LondonTower.exe.config" Path="[|AI_PROPPATH_DIR_PERBUILD_LondonTower.exe.config]\[|AI_PROPPATH_FILENAME_PERBUILD_LondonTower.exe.config]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_LondonTower.pdb" Path="[|AI_PROPPATH_DIR_PERBUILD_LondonTower.pdb]\[|AI_PROPPATH_FILENAME_PERBUILD_LondonTower.pdb]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_LondonTowerLibrary.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_LondonTowerLibrary.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_LondonTowerLibrary.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_LondonTowerLibrary.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_LondonTowerLibrary.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_LondonTowerLibrary.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_LondonTowerLibrary.pdb" Path="[|AI_PROPPATH_DIR_PERBUILD_LondonTowerLibrary.pdb]\[|AI_PROPPATH_FILENAME_PERBUILD_LondonTowerLibrary.pdb]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Newtonsoft.Json.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Newtonsoft.Json.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Newtonsoft.Json.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_Newtonsoft.Json.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.IO.Packaging.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_System.IO.Packaging.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_System.IO.Packaging.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_System.IO.Packaging.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_System.IO.Packaging.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_System.IO.Packaging.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Template.xlsx" Path="[|AI_PROPPATH_DIR_PERBUILD_Template.xlsx]\[|AI_PROPPATH_FILENAME_PERBUILD_Template.xlsx]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Template.xlsx_1" Path="[|AI_PROPPATH_DIR_PERBUILD_Template.xlsx_1]\[|AI_PROPPATH_FILENAME_PERBUILD_Template.xlsx_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_TowerOfLondon_Lvl3.txt" Path="[|AI_PROPPATH_DIR_PERBUILD_TowerOfLondon_Lvl3.txt]\[|AI_PROPPATH_FILENAME_PERBUILD_TowerOfLondon_Lvl3.txt]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_TowerOfLondon_Lvl3.txt_1" Path="[|AI_PROPPATH_DIR_PERBUILD_TowerOfLondon_Lvl3.txt_1]\[|AI_PROPPATH_FILENAME_PERBUILD_TowerOfLondon_Lvl3.txt_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_TowerOfLondon_Lvl4.txt" Path="[|AI_PROPPATH_DIR_PERBUILD_TowerOfLondon_Lvl4.txt]\[|AI_PROPPATH_FILENAME_PERBUILD_TowerOfLondon_Lvl4.txt]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_TowerOfLondon_Lvl4.txt_1" Path="[|AI_PROPPATH_DIR_PERBUILD_TowerOfLondon_Lvl4.txt_1]\[|AI_PROPPATH_FILENAME_PERBUILD_TowerOfLondon_Lvl4.txt_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_TowerOfLondon_Lvl5.txt" Path="[|AI_PROPPATH_DIR_PERBUILD_TowerOfLondon_Lvl5.txt]\[|AI_PROPPATH_FILENAME_PERBUILD_TowerOfLondon_Lvl5.txt]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_TowerOfLondon_Lvl5.txt_1" Path="[|AI_PROPPATH_DIR_PERBUILD_TowerOfLondon_Lvl5.txt_1]\[|AI_PROPPATH_FILENAME_PERBUILD_TowerOfLondon_Lvl5.txt_1]" Type="2" Content="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" Languages="en" InstallationType="4" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="LondonTowerLibrary_PrimaryOutput"/>
+    <ROW Feature_="MainFeature" Component_="LondonTowerLibrary_References"/>
+    <ROW Feature_="MainFeature" Component_="LondonTowerLibrary_ContentOutput_Config"/>
+    <ROW Feature_="MainFeature" Component_="LondonTowerLibrary_ContentOutput_sound"/>
+    <ROW Feature_="MainFeature" Component_="LondonTowerLibrary_ContentOutput_Converters"/>
+    <ROW Feature_="MainFeature" Component_="LondonTowerLibrary_SymbolsOutput"/>
+    <ROW Feature_="MainFeature" Component_="LondonTower_PrimaryOutput"/>
+    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+    <ROW Feature_="MainFeature" Component_="LondonTower_References"/>
+    <ROW Feature_="MainFeature" Component_="LondonTower_ContentOutput_Config"/>
+    <ROW Feature_="MainFeature" Component_="LondonTower_ContentOutput_sound"/>
+    <ROW Feature_="MainFeature" Component_="LondonTower_ContentOutput_Converters"/>
+    <ROW Feature_="MainFeature" Component_="LondonTower_SymbolsOutput"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="LondonTower" Directory_="SHORTCUTDIR" Name="LONDON~1|LondonTower" Component_="LondonTower_PrimaryOutput" Target="[#LondonTower.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="LondonTower_Dir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.VsProjectComponent">
+    <ROW ProjectId="{0867f03e-c3cd-48ae-a658-b28a0d9276df}" ProjectName="LondonTowerLibrary" OutputGroup="PrimaryOutput" OutputFile="LondonTowerLibrary.dll"/>
+    <ROW ProjectId="{0867f03e-c3cd-48ae-a658-b28a0d9276df}" ProjectName="LondonTowerLibrary" OutputGroup="References" OutputFile="ClosedXML.dll"/>
+    <ROW ProjectId="{0867f03e-c3cd-48ae-a658-b28a0d9276df}" ProjectName="LondonTowerLibrary" OutputGroup="References" OutputFile="DocumentFormat.OpenXml.dll"/>
+    <ROW ProjectId="{0867f03e-c3cd-48ae-a658-b28a0d9276df}" ProjectName="LondonTowerLibrary" OutputGroup="References" OutputFile="ExcelNumberFormat.dll"/>
+    <ROW ProjectId="{0867f03e-c3cd-48ae-a658-b28a0d9276df}" ProjectName="LondonTowerLibrary" OutputGroup="References" OutputFile="FastMember.dll"/>
+    <ROW ProjectId="{0867f03e-c3cd-48ae-a658-b28a0d9276df}" ProjectName="LondonTowerLibrary" OutputGroup="References" OutputFile="FontAwesome.WPF.dll"/>
+    <ROW ProjectId="{0867f03e-c3cd-48ae-a658-b28a0d9276df}" ProjectName="LondonTowerLibrary" OutputGroup="References" OutputFile="Newtonsoft.Json.dll"/>
+    <ROW ProjectId="{0867f03e-c3cd-48ae-a658-b28a0d9276df}" ProjectName="LondonTowerLibrary" OutputGroup="References" OutputFile="System.IO.Packaging.dll"/>
+    <ROW ProjectId="{0867f03e-c3cd-48ae-a658-b28a0d9276df}" ProjectName="LondonTowerLibrary" OutputGroup="ContentOutput" OutputFile="Template.xlsx"/>
+    <ROW ProjectId="{0867f03e-c3cd-48ae-a658-b28a0d9276df}" ProjectName="LondonTowerLibrary" OutputGroup="ContentOutput" OutputFile="TowerOfLondon_Lvl4.txt"/>
+    <ROW ProjectId="{0867f03e-c3cd-48ae-a658-b28a0d9276df}" ProjectName="LondonTowerLibrary" OutputGroup="ContentOutput" OutputFile="TowerOfLondon_Lvl5.txt"/>
+    <ROW ProjectId="{0867f03e-c3cd-48ae-a658-b28a0d9276df}" ProjectName="LondonTowerLibrary" OutputGroup="ContentOutput" OutputFile="Buzzer.mp3"/>
+    <ROW ProjectId="{0867f03e-c3cd-48ae-a658-b28a0d9276df}" ProjectName="LondonTowerLibrary" OutputGroup="ContentOutput" OutputFile="TowerOfLondon_Lvl3.txt"/>
+    <ROW ProjectId="{0867f03e-c3cd-48ae-a658-b28a0d9276df}" ProjectName="LondonTowerLibrary" OutputGroup="ContentOutput" OutputFile="DateToStringConverter.cs"/>
+    <ROW ProjectId="{0867f03e-c3cd-48ae-a658-b28a0d9276df}" ProjectName="LondonTowerLibrary" OutputGroup="SymbolsOutput" OutputFile="LondonTowerLibrary.pdb"/>
+    <ROW ProjectId="{679c6ab5-e9cf-49d6-9e5a-f8c1da232493}" ProjectName="LondonTower" OutputGroup="PrimaryOutput" OutputFile="LondonTower.exe" OutputFileShortcut="LondonTower"/>
+    <ROW ProjectId="{679c6ab5-e9cf-49d6-9e5a-f8c1da232493}" ProjectName="LondonTower" OutputGroup="PrimaryOutput" OutputFile="LondonTower.exe.config"/>
+    <ROW ProjectId="{679c6ab5-e9cf-49d6-9e5a-f8c1da232493}" ProjectName="LondonTower" OutputGroup="References" OutputFile="LondonTowerLibrary.dll_1"/>
+    <ROW ProjectId="{679c6ab5-e9cf-49d6-9e5a-f8c1da232493}" ProjectName="LondonTower" OutputGroup="References" OutputFile="ClosedXML.dll_1"/>
+    <ROW ProjectId="{679c6ab5-e9cf-49d6-9e5a-f8c1da232493}" ProjectName="LondonTower" OutputGroup="References" OutputFile="DocumentFormat.OpenXml.dll_1"/>
+    <ROW ProjectId="{679c6ab5-e9cf-49d6-9e5a-f8c1da232493}" ProjectName="LondonTower" OutputGroup="References" OutputFile="ExcelNumberFormat.dll_1"/>
+    <ROW ProjectId="{679c6ab5-e9cf-49d6-9e5a-f8c1da232493}" ProjectName="LondonTower" OutputGroup="References" OutputFile="FastMember.dll_1"/>
+    <ROW ProjectId="{679c6ab5-e9cf-49d6-9e5a-f8c1da232493}" ProjectName="LondonTower" OutputGroup="References" OutputFile="FontAwesome.WPF.dll_1"/>
+    <ROW ProjectId="{679c6ab5-e9cf-49d6-9e5a-f8c1da232493}" ProjectName="LondonTower" OutputGroup="References" OutputFile="Newtonsoft.Json.dll_1"/>
+    <ROW ProjectId="{679c6ab5-e9cf-49d6-9e5a-f8c1da232493}" ProjectName="LondonTower" OutputGroup="References" OutputFile="System.IO.Packaging.dll_1"/>
+    <ROW ProjectId="{679c6ab5-e9cf-49d6-9e5a-f8c1da232493}" ProjectName="LondonTower" OutputGroup="ContentOutput" OutputFile="Template.xlsx_1"/>
+    <ROW ProjectId="{679c6ab5-e9cf-49d6-9e5a-f8c1da232493}" ProjectName="LondonTower" OutputGroup="ContentOutput" OutputFile="TowerOfLondon_Lvl4.txt_1"/>
+    <ROW ProjectId="{679c6ab5-e9cf-49d6-9e5a-f8c1da232493}" ProjectName="LondonTower" OutputGroup="ContentOutput" OutputFile="TowerOfLondon_Lvl5.txt_1"/>
+    <ROW ProjectId="{679c6ab5-e9cf-49d6-9e5a-f8c1da232493}" ProjectName="LondonTower" OutputGroup="ContentOutput" OutputFile="Buzzer.mp3_1"/>
+    <ROW ProjectId="{679c6ab5-e9cf-49d6-9e5a-f8c1da232493}" ProjectName="LondonTower" OutputGroup="ContentOutput" OutputFile="TowerOfLondon_Lvl3.txt_1"/>
+    <ROW ProjectId="{679c6ab5-e9cf-49d6-9e5a-f8c1da232493}" ProjectName="LondonTower" OutputGroup="ContentOutput" OutputFile="DateToStringConverter.cs_1"/>
+    <ROW ProjectId="{679c6ab5-e9cf-49d6-9e5a-f8c1da232493}" ProjectName="LondonTower" OutputGroup="SymbolsOutput" OutputFile="LondonTower.pdb"/>
+  </COMPONENT>
+</DOCUMENT>
