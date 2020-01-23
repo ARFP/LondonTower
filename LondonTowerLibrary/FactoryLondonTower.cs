@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Controls;
+using System.Windows.Resources;
 using LondonTowerLibrary.Properties;
 using LondonTowerLibrary.ViewModels;
 using Newtonsoft.Json;
@@ -35,8 +37,9 @@ namespace LondonTowerLibrary
         /// <returns>Retourne l'object deserialiser et construit avec les valeurs contenue dans le fichier de config</returns>
         private static T LoadTowerOfLondon<T>(int level)
         {
-           string path = "./Config/TowerOfLondon_Lvl" + level + ".txt";
-           var str = File.ReadAllText(path);
+            string path = "./Config/TowerOfLondon_Lvl" + level + ".txt";
+            var str = File.ReadAllText(path);
+           
             T Tempo = JsonConvert.DeserializeObject<T>(str);
             return Tempo;
         }
