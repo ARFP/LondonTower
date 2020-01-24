@@ -9,6 +9,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LondonTowerLibrary", "Londo
 EndProject
 Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "Setup London Tower", "Setup London Tower\Setup London Tower.aiproj", "{CDB44C70-A6E6-4F18-B3F8-8C51B4C089E1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation Technique", "Documentation Technique", "{919A5A93-1944-4D56-ABB1-B67F956A94E1}"
+	ProjectSection(SolutionItems) = preProject
+		Help\LondonTower.chm = Help\LondonTower.chm
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation Utilisateur", "Documentation Utilisateur", "{8E29A4A6-B45A-4E0A-9084-36502E4F073C}"
+	ProjectSection(SolutionItems) = preProject
+		..\London Tower.pdf = ..\London Tower.pdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		All|Any CPU = All|Any CPU
