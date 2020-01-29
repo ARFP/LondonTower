@@ -7,7 +7,7 @@
         xmlns:libBorder="clr-namespace:LondonTowerLibrary.Border;assembly=LondonTowerLibrary"        
         xmlns:libButtons="clr-namespace:LondonTowerLibrary.Button;assembly=LondonTowerLibrary"
         mc:Ignorable="d"
-        Title="Settings" Height="520" Width="800"
+        Title="Settings" Height="520" Width="800" ResizeMode="NoResize"
         DataContext="{Binding RelativeSource={RelativeSource self}}">
     <Window.Background>
         <LinearGradientBrush>
@@ -17,7 +17,7 @@
             <GradientStop Offset="0.9" Color="#FF2A3132" />
         </LinearGradientBrush>
     </Window.Background>
-    <libBorder:AdornedBorder Style="{StaticResource WoodBorder}" VerticalAlignment="Center" HorizontalAlignment="Center">
+    <libBorder:AdornedBorder MinWidth="600" MaxWidth="800" Style="{StaticResource WoodBorder}" VerticalAlignment="Center" HorizontalAlignment="Center">
         <StackPanel>
             <TextBlock Text="SETTINGS" FontSize="48" HorizontalAlignment="Center" FontWeight="Bold" Style="{StaticResource TextBlockTitle}"/>
             <StackPanel Name="GridFond" Margin="0,40,0,0">
