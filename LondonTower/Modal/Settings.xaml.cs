@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LondonTowerLibrary.Button;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -65,7 +66,7 @@ namespace LondonTower.Modal
 
         private void BrowseFolder_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.Controls.Button but = (System.Windows.Controls.Button)sender;
+            WoodButtonUc but = (WoodButtonUc)sender;
             folder = new FolderBrowserDialog();
             DialogResult result = folder.ShowDialog();
             if(result == System.Windows.Forms.DialogResult.OK)

@@ -4,8 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LondonTower.Modal"
+        xmlns:libBorder="clr-namespace:LondonTowerLibrary.Border;assembly=LondonTowerLibrary"        
+        xmlns:libButtons="clr-namespace:LondonTowerLibrary.Button;assembly=LondonTowerLibrary"
         mc:Ignorable="d"
-        Title="Settings" Height="320" Width="800"
+        Title="Settings" Height="520" Width="800"
         DataContext="{Binding RelativeSource={RelativeSource self}}">
     <Window.Background>
         <LinearGradientBrush>
@@ -15,35 +17,38 @@
             <GradientStop Offset="0.9" Color="#FF2A3132" />
         </LinearGradientBrush>
     </Window.Background>
-    <StackPanel>
-        <TextBlock Text="SETTING" FontSize="48" HorizontalAlignment="Center" FontWeight="Bold"/>
-        <StackPanel Name="GridFond" Margin="0,40,0,0">
+    <libBorder:AdornedBorder Style="{StaticResource WoodBorder}" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <StackPanel>
+            <TextBlock Text="SETTINGS" FontSize="48" HorizontalAlignment="Center" FontWeight="Bold" Style="{StaticResource TextBlockTitle}"/>
+            <StackPanel Name="GridFond" Margin="0,40,0,0">
 
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="300"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="90"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Sauvegarde principale" FontSize="18" HorizontalAlignment="Center" FontWeight="Bold"/>
-                <TextBox Grid.Column="1" FontSize="18" Text="{Binding FirstSaveFolder, UpdateSourceTrigger=PropertyChanged}"/>
-                <Button Tag="First" Name="FirstSaveBut" Grid.Column="2" HorizontalAlignment="Center" Content="Parcourir" Padding="5" Click="BrowseFolder_Click"/>
-            </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="Sauvegarde principale" FontSize="18" HorizontalAlignment="Center" Style="{StaticResource TextBlockStyle}"/>
+                    <TextBox Grid.Column="1" FontSize="18" Text="{Binding FirstSaveFolder, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBoxStyle}" Template="{StaticResource TextBoxTemplate}"/>
+                    <libButtons:WoodButtonUc Tag="First" ImgName="openFolderButton" Name="FirstSaveBut" Grid.Column="2" HorizontalAlignment="Center"  Click="BrowseFolder_Click" MAGICEnabled="True" />
+                </Grid>
 
-            <Grid Margin="0,30,0,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="300"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="90"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Sauvegarde de secours" FontSize="18" HorizontalAlignment="Center" FontWeight="Bold"/>
-                <TextBox Grid.Column="1" FontSize="18"  MinWidth="120" Text="{Binding SecondeSaveFolder, UpdateSourceTrigger=PropertyChanged}"/>
-                <Button Tag="Second" Name="SecondSaveBut" Grid.Column="2" HorizontalAlignment="Center" Content="Parcourir" Padding="5" Click="BrowseFolder_Click"/>
-            </Grid>
+                <Grid Margin="0,30,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="Sauvegarde de secours" FontSize="18" HorizontalAlignment="Center" Style="{StaticResource TextBlockStyle}"/>
+                    <TextBox Grid.Column="1" FontSize="18"  MinWidth="120" Text="{Binding SecondeSaveFolder, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBoxStyle}" Template="{StaticResource TextBoxTemplate}"/>
+                    <libButtons:WoodButtonUc Tag="Second"  ImgName="openFolderButton" Name="SecondSaveBut" Grid.Column="2" HorizontalAlignment="Center"  Click="BrowseFolder_Click" MAGICEnabled="True"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel Margin="0,50,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
+                <libButtons:WoodButtonUc Name="ButCancel" ImgName="returnButton" VerticalAlignment="Bottom" HorizontalAlignment="Right"  MAGICEnabled="True"  Click="Leave_OnClick" Margin="20 20 20 20"/>
+                <libButtons:WoodButtonUc Name="ButSave" ImgName="SaveButton" VerticalAlignment="Bottom" HorizontalAlignment="Right"  MAGICEnabled="True" Click="Save_OnClick" Margin="20 20 20 20"/>
+                            
+            </StackPanel>
         </StackPanel>
-        <StackPanel Margin="0,50,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button VerticalAlignment="Bottom" Padding="5" Content="Sauvegarder" Click="Save_OnClick"/>
-            <Button VerticalAlignment="Bottom" Margin="50,0,0,0" Padding="5" Content="Annuler" Click="Leave_OnClick"/>
-        </StackPanel>
-    </StackPanel>
+    </libBorder:AdornedBorder>
 </Window>
