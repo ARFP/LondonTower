@@ -68,17 +68,7 @@ namespace LondonTower.PageFolder
                 VisibilityAdmin = Visibility.Hidden;
             }
 
-
-
             this.towerVM = new LondonTowerVM();
-
-            // personne pre remplie A ENLEVER AVANT RELEASE 
-            this.towerVM.Personne.LastName = "Hawking";
-            this.towerVM.Personne.FirstName = "Stephen";
-            this.towerVM.Personne.Month = "01";
-            this.towerVM.Personne.Day = "08";
-            this.towerVM.Personne.Year = "1942";
-            //fin personne pre remplie 
 
             this.InfoStack.DataContext = this.towerVM.Personne;
             this.TowerStack.DataContext = this.towerVM;
