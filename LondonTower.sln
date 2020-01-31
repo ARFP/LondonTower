@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation Technique", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation Utilisateur", "Documentation Utilisateur", "{8E29A4A6-B45A-4E0A-9084-36502E4F073C}"
 	ProjectSection(SolutionItems) = preProject
-		..\London Tower.pdf = ..\London Tower.pdf
+		..\London Tower Documentation Utilisateur.pdf = ..\London Tower Documentation Utilisateur.pdf
 	EndProjectSection
 EndProject
 Global
